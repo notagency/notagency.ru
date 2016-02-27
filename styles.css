@@ -1,0 +1,205 @@
+body {
+    font-family: 'Roboto',Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+.valign-middle{
+    white-space: nowrap;
+}
+.valign-middle:before{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.slide{
+    width: 100%;
+    padding: 50px 0;
+}
+.slide_hero{
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+    top: 0;
+    height: 100%;
+    padding: 0;
+}
+.slide_portfolio{
+    background: #F3F3F3;
+    position: relative;
+}
+.slide_contacts{
+    top: 230%;
+}
+.slide__title{
+    margin-top: 0;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+.slide__divider hr{
+    width: 150px;
+    border-top: 2px solid black;
+    margin: 30px auto;
+}
+.slide__desc{
+    font-size: 19px;
+    font-weight: 300;
+}
+.content{
+    width: 100%;
+    top: 100%;    
+    position: absolute;
+}
+.hero{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    text-transform: uppercase;
+}
+.hero__title{
+    font-size: 140px;
+    font-weight: 700;
+    display: inline-block;
+    margin: 0;
+    letter-spacing: -5px;
+    margin-right: 15px;
+}
+.hero__title_smaller{
+    font-size: 30px;
+    display: inline-block;
+    margin: 0;
+}
+.hero__subtitle{
+    font-size: 19px;
+    margin: 0;
+    font-weight: 300;
+}
+.btn-nextslide{
+    border-radius: 25px;
+}
+.hero__divider hr{
+    width: 250px;
+    border-top: 2px solid black;
+    margin: 30px auto;
+}
+.portfolio_menu{
+    margin: 48px 0 30px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.portfolio_list{
+    display: none;
+}
+.portfolio_list__item__image{
+    width: 300px;
+    -webkit-box-shadow: 0 9px 10px -7px rgba(0,0,0,0.8);
+    -moz-box-shadow: 0 9px 10px -7px rgba(0,0,0,0.8);
+    box-shadow: 0 9px 10px -7px rgba(0,0,0,0.8);
+    margin-bottom: 20px;
+}
+.portfolio_menu__link{
+    color: #000;
+    text-decoration: none;
+    -webkit-transition: color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    -moz-transition: color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    -o-transition: color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.portfolio_menu__link_current{
+    color: #A9A9A9;
+}
+.portfolio_menu__link:hover{
+    color: #A9A9A9;
+    text-decoration: none;
+}
+.contacts_form{
+    width: 300px;
+    margin: 30px auto 0;
+    text-align: left;
+}
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 10px 0;
+    border-bottom: 1px solid #EFEFEF;
+    text-align: center;
+    z-index: 1;
+}
+.header_menu__link{
+    color: #000;
+    font-weight: 400;
+    -webkit-transition: color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    -moz-transition: color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    -o-transition: color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.header_menu__link:hover{
+    color: #A9A9A9;
+    text-decoration: none;
+}
+.header_lang{
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+.footer{
+    background: #000;
+    color: #8C8C8C;
+    font-size: 12px;
+    padding: 10px 0;
+    font-weight: 400;
+}
+
+.owl-theme .owl-controls {
+    margin-top: 10px;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent
+}
+.owl-theme .owl-controls .owl-nav [class*=owl-] {
+    color: #fff;
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    background: #d6d6d6;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px
+}
+.owl-theme .owl-controls .owl-nav [class*=owl-]:hover {
+    background: #869791;
+    color: #fff;
+    text-decoration: none
+}
+.owl-theme .owl-controls .owl-nav .disabled {
+    opacity: .5;
+    cursor: default
+}
+.owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    *display: inline
+}
+.owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: #d6d6d6;
+    display: block;
+    -webkit-backface-visibility: visible;
+    -webkit-transition: opacity 200ms ease;
+    -moz-transition: opacity 200ms ease;
+    -ms-transition: opacity 200ms ease;
+    -o-transition: opacity 200ms ease;
+    transition: opacity 200ms ease;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #869791
+}
