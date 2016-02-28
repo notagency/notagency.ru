@@ -24,31 +24,31 @@ html.no-touch:not(.no-cssanimations) .animate {
   backface-visibility: hidden;
   animation-fill-mode: forwards;
 }
-html.no-touch:not(.no-cssanimations) .animate.start_animation:not(.zoom-reverse).top-t-bottom {
+html.no-touch:not(.no-cssanimations) .animate:not(.zoom-reverse).top-t-bottom {
   -webkit-animation-name: anim_ttb;
   -moz-animation-name: anim_ttb;
   -o-animation-name: anim_ttb;
   animation-name: anim_ttb;
 }
-html.no-touch:not(.no-cssanimations) .animate.start_animation:not(.zoom-reverse).bottom-t-top {
+html.no-touch:not(.no-cssanimations) .animate:not(.zoom-reverse).bottom-t-top {
   -webkit-animation-name: anim_btt;
   -moz-animation-name: anim_btt;
   -o-animation-name: anim_btt;
   animation-name: anim_btt;
 }
-html.no-touch:not(.no-cssanimations) .animate.start_animation:not(.zoom-reverse).left-t-right {
+html.no-touch:not(.no-cssanimations) .animate:not(.zoom-reverse).left-t-right {
   -webkit-animation-name: anim_ltr;
   -moz-animation-name: anim_ltr;
   -o-animation-name: anim_ltr;
   animation-name: anim_ltr;
 }
-html.no-touch:not(.no-cssanimations) .animate.start_animation:not(.zoom-reverse).right-t-left {
+html.no-touch:not(.no-cssanimations) .animate:not(.zoom-reverse).right-t-left {
   -webkit-animation-name: anim_rtl;
   -moz-animation-name: anim_rtl;
   -o-animation-name: anim_rtl;
   animation-name: anim_rtl;
 }
-html.no-touch:not(.no-cssanimations) .animate.start_animation:not(.zoom-reverse).zoom-in {
+html.no-touch:not(.no-cssanimations) .animate:not(.zoom-reverse).zoom-in {
   -webkit-animation-name: zoom-in;
   -moz-animation-name: zoom-in;
   -o-animation-name: zoom-in;
@@ -59,7 +59,7 @@ html.no-touch:not(.no-cssanimations) .animate.start_animation:not(.zoom-reverse)
   -ms-transform: scale(1);
   transform: scale(1);
 }
-html.no-touch:not(.no-cssanimations) .animate.start_animation:not(.zoom-reverse).zoom-out {
+html.no-touch:not(.no-cssanimations) .animate:not(.zoom-reverse).zoom-out {
   -webkit-animation-name: zoom-out;
   -moz-animation-name: zoom-out;
   -o-animation-name: zoom-out;
@@ -87,7 +87,7 @@ html.no-touch:not(.no-cssanimations) .animate.zoom-reverse {
   transform: scale(0.5);
   opacity: 0;
 }
-html.no-touch:not(.no-cssanimations) .animate.start_animation:not(.zoom-reverse).alpha-anim {
+html.no-touch:not(.no-cssanimations) .animate:not(.zoom-reverse).alpha-anim {
   -webkit-animation-name: alpha-in;
   -moz-animation-name: alpha-in;
   -o-animation-name: alpha-in;

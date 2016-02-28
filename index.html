@@ -18,11 +18,11 @@
     <![endif]-->
 </head>
 <body>
-    <div class="header animate top-t-bottom start_animation" data-delay="1200">
+    <div class="header animate top-t-bottom" data-delay="1200">
         <ul class="list-inline header_menu">
-          <li><a class="header_menu__link" href="#">Последние работы</a></li>
-          <li><a class="header_menu__link" href="#">Прочая хрень</a></li>
-          <li><a class="header_menu__link" href="#">Контакты</a></li>
+          <li><a class="header_menu__link" href="#" data-scroll-to="services">Наши услуги</a></li>
+          <li><a class="header_menu__link" href="#" data-scroll-to="portfolio">Последние работы</a></li>
+          <li><a class="header_menu__link" href="#" data-scroll-to="contacts">Контакты</a></li>
         </ul>
         <div class="header_lang">
             <a class="header_menu__link" href="#">EN</a>
@@ -30,23 +30,57 @@
     </div>
     <div class="slide slide_hero text-center valign-middle" data-slide="hero">
         <div class="hero">
-            <h1 class="hero__title animate zoom-in start_animation" data-delay="400">Not</h1>
-            <h2 class="hero__title_smaller animate right-t-left start_animation" data-delay="600">Agency</h2>
-            <h3 class="hero__subtitle animate zoom-in start_animation" data-delay="800">Удаленная команда профессионалов</h3>
-            <div class="hero__divider zoom-in animate start_animation" data-delay="1000">
+            <h1 class="hero__title animate zoom-in" data-delay="400">Not</h1>
+            <h2 class="hero__title_smaller animate right-t-left" data-delay="600">Agency</h2>
+            <h3 class="hero__subtitle animate zoom-in" data-delay="800">Удаленная команда профессионалов</h3>
+            <div class="hero__divider zoom-in animate" data-delay="1000">
                 <hr>
             </div>
-            <div class="bottom-t-top animate start_animation" data-delay="1200">
-                <a href="#" class="btn btn-default btn-nextslide" data-role="next-slide">Последние работы</a>
+            <div class="bottom-t-top animate" data-delay="1200">
+                <a href="#" class="btn btn-default btn-nextslide" data-scroll-to="services">Наши услуги</a>
             </div>
         </div>
     </div>
     <div class="content">
+        <div class="slide slide_services text-center" data-slide="services">
+            <h1 class="slide__title">Что мы умеем</h1>
+            <hr>
+            <p>
+                Мы умеем классно собирать высоконагруженные сайты на Битрикс.<br/>
+                А еще верстать и даже разрабатывать игры на HTML5.<br/>
+                И еще немножко дизайн.<br/>
+                А вообще этот текст нужно копирайтить.
+            </p>
+        </div>
+        <div class="slide slide_technologies" data-role="technologies-list">
+            <div class="technology_item">
+                <img src="http://cdn.undsgn.com/uncode/wp-content/uploads/2014/12/logo-jquery-uai-258x116.png" alt="" />
+            </div>
+            <div class="technology_item">
+                <img src="http://cdn.undsgn.com/uncode/wp-content/uploads/2014/12/logo-less-uai-258x116.png" alt="" />
+            </div>
+            <div class="technology_item">
+                <img src="http://cdn.undsgn.com/uncode/wp-content/uploads/2014/12/logo-sass-uai-258x116.png" alt="" />
+            </div>
+            <div class="technology_item">
+                <img src="http://cdn.undsgn.com/uncode/wp-content/uploads/2015/05/logo-github-uai-258x116.png" alt="" />
+            </div>
+            <div class="technology_item">
+                <img src="http://cdn.undsgn.com/uncode/wp-content/uploads/2014/12/logo-jquery-uai-258x116.png" alt="" />
+            </div>
+            <div class="technology_item">
+                <img src="http://cdn.undsgn.com/uncode/wp-content/uploads/2014/12/logo-less-uai-258x116.png" alt="" />
+            </div>
+            <div class="technology_item">
+                <img src="http://cdn.undsgn.com/uncode/wp-content/uploads/2014/12/logo-sass-uai-258x116.png" alt="" />
+            </div>
+            <div class="technology_item">
+                <img src="http://cdn.undsgn.com/uncode/wp-content/uploads/2015/05/logo-github-uai-258x116.png" alt="" />
+            </div>
+        </div>
         <div class="slide slide_portfolio text-center" data-slide="portfolio">
             <h1 class="slide__title">Последние работы</h1>
-            <div class="slide__divider">
-                <hr>
-            </div>
+            <hr>
             <div class="slide__desc">Нам доверяют ведущие веб-студии</div>
             <ul class="list-inline portfolio_menu">
               <li><a class="portfolio_menu__link portfolio_menu__link_current" href="#">Все</a></li>
@@ -55,29 +89,28 @@
               <li><a class="portfolio_menu__link" href="#">Дизайн</a></li>
             </ul>
             <div class="portfolio_list" data-role="portfolio-list">
-                <div class="portfolio_list__item animate bottom-t-top start_animation" data-delay="0">
+                <div class="portfolio_list__item wow animate bottom-t-top" data-delay="0">
                     <a href="#"><img class="portfolio_list__item__image" src="twd6.png" alt="" /></a>
                     <p>Разработка игры и верстка промо-сайта.<br/>По заказу <a target="_blank" href="http:/articulmedia.ru/">Articul Media</a></p>
                 </div>
-                <div class="portfolio_list__item animate bottom-t-top start_animation" data-delay="100">
+                <div class="portfolio_list__item wow animate bottom-t-top" data-delay="100">
                     <img class="portfolio_list__item__image" src="ww2.png" alt="" />
                     <p>Дизайн и сборка под ключ сайта посвященному событиям Великой Отечественной Войны.</p>
                 </div>
-                <div class="portfolio_list__item animate bottom-t-top start_animation" data-delay="200">
+                <div class="portfolio_list__item wow animate bottom-t-top" data-delay="200">
                     <a href="#"><img class="portfolio_list__item__image" src="twd6.png" alt="" /></a>
                     <p>Разработка игры и верстка промо-сайта.<br/>По заказу <a target="_blank" href="http:/articulmedia.ru/">Articul Media</a></p>
                 </div>
-                <div class="portfolio_list__item animate bottom-t-top start_animation" data-delay="300">
+                <div class="portfolio_list__item wow animate bottom-t-top" data-delay="300">
                     <img class="portfolio_list__item__image" src="ww2.png" alt="" />
                     <p>Дизайн и сборка под ключ сайта посвященному событиям Великой Отечественной Войны.</p>
                 </div>
             </div>
         </div>
-        <div class="slide slide_contacts text-center" data-slide="portfolio">
+        <div class="slide slide_contacts text-center" data-slide="contacts">
             <h1 class="slide__title">Связаться с нами</h1>
-            <div class="slide__divider">
-                <hr>
-            </div>
+            <hr>
+            <div class="slide__desc">Заказать проект или по вопросам сотрудничества</div>
             <div class="contacts_form">
                 <form>
                   <div class="form-group">
@@ -100,19 +133,35 @@
         </div>
     </div>
 	<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="wow.min.js"></script>
     <script src="owl.carousel.min.js"></script>
     <script>
+         new WOW().init();
+         
         $(function(){
-            $('[data-role="next-slide"]').click(function(e){
+            $('[data-scroll-to]').click(function(e){
                 e.preventDefault();
-                $('body').animate({scrollTop:$('[data-slide="portfolio"]').offset().top}, 500);
+                var scrollTo = $(this).data('scroll-to');
+                $('body').animate({scrollTop:$('[data-slide="' + scrollTo + '"]').offset().top}, 500);
             })
             
             $('[data-role="portfolio-list"]').owlCarousel({
                 autoHeight:true,
                 loop:true,
                 margin: 40,
-                nav: true
+                nav: true,
+                dots: false,
+                navText: ['сюда', 'туда']
+            });
+            
+            $('[data-role="technologies-list"]').owlCarousel({
+                autoHeight:true,
+                loop:true,
+                nav: false,
+                items: 7,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 2000,
             });
         })
     </script>

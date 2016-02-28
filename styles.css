@@ -16,6 +16,11 @@ body {
     width: 100%;
     padding: 50px 0;
 }
+.slide hr{
+    width: 150px;
+    border-top: 2px solid black;
+    margin: 30px auto;
+}
 .slide_hero{
     position: absolute;
     left: 0;
@@ -25,21 +30,19 @@ body {
     padding: 0;
 }
 .slide_portfolio{
-    background: #F3F3F3;
+    background: #D4D4D4;
     position: relative;
 }
 .slide_contacts{
     top: 230%;
 }
+.slide_services{
+    background: #F3F3F3;
+}
 .slide__title{
     margin-top: 0;
     font-size: 32px;
     text-transform: uppercase;
-}
-.slide__divider hr{
-    width: 150px;
-    border-top: 2px solid black;
-    margin: 30px auto;
 }
 .slide__desc{
     font-size: 19px;
@@ -89,6 +92,7 @@ body {
 }
 .portfolio_list{
     display: none;
+    height: 350px;
 }
 .portfolio_list__item__image{
     width: 300px;
@@ -127,17 +131,20 @@ body {
     text-align: center;
     z-index: 1;
 }
+.header_menu>li{
+    padding: 0 10px;
+}
 .header_menu__link{
-    color: #000;
+    color: #000 !important;
     font-weight: 400;
     -webkit-transition: color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
     -moz-transition: color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
     -o-transition: color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
     transition: color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    text-decoration: none !important;
 }
 .header_menu__link:hover{
-    color: #A9A9A9;
-    text-decoration: none;
+    color: #A9A9A9 !important;
 }
 .header_lang{
     position: absolute;
@@ -150,6 +157,10 @@ body {
     font-size: 12px;
     padding: 10px 0;
     font-weight: 400;
+}
+
+.technology_item{
+    display: inline-block;
 }
 
 .owl-theme .owl-controls {
