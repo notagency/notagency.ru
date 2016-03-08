@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?
+require 'lib/vendor/lessc.inc.php';
+require 'lib/tools.php';
+
+?><!DOCTYPE html>
 <html lang="ru" class="no-touch">
 <head>
 	<meta charset="utf-8" />
@@ -6,9 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="owl.carousel.css">    
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="/assets/vendor/owl.carousel.css">    
+    <link rel="stylesheet" href="/assets/vendor/animations.css">
+    
+    <?
+    $inputLessFile = '/assets/less/common.less';
+    $outputCssFile = '/assets/css/compiled.min.css';
+    compileLess('.' . $inputLessFile, '.' . $outputCssFile);
+    ?>
+    <link rel="stylesheet" href="<?=$outputCssFile?>">
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,6 +28,7 @@
     <![endif]-->
 </head>
 <body>
+    <?/*
     <div class="header animate top-t-bottom" data-delay="1200">
         <ul class="list-inline header_menu">
           <li><a class="header_menu__link" href="#" data-scroll-to="services">Наши услуги</a></li>
@@ -28,6 +39,7 @@
             <a class="header_menu__link" href="#">EN</a>
         </div>
     </div>
+    */?>
     <div class="slide slide_hero text-center valign-middle" data-slide="hero">
         <div class="hero">
             <h1 class="hero__title animate zoom-in" data-delay="400">Not</h1>
@@ -37,11 +49,12 @@
                 <hr>
             </div>
             <div class="bottom-t-top animate" data-delay="1200">
-                <a href="#" class="btn btn-default btn-nextslide" data-scroll-to="services">Наши услуги</a>
+                <a href="#" class="btn btn-default btn-nextslide" data-scroll-to="contacts">Контакты</a>
             </div>
         </div>
     </div>
     <div class="content">
+        <?/*
         <div class="slide slide_services text-center" data-slide="services">
             <h1 class="slide__title">Что мы умеем</h1>
             <hr>
@@ -91,11 +104,11 @@
             </ul>
             <div class="portfolio_list" data-role="portfolio-list">
                 <div class="portfolio_list__item wow animate bottom-t-top" data-delay="0">
-                    <a href="/portfolio/twd6/play/"><img class="portfolio_list__item__image" src="twd6.png" alt="" /></a>
+                    <a href="/portfolio/twd6/play/"><img class="portfolio_list__item__image" src="/assets/i/twd6.png" alt="" /></a>
                     <p>Разработка игры и верстка промо-сайта.<br/>По заказу <a target="_blank" href="http:/articulmedia.ru/">Articul Media</a></p>
                 </div>
                 <div class="portfolio_list__item wow animate bottom-t-top" data-delay="100">
-                    <img class="portfolio_list__item__image" src="ww2.png" alt="" />
+                    <img class="portfolio_list__item__image" src="/assets/i/ww2.png" alt="" />
                     <p>Сайт о Великой Отечественной Войне<br/>Дизайн и сборка под ключ.</p>
                 </div>
                 <div class="portfolio_list__item wow animate bottom-t-top" data-delay="200">
@@ -115,6 +128,7 @@
                 </div>
             </div>
         </div>
+        */?>
         <div class="slide slide_contacts text-center" data-slide="contacts">
             <h1 class="slide__title">Связаться с нами</h1>
             <hr>
@@ -141,36 +155,8 @@
         </div>
     </div>
 	<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
-    <script src="wow.min.js"></script>
-    <script src="owl.carousel.min.js"></script>
-    <script>
-         new WOW().init();
-         
-        $(function(){
-            $('[data-scroll-to]').click(function(e){
-                e.preventDefault();
-                var scrollTo = $(this).data('scroll-to');
-                $('body').animate({scrollTop:$('[data-slide="' + scrollTo + '"]').offset().top}, 500);
-            })
-            
-            $('[data-role="portfolio-list"]').owlCarousel({
-                loop:true,
-                margin: 40,
-                nav: true,
-                dots: false,
-                navText: ['сюда', 'туда']
-            });
-            
-            $('[data-role="technologies-list"]').owlCarousel({
-                autoHeight:true,
-                loop:true,
-                nav: false,
-                items: 7,
-                dots: false,
-                autoplay: true,
-                autoplayTimeout: 2000,
-            });
-        })
-    </script>
+    <script src="/assets/vendor/wow.min.js"></script>
+    <script src="/assets/vendor/owl.carousel.min.js"></script>
+    <script src="/assets/js/scripts.js"></script>
 </body>
 </html>
