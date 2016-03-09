@@ -141,15 +141,15 @@ require 'lib/tools.php';
             <hr>
             <div class="slide__desc">Вы хотели бы заказать проект, или у Вас есть вопросы?</div>
             <div class="contacts_form">
-                <form>
-                  <div class="form-group">
-                    <input type="text" class="form-control form-control-big" placeholder="Как Вас зовут">
+                <form method="post" action="" data-role="conacts-form">
+                  <div class="form-group error">
+                    <input name="name" type="text" class="form-control form-control-big" placeholder="Как Вас зовут" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control form-control-big" placeholder="Email / Телефон / Любой контакт">
+                    <input name="contact" type="text" class="form-control form-control-big" placeholder="Email / Телефон / Любой контакт" required>
                   </div>
                   <div class="form-group">
-                    <textarea class="form-control form-control-big" rows="5" placeholder="Комментарий"></textarea>
+                    <textarea name="message" class="form-control form-control-big" rows="5" placeholder="Комментарий" required></textarea>
                   </div>
                   <div class="text-center">
                       <button type="submit" class="btn btn-custom">Отправить</button>
@@ -164,6 +164,8 @@ require 'lib/tools.php';
     <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
     <script src="/assets/packages/wow.min.js"></script>
     <script src="/assets/packages/owl.carousel.min.js"></script>
+    <script src="/assets/packages/jquery.validation-1.15.0/jquery.validate.min.js"></script>
+    <script src="/assets/packages/jquery.validation-1.15.0/messages_ru.min.js"></script>
     <script src="/assets/js/scripts.js"></script>
 </body>
 </html>
