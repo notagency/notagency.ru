@@ -149,7 +149,7 @@ require 'lib/tools.php';
                     <input type="text" class="form-control form-control-big" placeholder="Email / Телефон / Любой контакт">
                   </div>
                   <div class="form-group">
-                    <textarea class="form-control form-control-big" rows="3" placeholder="Комментарий"></textarea>
+                    <textarea class="form-control form-control-big" rows="5" placeholder="Комментарий"></textarea>
                   </div>
                   <div class="text-center">
                       <button type="submit" class="btn btn-custom">Отправить</button>
