@@ -14,12 +14,19 @@ body {
     vertical-align: middle;
 }
 .btn-custom{
+    .button-size(5px; 20px; 19px; 30px; 35px);
     background-color: white;
     border-color: #ccc;
-    .button-size(5px; 20px; 19px; 30px; 35px);
     color: #3E3E3E;
+    position: relative;
     &:hover{
         color: black;
+    }
+    &:focus,
+    &:active,
+    &:hover{
+        outline:0;
+        -webkit-appearance:none;
     }
 }
 .form-control-big{
