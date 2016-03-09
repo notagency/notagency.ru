@@ -1,0 +1,16 @@
+{
+  "name": "notagency/website",
+  "type": "project",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Dmitry Savchenkov",
+      "email": "ds@notagency.ru"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "twbs/bootstrap": "^3.3",
+    "oyejorge/less.php": "v1.7.0.10"
+  }
+}
