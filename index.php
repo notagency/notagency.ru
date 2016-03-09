@@ -12,8 +12,10 @@ require 'lib/tools.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/packages/owl.carousel.css">    
+    
+    <?/*<link rel="stylesheet" href="/assets/packages/owl.carousel.css">*/?>
     <link rel="stylesheet" href="/assets/packages/animations.css">
     
     <?
@@ -137,11 +139,11 @@ require 'lib/tools.php';
         </div>
         */?>
         <div class="slide slide_contacts text-center" data-slide="contacts">
-            <h1 class="slide__title">Контакты</h1>
+            <h1 class="slide__title">Обратная связь</h1>
             <hr>
             <div class="slide__desc">Вы хотели бы заказать проект, или у Вас есть вопросы?</div>
             <div class="contacts_form">
-                <form method="post" action="" data-role="conacts-form">
+                <form method="post" action="/api/v1/feedback/" data-role="feedback-form">
                   <div class="form-group error">
                     <input name="name" type="text" class="form-control form-control-big" placeholder="Как Вас зовут" required>
                   </div>
@@ -152,13 +154,18 @@ require 'lib/tools.php';
                     <textarea name="message" class="form-control form-control-big" rows="5" placeholder="Комментарий" required></textarea>
                   </div>
                   <div class="text-center">
-                      <button type="submit" class="btn btn-custom">Отправить</button>
+                      <a href="#" class="btn btn-custom" data-role="feedback-form-submit">
+                          Отправить
+                          <div class="spinner">
+                            <i class="glyphicon glyphicon-refresh"></i>
+                          </div>
+                      </a>
                   </div>
                 </form>
              </div>
         </div>
         <div class="footer text-center">
-            2016 &copy; NotAgency ОГРНИП 1230812093819283
+            <?=date('Y')?> &copy; NotAgency ОГРНИП 1230812093819283
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>

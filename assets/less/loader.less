@@ -1,0 +1,42 @@
+@transformFrom: rotate(0deg) translateZ(0);
+@transformTo: rotate(360deg) translateZ(0);
+-webkit-keyframes rotating{
+  0% {
+    .transform(@transformFrom);
+  }
+  70% {
+    .transform(@transformTo);
+  }
+  100% {
+    .transform(@transformTo);
+  }
+}
+@keyframes rotating {
+  0% {
+    .transform(@transformFrom);
+  }
+  70% {
+    .transform(@transformTo);
+  }
+  100% {
+    .transform(@transformTo);
+  }
+}
+
+.spinner {
+  line-height: 0;
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  margin-top: -9px;
+  animation: rotating 1.5s linear infinite;
+  opacity: 0;
+}
+
+.btn-has-spinner{
+    position: relative;
+    cursor: progress;
+}
+.btn-has-spinner .spinner{
+    opacity: 1;
+}

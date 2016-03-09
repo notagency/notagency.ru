@@ -7,7 +7,7 @@ $(function(){
         $('body').animate({scrollTop:$('[data-slide="' + scrollTo + '"]').offset().top}, 500);
     })
     
-    $('[data-role="conacts-form"]').validate({
+    $('[data-role="feedback-form"]').validate({
         errorPlacement: function(error,element) { return true },
         highlight: function (element) {
             $(element)
@@ -30,23 +30,35 @@ $(function(){
         }
     });
     
-    $('[data-role="conacts-form"]').submit(function(){
-        if ($(this).valid())
-        {
-            $.ajax({
-                url: '/',
-                dataType: 'json',
-                data: $(this).serialize(),
-                success: function(){
-                
-                },
-                error: function(e){
-                    console.error(e);
-                }
-            });
+    $('[data-role="feedback-form-submit"]').click(function(e){
+        e.preventDefault();
+        var $button = $(this),
+            $form = $button.closest('[data-role="feedback-form"]');
+            
+        
+        if (!$form.valid()){
+            return false;
         }
+        
+        $button.addClass('btn-has-spinner');
+        
+        $.ajax({
+            url: $form.attr('action'),
+            dataType: 'json',
+            data: $form.serialize(),
+            method : $form.attr('method'),
+            success: function(response){
+                console.log(response);
+                $button.removeClass('btn-has-spinner');
+            },
+            error: function(e){
+                console.error(e);
+                $button.removeClass('btn-has-spinner');
+            }
+        });
+        
         return false;
-    })
+    });
     
     /*$('[data-role="portfolio-list"]').owlCarousel({
         loop:true,
