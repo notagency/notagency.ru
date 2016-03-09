@@ -1,21 +1,28 @@
 <?
-require 'lib/vendor/lessc.inc.php';
+require 'vendor/autoload.php';
 require 'lib/tools.php';
 
 ?><!DOCTYPE html>
 <html lang="ru" class="no-touch">
 <head>
-	<meta charset="utf-8" />
-	<title>NotAgency</title>
+	
+    <title>NotAgency</title>
+    
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/vendor/owl.carousel.css">    
-    <link rel="stylesheet" href="/assets/vendor/animations.css">
+    <link rel="stylesheet" href="/assets/packages/owl.carousel.css">    
+    <link rel="stylesheet" href="/assets/packages/animations.css">
     
     <?
+    $inputLessFile = '/vendor/twbs/bootstrap/less/bootstrap.less';
+    $outputCssFile = '/assets/css/bootstrap.min.css';
+    compileLess('.' . $inputLessFile, '.' . $outputCssFile);
+    
     $inputLessFile = '/assets/less/common.less';
-    $outputCssFile = '/assets/css/compiled.min.css';
+    $outputCssFile = '/assets/css/common.min.css';
     compileLess('.' . $inputLessFile, '.' . $outputCssFile);
     ?>
     <link rel="stylesheet" href="<?=$outputCssFile?>">
@@ -44,12 +51,12 @@ require 'lib/tools.php';
         <div class="hero">
             <h1 class="hero__title animate zoom-in" data-delay="400">Not</h1>
             <h2 class="hero__title_smaller animate right-t-left" data-delay="600">Agency</h2>
-            <h3 class="hero__subtitle animate zoom-in" data-delay="800">Удаленная команда профессионалов</h3>
+            <h3 class="hero__subtitle animate zoom-in" data-delay="800">Верстка и сборка сайтов на 1C-Битрикс</h3>
             <div class="hero__divider zoom-in animate" data-delay="1000">
                 <hr>
             </div>
             <div class="bottom-t-top animate" data-delay="1200">
-                <a href="#" class="btn btn-default btn-nextslide" data-scroll-to="contacts">Контакты</a>
+                <a href="#" class="btn btn-custom" data-scroll-to="contacts">Контакты</a>
             </div>
         </div>
     </div>
@@ -130,22 +137,22 @@ require 'lib/tools.php';
         </div>
         */?>
         <div class="slide slide_contacts text-center" data-slide="contacts">
-            <h1 class="slide__title">Связаться с нами</h1>
+            <h1 class="slide__title">Контакты</h1>
             <hr>
-            <div class="slide__desc">Заказать проект или по вопросам сотрудничества</div>
+            <div class="slide__desc">Вы хотели бы заказать проект, или у Вас есть вопросы?</div>
             <div class="contacts_form">
                 <form>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Как Вас зовут">
+                    <input type="text" class="form-control form-control-big" placeholder="Как Вас зовут">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Email / Телефон / Любой контакт">
+                    <input type="text" class="form-control form-control-big" placeholder="Email / Телефон / Любой контакт">
                   </div>
                   <div class="form-group">
-                    <textarea class="form-control" rows="3" placeholder="Комментарий"></textarea>
+                    <textarea class="form-control form-control-big" rows="3" placeholder="Комментарий"></textarea>
                   </div>
                   <div class="text-center">
-                      <button type="submit" class="btn btn-default">Отправить</button>
+                      <button type="submit" class="btn btn-custom">Отправить</button>
                   </div>
                 </form>
              </div>
@@ -154,9 +161,9 @@ require 'lib/tools.php';
             2016 &copy; NotAgency ОГРНИП 1230812093819283
         </div>
     </div>
-	<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
-    <script src="/assets/vendor/wow.min.js"></script>
-    <script src="/assets/vendor/owl.carousel.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="/assets/packages/wow.min.js"></script>
+    <script src="/assets/packages/owl.carousel.min.js"></script>
     <script src="/assets/js/scripts.js"></script>
 </body>
 </html>
