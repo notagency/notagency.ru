@@ -41,6 +41,8 @@ $(function(){
         }
         
         $button.addClass('btn-has-spinner');
+        $form.find('[data-role="feedback-form-success"], [data-role="feedback-form-error"]').addClass('hide');
+        
         
         $.ajax({
             url: $form.attr('action'),
@@ -48,8 +50,14 @@ $(function(){
             data: $form.serialize(),
             method : $form.attr('method'),
             success: function(response){
-                console.log(response);
                 $button.removeClass('btn-has-spinner');
+                $form.find('input[type="text"], textarea').val('');
+                if (response.success){
+                    $form.find('[data-role="feedback-form-success"]').removeClass('hide');                
+                }
+                else{
+                    $form.find('[data-role="feedback-form-error"]').removeClass('hide');                
+                }
             },
             error: function(e){
                 console.error(e);

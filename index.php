@@ -37,11 +37,13 @@ require 'lib/tools.php';
     <![endif]-->
 </head>
 <body>
+    
     <?/*
     <div class="header animate top-t-bottom" data-delay="1200">
         <ul class="list-inline header_menu">
           <li><a class="header_menu__link" href="#" data-scroll-to="services">Наши услуги</a></li>
           <li><a class="header_menu__link" href="#" data-scroll-to="portfolio">Последние работы</a></li>
+          <li><a class="header_menu__link" href="#" data-scroll-to="partners">Партнеры</a></li>
           <li><a class="header_menu__link" href="#" data-scroll-to="contacts">Контакты</a></li>
         </ul>
         <div class="header_lang">
@@ -58,7 +60,7 @@ require 'lib/tools.php';
                 <hr>
             </div>
             <div class="bottom-t-top animate" data-delay="1200">
-                <a href="#" class="btn btn-custom" data-scroll-to="contacts">Контакты</a>
+                <a href="#" class="btn btn-custom" data-scroll-to="contacts">Сделать заказ</a>
             </div>
         </div>
     </div>
@@ -138,20 +140,45 @@ require 'lib/tools.php';
             </div>
         </div>
         */?>
-        <div class="slide slide_contacts text-center" data-slide="contacts">
-            <h1 class="slide__title">Обратная связь</h1>
+        <div class="slide slide_partners text-center" data-slide="partners">
+            <h1 class="slide__title">Нам доверяют</h1>
             <hr>
-            <div class="slide__desc">Вы хотели бы заказать проект, или у Вас есть вопросы?</div>
+            <div class="slide__desc">Признанные лучшие digital-агенства</div>
+            <div class="partners_list">
+                <a href="http://cpeople.ru/" target="_blank" class="partner_item wow animate bottom-t-top" data-delay="100">
+                    <img src="/assets/i/cpeople.png" alt="Creative People" /><br/>
+                    <span class="partner_item__name">Creative People</span>
+                </a>
+                <a href="http://articulmedia.ru/" target="_blank" class="partner_item wow animate bottom-t-top" data-delay="200">
+                    <img src="/assets/i/articulmedia.png" alt="Articul Media" /><br/>
+                    <span class="partner_item__name">Articul Media</span>
+                </a>
+                <a href="http://zephyrlab.ru/" target="_blank" class="partner_item wow animate bottom-t-top" data-delay="300">
+                    <img src="/assets/i/zephyrlab.png" alt="ZephyrLab" /><br/>
+                    <span class="partner_item__name">ZephyrLab</span>
+                </a>
+            </div>
+        </div>
+        <div class="slide slide_contacts text-center" data-slide="contacts">
+            <h1 class="slide__title">Напишите нам</h1>
+            <hr>
+            <div class="slide__desc">Сделайте заказ или задайте вопрос</div>
             <div class="contacts_form">
                 <form method="post" action="/api/v1/feedback/" data-role="feedback-form">
+                  <div class="alert alert-success hide" data-role="feedback-form-success">
+                      <strong>Спасибо!</strong> Ваше сообщение отправлено. Мы свяжемся с Вами в ближайшее время.
+                  </div>
+                  <div class="alert alert-danger hide">
+                      Произошла ошибка. Попробуйте позднее.
+                  </div>
                   <div class="form-group error">
-                    <input name="name" type="text" class="form-control form-control-big" placeholder="Как Вас зовут" required>
+                    <input name="name" type="text" class="form-control form-control-big" placeholder="Ваше имя" required>
                   </div>
                   <div class="form-group">
                     <input name="contact" type="text" class="form-control form-control-big" placeholder="Email / Телефон / Любой контакт" required>
                   </div>
                   <div class="form-group">
-                    <textarea name="message" class="form-control form-control-big" rows="5" placeholder="Комментарий" required></textarea>
+                    <textarea name="message" class="form-control form-control-big" rows="5" placeholder="Опишите Вашу задачу" required></textarea>
                   </div>
                   <div class="text-center">
                       <a href="#" class="btn btn-custom" data-role="feedback-form-submit">
@@ -165,7 +192,7 @@ require 'lib/tools.php';
              </div>
         </div>
         <div class="footer text-center">
-            <?=date('Y')?> &copy; NotAgency ОГРНИП 1230812093819283
+            <?=date('Y')?> &copy; NotAgency ОГРНИП 314774601700196
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
