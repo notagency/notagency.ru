@@ -55,28 +55,30 @@ require 'lib/tools.php';
         <div class="hero">
             <h1 class="hero__title animate zoom-in" data-delay="400">Not</h1>
             <h2 class="hero__title_smaller animate right-t-left" data-delay="600">Agency</h2>
-            <h3 class="hero__subtitle animate zoom-in" data-delay="800">Верстка и сборка сайтов на 1C-Битрикс</h3>
+            <!--<h3 class="hero__subtitle animate zoom-in" data-delay="800">Верстка и сборка сайтов на 1C-Битрикс</h3>-->
+            <h3 class="hero__subtitle animate zoom-in" data-delay="800">Секретное оружие digital-агенств</h3>
             <div class="hero__divider zoom-in animate" data-delay="1000">
                 <hr>
             </div>
             <div class="bottom-t-top animate" data-delay="1200">
-                <a href="#" class="btn btn-custom" data-scroll-to="contacts">Сделать заказ</a>
+                <a href="#" class="btn btn-custom" data-scroll-to="about">Узнать больше</a>
             </div>
         </div>
     </div>
     <div class="content">
-        <?/*
-        <div class="slide slide_services text-center" data-slide="services">
-            <h1 class="slide__title">Что мы умеем</h1>
+        <div class="slide slide_services text-center" data-slide="about">
+            <h1 class="slide__title">Кто мы</h1>
             <hr>
             <p>
                 Мы умеем классно собирать высоконагруженные сайты на Битрикс.<br/>
                 А еще верстать и даже разрабатывать игры на HTML5.<br/>
                 И еще немножко дизайн.<br/>
-                Для нас важная каждая деталь Вашего проекта.<br/>
-                А вообще этот текст нужно копирайтить.
+                Мы сотрудничаем с топовым digital-агенствами.<br/>
+                Мы - их тайное оружие.
             </p>
+            <a href="#" class="btn btn-custom" data-scroll-to="contacts">Сделать заказ</a>
         </div>
+        <?/*
         <div class="slide slide_technologies" data-role="technologies-list">
             <div class="technology_item">
                 <img src="http://cdn.undsgn.com/uncode/wp-content/uploads/2014/12/logo-jquery-uai-258x116.png" alt="" />
@@ -103,60 +105,112 @@ require 'lib/tools.php';
                 <img src="http://cdn.undsgn.com/uncode/wp-content/uploads/2015/05/logo-github-uai-258x116.png" alt="" />
             </div>
         </div>
+        */?>
         <div class="slide slide_portfolio text-center" data-slide="portfolio">
             <h1 class="slide__title">Последние работы</h1>
             <hr>
-            <div class="slide__desc">Нам доверяют ведущие веб-студии</div>
-            <ul class="list-inline portfolio_menu">
+            <div class="slide__desc"></div>
+            <?/*<ul class="list-inline portfolio_menu">
               <li><a class="portfolio_menu__link portfolio_menu__link_current" href="#">Все</a></li>
               <li><a class="portfolio_menu__link" href="#">Разработка</a></li>
               <li><a class="portfolio_menu__link" href="#">Верстка</a></li>
               <li><a class="portfolio_menu__link" href="#">Дизайн</a></li>
-            </ul>
-            <div class="portfolio_list" data-role="portfolio-list">
-                <div class="portfolio_list__item wow animate bottom-t-top" data-delay="0">
-                    <a href="/portfolio/twd6/play/"><img class="portfolio_list__item__image" src="/assets/i/twd6.png" alt="" /></a>
-                    <p>Разработка игры и верстка промо-сайта.<br/>По заказу <a target="_blank" href="http:/articulmedia.ru/">Articul Media</a></p>
-                </div>
-                <div class="portfolio_list__item wow animate bottom-t-top" data-delay="100">
-                    <img class="portfolio_list__item__image" src="/assets/i/ww2.png" alt="" />
-                    <p>Сайт о Великой Отечественной Войне<br/>Дизайн и сборка под ключ.</p>
-                </div>
-                <div class="portfolio_list__item wow animate bottom-t-top" data-delay="200">
-                    <p>Fox-live</p>
-                </div>
-                <div class="portfolio_list__item wow animate bottom-t-top" data-delay="300">
-                    <p>Вертикаль</p>
-                </div>
-                <div class="portfolio_list__item wow animate bottom-t-top" data-delay="300">
-                    <p>МатчТВ</p>
-                </div>
-                <div class="portfolio_list__item wow animate bottom-t-top" data-delay="300">
-                    <p>Кафекремона</p>
-                </div>
-                <div class="portfolio_list__item wow animate bottom-t-top" data-delay="300">
-                    <p>Брабантиа</p>
+            </ul>*/?>
+            <div class="portfolio_list">
+                <div class="portfolio_list__row">
+                    <div class="portfolio_list__item">
+                        <a href="http://grandawards.ru/" target="_blank">
+                            <img class="portfolio_list__item__image" src="/assets/i/portfolio/vertical.jpg" alt="" />
+                        </a>
+                        <p>
+                            Сборка сайта национальной премии<br/>
+                            бизнес-коммуникаций. По заказу <a target="_blank" href="http://articulmedia.ru/">Articul Media</a>.
+                        </p>
+                    </div>
+                    <div class="portfolio_list__item">
+                        <a href="/portfolio/twd6/play/" target="_blank">
+                            <img class="portfolio_list__item__image" src="/assets/i/portfolio/twd6.jpg" alt="" />
+                        </a>
+                        <p>
+                            Разработка игры, верстка промо-сайта, сборка.<br/>
+                            По заказу <a target="_blank" href="http://articulmedia.ru/">Articul Media</a>.
+                        </p>
+                    </div>
+                    <div class="portfolio_list__item">
+                        <a href="http://1941-1945.org/" target="_blank">
+                            <img class="portfolio_list__item__image" src="/assets/i/portfolio/ww2.jpg" alt="" />
+                        </a>
+                        <p>Хроники Великой Отечественной Войны<br/>Создание под ключ.</p>
+                    </div>
+                    <div class="portfolio_list__item">
+                        <a href="http://grandawards.ru/" target="_blank">
+                            <img class="portfolio_list__item__image" src="/assets/i/portfolio/vertical.jpg" alt="" />
+                        </a>
+                        <p>
+                            Сборка сайта национальной премии<br/>
+                            бизнес-коммуникаций. По заказу <a target="_blank" href="http://articulmedia.ru/">Articul Media</a>.
+                        </p>
+                    </div>
+                    <div class="portfolio_list__item">
+                        <a href="/portfolio/twd6/play/" target="_blank">
+                            <img class="portfolio_list__item__image" src="/assets/i/portfolio/twd6.jpg" alt="" />
+                        </a>
+                        <p>
+                            Разработка игры, верстка промо-сайта, сборка.<br/>
+                            По заказу <a target="_blank" href="http://articulmedia.ru/">Articul Media</a>.
+                        </p>
+                    </div>
+                    <div class="portfolio_list__item">
+                        <a href="http://1941-1945.org/" target="_blank">
+                            <img class="portfolio_list__item__image" src="/assets/i/portfolio/ww2.jpg" alt="" />
+                        </a>
+                        <p>Хроники Великой Отечественной Войны<br/>Создание под ключ.</p>
+                    </div>
+                    <div class="portfolio_list__item">
+                        <a href="/portfolio/twd6/play/" target="_blank">
+                            <img class="portfolio_list__item__image" src="/assets/i/portfolio/twd6.jpg" alt="" />
+                        </a>
+                        <p>
+                            Разработка игры, верстка промо-сайта, сборка.<br/>
+                            По заказу <a target="_blank" href="http://articulmedia.ru/">Articul Media</a>.
+                        </p>
+                    </div>
+                    <div class="portfolio_list__item">
+                        <a href="http://1941-1945.org/" target="_blank">
+                            <img class="portfolio_list__item__image" src="/assets/i/portfolio/ww2.jpg" alt="" />
+                        </a>
+                        <p>Хроники Великой Отечественной Войны<br/>Создание под ключ.</p>
+                    </div>
+                    <?/*<div class="portfolio_list__item wow animate bottom-t-top" data-delay="200">
+                        <p>Fox-live</p>
+                    </div>
+                    <div class="portfolio_list__item wow animate bottom-t-top" data-delay="300">
+                        <p>МатчТВ</p>
+                    </div>
+                    <div class="portfolio_list__item wow animate bottom-t-top" data-delay="300">
+                        <p>Кафекремона</p>
+                    </div>
+                    <div class="portfolio_list__item wow animate bottom-t-top" data-delay="300">
+                        <p>Брабантиа</p>
+                    </div>*/?>
                 </div>
             </div>
         </div>
-        */?>
-        <div class="slide slide_partners text-center" data-slide="partners">
-            <h1 class="slide__title">Нам доверяют</h1>
-            <hr>
-            <div class="slide__desc">Признанные лучшие digital-агенства</div>
+        <div class="slide slide_partners text-center" data-slide="portfolio">
+            <div class="slide__desc">Нам доверяют</div>
             <div class="partners_list">
-                <a href="http://cpeople.ru/" target="_blank" class="partner_item wow animate bottom-t-top" data-delay="100">
-                    <img src="/assets/i/cpeople.png" alt="Creative People" /><br/>
-                    <span class="partner_item__name">Creative People</span>
-                </a>
-                <a href="http://articulmedia.ru/" target="_blank" class="partner_item wow animate bottom-t-top" data-delay="200">
-                    <img src="/assets/i/articulmedia.png" alt="Articul Media" /><br/>
-                    <span class="partner_item__name">Articul Media</span>
-                </a>
-                <a href="http://zephyrlab.ru/" target="_blank" class="partner_item wow animate bottom-t-top" data-delay="300">
-                    <img src="/assets/i/zephyrlab.png" alt="ZephyrLab" /><br/>
-                    <span class="partner_item__name">ZephyrLab</span>
-                </a>
+                <div class="partner_item wow animate bottom-t-top" data-delay="100">
+                    <img src="/assets/i/partners/cpeople_72x72.png" alt="Creative People" /><br/>
+                    <!--<span class="partner_item__name">Creative People</span>-->
+                </div>
+                <div class="partner_item wow animate bottom-t-top" data-delay="200">
+                    <img src="/assets/i/partners/articulmedia_72x72_bw.jpg" alt="Articul Media" /><br/>
+                    <!--<span class="partner_item__name">Articul Media</span>-->
+                </div>
+                <div class="partner_item wow animate bottom-t-top" data-delay="300">
+                    <img src="/assets/i/partners/zephyrlab_72x72_bw.jpg" alt="ZephyrLab" /><br/>
+                    <!--<span class="partner_item__name">ZephyrLab</span>-->
+                </div>
             </div>
         </div>
         <div class="slide slide_contacts text-center" data-slide="contacts">
@@ -178,7 +232,7 @@ require 'lib/tools.php';
                     <input name="contact" type="text" class="form-control form-control-big" placeholder="Email / Телефон / Любой контакт" required>
                   </div>
                   <div class="form-group">
-                    <textarea name="message" class="form-control form-control-big" rows="5" placeholder="Опишите Вашу задачу" required></textarea>
+                    <textarea name="message" class="form-control form-control-big" rows="5" placeholder="Опишите вашу задачу" required></textarea>
                   </div>
                   <div class="text-center">
                       <a href="#" class="btn btn-custom" data-role="feedback-form-submit">
