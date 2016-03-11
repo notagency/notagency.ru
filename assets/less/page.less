@@ -1,9 +1,18 @@
+/**
+ *  Globals
+ */
 body {
     font-family: 'Roboto',Helvetica,Arial,sans-serif;
     font-size: 16px;
     font-weight: 300;
 }
-
+@h1: 32px;
+@h2: 25px;
+@slide_padding: 50px;
+@slide_hr_padding: 30px;
+/**
+ *  Bootsrtap customs
+ */
 .valign-middle{
     white-space: nowrap;
 }
@@ -36,8 +45,9 @@ body {
 .cursor-progress {
   cursor:progress;
 }
-
-
+/**
+ *  Layout
+ */
 .header{
     position: absolute;
     top: 0;
@@ -48,7 +58,7 @@ body {
     text-align: center;
     z-index: 1;
 }
-.header_menu>li{
+.header_menu > li{
     padding: 0 10px;
 }
 .header_menu__link{
@@ -80,15 +90,17 @@ body {
     top: 100%;    
     position: absolute;
 }
-
+/**
+ *  Slide
+ */
 .slide{
     width: 100%;
-    padding: 50px 0;
+    padding: @slide_padding 0;
 }
 .slide hr{
     width: 150px;
     border-top: 2px solid black;
-    margin: 30px auto;
+    margin: @slide_hr_padding auto;
 }
 .slide_hero{
     position: absolute;
@@ -109,19 +121,21 @@ body {
     overflow: hidden;
 }
 .slide_services{
-    background: #D4D4D4;
-    //background: #F3F3F3;
+    background: #F3F3F3;
 }
 .slide__title{
     margin-top: 0;
-    font-size: 32px;
+    font-size: @h1;
     text-transform: uppercase;
 }
 .slide__desc{
     font-size: 19px;
     font-weight: 300;
+    margin-bottom: @slide_hr_padding;
 }
-
+/**
+ *  Hero
+ */
 .hero{
     display: inline-block;
     vertical-align: middle;
@@ -129,7 +143,7 @@ body {
 }
 .hero__title{
     font-size: 140px;
-    font-weight: 700;
+    font-weight: 900;
     display: inline-block;
     margin: 0;
     letter-spacing: -5px;
@@ -149,12 +163,14 @@ body {
 .hero__divider hr{
     width: 250px;
     border-top: 2px solid black;
-    margin: 30px auto 50px;
+    margin: @slide_hr_padding auto @slide_padding;
     text-transform: uppercase;
 }
-
+/**
+ *  Портфолио
+ */
 .portfolio_menu{
-    margin: 48px 0 30px;
+    margin: 48px 0 @slide_hr_padding;
     font-size: 16px;
     font-weight: 400;
 }
@@ -165,10 +181,7 @@ body {
     .make-row();
 }
 .portfolio_list__item{
-    .make-md-column(3);
-    p{
-        display: none;
-    }
+    .make-md-column(4);
 }
 .portfolio_list__item__image{
     max-width: 100%;
@@ -192,18 +205,30 @@ body {
     color: #A9A9A9;
     text-decoration: none;
 }
-
+/**
+ *  Контакты
+ */
 .contacts_form{
     width: 500px;
-    margin: 30px auto 0;
+    margin: @slide_hr_padding auto 0;
     text-align: left;
 }
-
+/**
+ *  Технологии
+ */
 .technology_item{
     display: inline-block;
 }
+/**
+ *  Партнеры
+ */
+.partners_side{
+    display: inline-block;
+    font-size: @h2;
+}
 .partners_list{
-    margin-top: 30px;
+    display: inline-block;
+    margin-top: @slide_hr_padding;
 }
 .partner_item{
     display: inline-block;

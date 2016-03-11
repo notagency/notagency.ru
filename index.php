@@ -70,11 +70,11 @@ require 'lib/tools.php';
             <h1 class="slide__title">Кто мы</h1>
             <hr>
             <p>
-                Мы умеем классно собирать высоконагруженные сайты на Битрикс.<br/>
+                Мы умеем классно собирать высоконагруженные сайты на 1С-Битрикс.<br/>
                 А еще верстать и даже разрабатывать игры на HTML5.<br/>
                 И еще немножко дизайн.<br/>
-                Мы сотрудничаем с топовым digital-агенствами.<br/>
-                Мы - их тайное оружие.
+                Мы сотрудничаем с топовыми digital-агенствами.<br/>
+                Мы &mdash; их тайное оружие.
             </p>
             <a href="#" class="btn btn-custom" data-scroll-to="contacts">Сделать заказ</a>
         </div>
@@ -106,10 +106,34 @@ require 'lib/tools.php';
             </div>
         </div>
         */?>
+        <div class="slide slide_partners text-center" data-slide="portfolio">
+            <div class="partners_wrapper">
+                <div class="partners_side">
+                    Нам доверяют
+                </div>
+                <div class="partners_list">
+                    <div class="partner_item wow animate bottom-t-top" data-delay="100">
+                        <img src="/assets/i/partners/articulmedia_72x72_bw.jpg" alt="Articul Media" /><br/>
+                        <!--<span class="partner_item__name">Articul Media</span>-->
+                    </div>
+                    <div class="partner_item wow animate bottom-t-top" data-delay="200">
+                        <img src="/assets/i/partners/cpeople_72x72.png" alt="Creative People" /><br/>
+                        <!--<span class="partner_item__name">Creative People</span>-->
+                    </div>
+                    <div class="partner_item wow animate bottom-t-top" data-delay="300">
+                        <img src="/assets/i/partners/zephyrlab_72x72_bw.jpg" alt="ZephyrLab" /><br/>
+                        <!--<span class="partner_item__name">ZephyrLab</span>-->
+                    </div>
+                </div>
+                <?/*<div class="partners_side">
+                    Наши работы
+                </div>*/?>
+            </div>
+        </div>
         <div class="slide slide_portfolio text-center" data-slide="portfolio">
             <h1 class="slide__title">Последние работы</h1>
             <hr>
-            <div class="slide__desc"></div>
+            <div class="slide__desc">Мы можем рассекретить только лишь некоторые наши работы</div>
             <?/*<ul class="list-inline portfolio_menu">
               <li><a class="portfolio_menu__link portfolio_menu__link_current" href="#">Все</a></li>
               <li><a class="portfolio_menu__link" href="#">Разработка</a></li>
@@ -142,45 +166,6 @@ require 'lib/tools.php';
                         </a>
                         <p>Хроники Великой Отечественной Войны<br/>Создание под ключ.</p>
                     </div>
-                    <div class="portfolio_list__item">
-                        <a href="http://grandawards.ru/" target="_blank">
-                            <img class="portfolio_list__item__image" src="/assets/i/portfolio/vertical.jpg" alt="" />
-                        </a>
-                        <p>
-                            Сборка сайта национальной премии<br/>
-                            бизнес-коммуникаций. По заказу <a target="_blank" href="http://articulmedia.ru/">Articul Media</a>.
-                        </p>
-                    </div>
-                    <div class="portfolio_list__item">
-                        <a href="/portfolio/twd6/play/" target="_blank">
-                            <img class="portfolio_list__item__image" src="/assets/i/portfolio/twd6.jpg" alt="" />
-                        </a>
-                        <p>
-                            Разработка игры, верстка промо-сайта, сборка.<br/>
-                            По заказу <a target="_blank" href="http://articulmedia.ru/">Articul Media</a>.
-                        </p>
-                    </div>
-                    <div class="portfolio_list__item">
-                        <a href="http://1941-1945.org/" target="_blank">
-                            <img class="portfolio_list__item__image" src="/assets/i/portfolio/ww2.jpg" alt="" />
-                        </a>
-                        <p>Хроники Великой Отечественной Войны<br/>Создание под ключ.</p>
-                    </div>
-                    <div class="portfolio_list__item">
-                        <a href="/portfolio/twd6/play/" target="_blank">
-                            <img class="portfolio_list__item__image" src="/assets/i/portfolio/twd6.jpg" alt="" />
-                        </a>
-                        <p>
-                            Разработка игры, верстка промо-сайта, сборка.<br/>
-                            По заказу <a target="_blank" href="http://articulmedia.ru/">Articul Media</a>.
-                        </p>
-                    </div>
-                    <div class="portfolio_list__item">
-                        <a href="http://1941-1945.org/" target="_blank">
-                            <img class="portfolio_list__item__image" src="/assets/i/portfolio/ww2.jpg" alt="" />
-                        </a>
-                        <p>Хроники Великой Отечественной Войны<br/>Создание под ключ.</p>
-                    </div>
                     <?/*<div class="portfolio_list__item wow animate bottom-t-top" data-delay="200">
                         <p>Fox-live</p>
                     </div>
@@ -193,23 +178,6 @@ require 'lib/tools.php';
                     <div class="portfolio_list__item wow animate bottom-t-top" data-delay="300">
                         <p>Брабантиа</p>
                     </div>*/?>
-                </div>
-            </div>
-        </div>
-        <div class="slide slide_partners text-center" data-slide="portfolio">
-            <div class="slide__desc">Нам доверяют</div>
-            <div class="partners_list">
-                <div class="partner_item wow animate bottom-t-top" data-delay="100">
-                    <img src="/assets/i/partners/cpeople_72x72.png" alt="Creative People" /><br/>
-                    <!--<span class="partner_item__name">Creative People</span>-->
-                </div>
-                <div class="partner_item wow animate bottom-t-top" data-delay="200">
-                    <img src="/assets/i/partners/articulmedia_72x72_bw.jpg" alt="Articul Media" /><br/>
-                    <!--<span class="partner_item__name">Articul Media</span>-->
-                </div>
-                <div class="partner_item wow animate bottom-t-top" data-delay="300">
-                    <img src="/assets/i/partners/zephyrlab_72x72_bw.jpg" alt="ZephyrLab" /><br/>
-                    <!--<span class="partner_item__name">ZephyrLab</span>-->
                 </div>
             </div>
         </div>
