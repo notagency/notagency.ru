@@ -114,15 +114,15 @@ require 'lib/tools.php';
                 <div class="partners_list">
                     <div class="partner_item wow animate bottom-t-top" data-delay="100">
                         <img src="/assets/i/partners/articulmedia_72x72_bw.jpg" alt="Articul Media" /><br/>
-                        <!--<span class="partner_item__name">Articul Media</span>-->
+                        <span class="partner_item__name">Articul Media</span>
                     </div>
                     <div class="partner_item wow animate bottom-t-top" data-delay="200">
                         <img src="/assets/i/partners/cpeople_72x72.png" alt="Creative People" /><br/>
-                        <!--<span class="partner_item__name">Creative People</span>-->
+                        <span class="partner_item__name">Creative People</span>
                     </div>
                     <div class="partner_item wow animate bottom-t-top" data-delay="300">
                         <img src="/assets/i/partners/zephyrlab_72x72_bw.jpg" alt="ZephyrLab" /><br/>
-                        <!--<span class="partner_item__name">ZephyrLab</span>-->
+                        <span class="partner_item__name">ZephyrLab</span>
                     </div>
                 </div>
                 <?/*<div class="partners_side">
