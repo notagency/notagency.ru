@@ -31,7 +31,6 @@ $(function(){
     var lastWindowWidth = $(window).width(),
         lastWindowHeight = $(window).height();
     $(window).resize(function(){
-        console.log(this);
         var windowWidth = $(window).width(),
             windowHeight = $(window).height();
         if (windowWidth != lastWindowWidth && windowHeight != lastWindowHeight){
