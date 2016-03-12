@@ -1,12 +1,33 @@
-new WOW().init();
+var wow = new WOW({
+    callback: function(el) {
+        initAnimation($(el));
+    }
+});
+wow.init();
+
+//animation
+function initAnimation($el){
+    $el.each(function(){
+        var $el = $(this),
+            delay = parseInt($el.data('delay'));
+        setTimeout(function(){
+            $el.addClass('start-animation');
+        }, delay);
+    })        
+}
  
 $(function(){
+
+    initAnimation($('.animate[data-delay]').not('.wow'));
+    
+    //navigation
     $('[data-scroll-to]').click(function(e){
         e.preventDefault();
         var scrollTo = $(this).data('scroll-to');
         $('body').animate({scrollTop:$('[data-slide="' + scrollTo + '"]').offset().top}, 500);
     })
-    
+
+    //form validation
     $('[data-role="feedback-form"]').validate({
         errorPlacement: function(error,element) { return true },
         highlight: function (element) {
@@ -30,6 +51,7 @@ $(function(){
         }
     });
     
+    //contacts form
     $('[data-role="feedback-form-submit"]').click(function(e){
         e.preventDefault();
         var $button = $(this),

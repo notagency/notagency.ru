@@ -1,5 +1,5 @@
 <?
-function compileLess($inputFile, $outputFile)
+function compileLess($inputFile, $outputFile, $minify=true)
 {
     $cacheFile = $inputFile . '.cache';
     if (file_exists($cacheFile))
@@ -12,7 +12,10 @@ function compileLess($inputFile, $outputFile)
     }
 
     $less = new lessc;
-    $less->setFormatter('compressed');
+    if ($minify)
+    {
+        $less->setFormatter('compressed');
+    }
     $newCache = $less->cachedCompile($cache);
 
     if (!is_array($cache) || $newCache['updated'] > $cache['updated'])
@@ -32,4 +35,26 @@ function compileLess($inputFile, $outputFile)
             }
         }
     }
+}
+
+/**
+ * @see http://stackoverflow.com/a/6225706/2393499
+ */
+function compressHtml($buffer) 
+{
+    $search = array(
+        '/\>[^\S ]+/s',  // strip whitespaces after tags, except space
+        '/[^\S ]+\</s',  // strip whitespaces before tags, except space
+        '/(\s)+/s'       // shorten multiple whitespace sequences
+    );
+
+    $replace = array(
+        '>',
+        '<',
+        '\\1'
+    );
+
+    $buffer = preg_replace($search, $replace, $buffer);
+
+    return $buffer;
 }

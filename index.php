@@ -1,6 +1,9 @@
 <?
+
 require 'vendor/autoload.php';
 require 'lib/tools.php';
+
+ob_start();
 
 ?><!DOCTYPE html>
 <html lang="ru" class="no-touch">
@@ -13,16 +16,8 @@ require 'lib/tools.php';
     
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    
-    <?/*<link rel="stylesheet" href="/assets/packages/owl.carousel.css">*/?>
-    <link rel="stylesheet" href="/assets/packages/animations.css">
-    
+    <?/*<link rel="stylesheet" href="/assets/packages/owl.carousel.css">*/?>    
     <?
-    $inputLessFile = '/vendor/twbs/bootstrap/less/bootstrap.less';
-    $outputCssFile = '/assets/css/bootstrap.min.css';
-    compileLess('.' . $inputLessFile, '.' . $outputCssFile);
-    
     $inputLessFile = '/assets/less/common.less';
     $outputCssFile = '/assets/css/common.min.css';
     compileLess('.' . $inputLessFile, '.' . $outputCssFile);
@@ -39,7 +34,7 @@ require 'lib/tools.php';
 <body>
     
     <?/*
-    <div class="header animate top-t-bottom" data-delay="1200">
+    <div class="header animate top-to-bottom" data-delay="1200">
         <ul class="list-inline header_menu">
           <li><a class="header_menu__link" href="#" data-scroll-to="services">Наши услуги</a></li>
           <li><a class="header_menu__link" href="#" data-scroll-to="portfolio">Последние работы</a></li>
@@ -54,13 +49,13 @@ require 'lib/tools.php';
     <div class="slide slide_hero text-center valign-middle" data-slide="hero">
         <div class="hero">
             <h1 class="hero__title animate zoom-in" data-delay="400">Not</h1>
-            <h2 class="hero__title_smaller animate right-t-left" data-delay="600">Agency</h2>
+            <h2 class="hero__title_smaller animate right-to-left" data-delay="600">Agency</h2>
             <!--<h3 class="hero__subtitle animate zoom-in" data-delay="800">Верстка и сборка сайтов на 1C-Битрикс</h3>-->
             <h3 class="hero__subtitle animate zoom-in" data-delay="800">Секретное оружие digital-агенств</h3>
             <div class="hero__divider zoom-in animate" data-delay="1000">
                 <hr>
             </div>
-            <div class="bottom-t-top animate" data-delay="1200">
+            <div class="bottom-to-top animate" data-delay="1200">
                 <a href="#" class="btn btn-custom" data-scroll-to="about">Узнать больше</a>
             </div>
         </div>
@@ -112,15 +107,15 @@ require 'lib/tools.php';
                     Нам доверяют
                 </div>
                 <div class="partners_list">
-                    <div class="partner_item wow animate bottom-t-top" data-delay="100">
+                    <div class="partner_item wow animate bottom-to-top" data-delay="100">
                         <img src="/assets/i/partners/articulmedia_72x72_bw.jpg" alt="Articul Media" /><br/>
                         <span class="partner_item__name">Articul Media</span>
                     </div>
-                    <div class="partner_item wow animate bottom-t-top" data-delay="200">
+                    <div class="partner_item wow animate bottom-to-top" data-delay="200">
                         <img src="/assets/i/partners/cpeople_72x72.png" alt="Creative People" /><br/>
                         <span class="partner_item__name">Creative People</span>
                     </div>
-                    <div class="partner_item wow animate bottom-t-top" data-delay="300">
+                    <div class="partner_item wow animate bottom-to-top" data-delay="300">
                         <img src="/assets/i/partners/zephyrlab_72x72_bw.jpg" alt="ZephyrLab" /><br/>
                         <span class="partner_item__name">ZephyrLab</span>
                     </div>
@@ -130,16 +125,16 @@ require 'lib/tools.php';
                 </div>*/?>
             </div>
         </div>
-        <div class="slide slide_portfolio text-center" data-slide="portfolio">
+        <?/*<div class="slide slide_portfolio text-center" data-slide="portfolio">
             <h1 class="slide__title">Последние работы</h1>
             <hr>
             <div class="slide__desc">Мы можем рассекретить только лишь некоторые наши работы</div>
-            <?/*<ul class="list-inline portfolio_menu">
+            <ul class="list-inline portfolio_menu">
               <li><a class="portfolio_menu__link portfolio_menu__link_current" href="#">Все</a></li>
               <li><a class="portfolio_menu__link" href="#">Разработка</a></li>
               <li><a class="portfolio_menu__link" href="#">Верстка</a></li>
               <li><a class="portfolio_menu__link" href="#">Дизайн</a></li>
-            </ul>*/?>
+            </ul>
             <div class="portfolio_list">
                 <div class="portfolio_list__row">
                     <div class="portfolio_list__item">
@@ -166,21 +161,21 @@ require 'lib/tools.php';
                         </a>
                         <p>Хроники Великой Отечественной Войны<br/>Создание под ключ.</p>
                     </div>
-                    <?/*<div class="portfolio_list__item wow animate bottom-t-top" data-delay="200">
+                    <div class="portfolio_list__item wow animate bottom-to-top" data-delay="200">
                         <p>Fox-live</p>
                     </div>
-                    <div class="portfolio_list__item wow animate bottom-t-top" data-delay="300">
+                    <div class="portfolio_list__item wow animate bottom-to-top" data-delay="300">
                         <p>МатчТВ</p>
                     </div>
-                    <div class="portfolio_list__item wow animate bottom-t-top" data-delay="300">
+                    <div class="portfolio_list__item wow animate bottom-to-top" data-delay="300">
                         <p>Кафекремона</p>
                     </div>
-                    <div class="portfolio_list__item wow animate bottom-t-top" data-delay="300">
+                    <div class="portfolio_list__item wow animate bottom-to-top" data-delay="300">
                         <p>Брабантиа</p>
-                    </div>*/?>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div>*/?>
         <div class="slide slide_contacts text-center" data-slide="contacts">
             <h1 class="slide__title">Напишите нам</h1>
             <hr>
@@ -224,4 +219,7 @@ require 'lib/tools.php';
     <script src="/assets/packages/jquery.validation-1.15.0/messages_ru.min.js"></script>
     <script src="/assets/js/scripts.js"></script>
 </body>
-</html>
+</html><?
+
+$buffer = ob_get_clean();
+echo compressHtml($buffer);
