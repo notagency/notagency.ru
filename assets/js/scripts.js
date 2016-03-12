@@ -15,12 +15,31 @@ function initAnimation($el){
         }, delay);
     })        
 }
+
+//fix hero slide height
+function fixHeroHeight(){
+    var minHeroHeight = 400,
+        heroHeight = $(window).height();
+    heroHeight = heroHeight > minHeroHeight ? heroHeight : minHeroHeight;
+    $('.slide_hero').height(heroHeight);
+    $('.content').css('top', heroHeight + 'px');        
+}
  
 $(function(){
-    //fix hero title height
-    var heroHeight = $('.slide_hero').height();
-    $('.slide_hero').height(heroHeight);
-    $('.content').css('top', heroHeight + 'px');
+    //fix hero slide height only if width AND height both changed
+    fixHeroHeight();
+    var lastWindowWidth = $(window).width(),
+        lastWindowHeight = $(window).height();
+    $(window).resize(function(){
+        console.log(this);
+        var windowWidth = $(window).width(),
+            windowHeight = $(window).height();
+        if (windowWidth != lastWindowWidth && windowHeight != lastWindowHeight){
+            fixHeroHeight();
+        }
+        lastWindowWidth = windowWidth;
+        lastWindowHeight = windowHeight;
+    })
 
     //animation
     initAnimation($('.animate[data-delay]').not('.wow'));
@@ -28,8 +47,9 @@ $(function(){
     //navigation
     $('[data-scroll-to]').click(function(e){
         e.preventDefault();
-        var scrollTo = $(this).data('scroll-to');
-        $('body').animate({scrollTop:$('[data-slide="' + scrollTo + '"]').offset().top}, 500);
+        var scrollTo = $(this).data('scroll-to'),
+            offsetTop = $('[data-slide="' + scrollTo + '"]').offset().top;
+        $('html, body').animate({scrollTop:offsetTop}, 500);
     })
 
     //form validation
@@ -100,7 +120,7 @@ $(function(){
         margin: 40,
         nav: true,
         dots: false,
-        navText: ['Ò˛‰‡', 'ÚÛ‰‡']
+        navText: ['—Å—é–¥–∞', '—Ç—É–¥–∞']
     });
     
     $('[data-role="technologies-list"]').owlCarousel({
