@@ -17,7 +17,12 @@ function initAnimation($el){
 }
  
 $(function(){
+    //fix hero title height
+    var heroHeight = $('.slide_hero').height();
+    $('.slide_hero').height(heroHeight);
+    $('.content').css('top', heroHeight + 'px');
 
+    //animation
     initAnimation($('.animate[data-delay]').not('.wow'));
     
     //navigation

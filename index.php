@@ -12,7 +12,7 @@ ob_start();
     <title>NotAgency</title>
     
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     
@@ -108,15 +108,15 @@ ob_start();
                 </div>
                 <div class="partners_list">
                     <div class="partner_item wow animate bottom-to-top" data-delay="100">
-                        <img src="/assets/i/partners/articulmedia_72x72_bw.jpg" alt="Articul Media" /><br/>
+                        <img src="/assets/i/partners/articulmedia_72x72_bw.jpg" alt="Articul Media" class="partner_item__image" /><br/>
                         <span class="partner_item__name">Articul Media</span>
                     </div>
                     <div class="partner_item wow animate bottom-to-top" data-delay="200">
-                        <img src="/assets/i/partners/cpeople_72x72.png" alt="Creative People" /><br/>
+                        <img src="/assets/i/partners/cpeople_72x72.png" alt="Creative People" class="partner_item__image" /><br/>
                         <span class="partner_item__name">Creative People</span>
                     </div>
                     <div class="partner_item wow animate bottom-to-top" data-delay="300">
-                        <img src="/assets/i/partners/zephyrlab_72x72_bw.jpg" alt="ZephyrLab" /><br/>
+                        <img src="/assets/i/partners/zephyrlab_72x72_bw.jpg" alt="ZephyrLab" class="partner_item__image" /><br/>
                         <span class="partner_item__name">ZephyrLab</span>
                     </div>
                 </div>

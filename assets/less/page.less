@@ -1,20 +1,28 @@
 /**
- *  Globals & vars
+ *  Vars
+ */
+@h1: 32px;
+@h2: 25px;
+@slide_padding: 50px;
+@slide_padding_mobile: 20px;
+@slide_hr_padding: 30px;
+@slide_hr_padding_mobile: 15px;
+@hover_effect: color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+@light_grey: #F3F3F3;
+@grey: #D4D4D4;
+@almost_black: #3E3E3E;
+@font_bigger: 19px;
+@font_bigger_mobile: 16px;
+@font_smaller: 12px;
+@mobile: ~"(max-width: 400px)";
+/**
+ *  Globals
  */
 body {
     font-family: 'Roboto',Helvetica,Arial,sans-serif;
     font-size: 16px;
     font-weight: 300;
 }
-@h1: 32px;
-@h2: 25px;
-@slide_padding: 50px;
-@slide_hr_padding: 30px;
-@hover_effect: color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-@light_grey: #F3F3F3;
-@grey: #D4D4D4;
-@almost_black: #3E3E3E;
-
 /**
  *  Bootsrtap customs
  */
@@ -28,7 +36,7 @@ body {
     }
 }
 .btn-custom{
-    .button-size(5px; 20px; 19px; 30px; 35px);
+    .button-size(5px; 20px; @font_bigger; 30px; 35px);
     .transition(@hover_effect);
     background-color: white;
     border-color: @grey;
@@ -43,10 +51,16 @@ body {
         outline:0;
         -webkit-appearance:none;
     }
+    @media @mobile{
+        font-size: @font_bigger_mobile;
+    }
 }
 .form-control-big{
-    .input-size(50px; 10px; 20px; 19px; 30px; 10px);
+    .input-size(50px; 10px; 20px; @font_bigger; 30px; 10px);
     font-weight: 400;
+    @media @mobile{
+        .input-size(40px; 5px; 10px; @font_bigger_mobile; 30px; 10px);
+    }
 }
 .cursor-progress {
   cursor:progress;
@@ -84,7 +98,7 @@ body {
 .footer{
     background: #000;
     color: #8C8C8C;
-    font-size: 12px;
+    font-size: @font_smaller;
     padding: 10px 0;
     font-weight: 400;
 }
@@ -98,17 +112,24 @@ body {
  */
 .slide{
     width: 100%;
-    padding: @slide_padding 0;
+    padding: @slide_padding;
+    overflow: hidden;
+    @media @mobile{
+        padding: @slide_padding_mobile;
+    }
 }
 .slide hr{
     width: 150px;
     border-top: 2px solid black;
     margin: @slide_hr_padding auto;
+    @media @mobile{
+        margin-top: @slide_hr_padding_mobile;
+        margin-bottom: @slide_hr_padding_mobile;
+    }
 }
 .slide_hero{
     position: absolute;
     left: 0;
-    overflow: hidden;
     top: 0;
     height: 100%;
     padding: 0;
@@ -116,12 +137,10 @@ body {
 .slide_portfolio{
     background: @light_grey;
     position: relative;
-    overflow: hidden;
 }
 .slide_partners{
     background: @grey;
     //background: @light_grey;
-    overflow: hidden;
 }
 .slide_services{
     background: @light_grey;
@@ -135,9 +154,12 @@ body {
     text-transform: uppercase;
 }
 .slide__desc{
-    font-size: 19px;
+    font-size: @font_bigger;
     font-weight: 300;
     margin-bottom: @slide_hr_padding;
+    @media @mobile{
+        font-size: @font_bigger_mobile;
+    }
 }
 /**
  *  Hero slide
@@ -155,6 +177,9 @@ body {
     letter-spacing: -5px;
     margin-right: 15px;
     text-transform: uppercase;
+    @media @mobile{
+        font-size: 100px;
+    }
 }
 .hero__title_smaller{
     font-size: 30px;
@@ -162,15 +187,22 @@ body {
     margin: 0 0 0 -20px;
 }
 .hero__subtitle{
-    font-size: 19px;
+    font-size: @font_bigger;
     margin: 0;
     font-weight: 300;
+    @media @mobile{
+        margin-top: 15px;
+        font-size: @font_bigger_mobile;
+    }
 }
 .hero__divider hr{
     width: 250px;
     border-top: 2px solid black;
     margin: @slide_hr_padding auto @slide_padding;
     text-transform: uppercase;
+    @media @mobile{
+        margin-bottom: @slide_hr_padding;
+    }
 }
 /**
  *  Portfolio slide
@@ -213,6 +245,9 @@ body {
     width: 500px;
     margin: @slide_hr_padding auto 0;
     text-align: left;
+    @media @mobile{
+        width: 100%;
+    }
 }
 /**
  *  Tech slide
@@ -232,14 +267,26 @@ body {
     display: inline-block;
     margin-top: @slide_hr_padding;
     vertical-align: middle;
+    white-space: nowrap;
 }
 .partner_item{
     display: inline-block;
     margin: 0 40px;
+    @media @mobile{
+        margin: 0 10px;
+        width: 70px;
+    }
 }
 .partner_item__name{
     display: inline-block;
     margin-top: 10px;
     color: black;
     text-decoration: none;
+    @media @mobile{
+        font-size: @font_smaller;
+        white-space: nowrap;
+    }
+}
+.partner_item__image{
+    max-width: 100%;
 }
