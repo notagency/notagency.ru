@@ -214,10 +214,11 @@ ob_start();
     </div>
     <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
     <script src="/assets/packages/wow.min.js"></script>
-    <script src="/assets/packages/owl.carousel.min.js"></script>
+    <!--<script src="/assets/packages/owl.carousel.min.js"></script>-->
     <script src="/assets/packages/jquery.validation-1.15.0/jquery.validate.min.js"></script>
     <script src="/assets/packages/jquery.validation-1.15.0/messages_ru.min.js"></script>
-    <script src="/assets/js/scripts.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/index.js"></script>
 </body>
 </html><?
 
