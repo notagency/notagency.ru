@@ -18,9 +18,9 @@ ob_start();
     
     <?/*<link rel="stylesheet" href="/assets/packages/owl.carousel.css">*/?>    
     <?
-    $inputLessFile = '/assets/less/common.less';
-    $outputCssFile = '/assets/css/common.min.css';
-    compileLess('.' . $inputLessFile, '.' . $outputCssFile);
+    $inputLessFile = 'assets/less/common.less';
+    $outputCssFile = 'assets/css/common.min.css';
+    compileLess('./' . $inputLessFile, './' . $outputCssFile);
     ?>
     <link rel="stylesheet" href="<?=$outputCssFile?>">
     
