@@ -58,7 +58,7 @@ ob_start();
                             <div class="about__digit" data-digit="true">
                                 65
                             </div><div class="about__text">
-                                проектов по заказу агенств<br/>
+                                проектов по заказу агентств<br/>
                                 <strong>Articul&nbsp;Media, Creative&nbsp;People,<br/>ZephyrLab, NotaMedia</strong>
                             </div>
                         </div>
