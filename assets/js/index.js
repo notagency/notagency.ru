@@ -29,21 +29,24 @@ function initDigits(){
 }
 
 function executeDigitsAnimation($el){
-    var finalDigit = parseInt($el.data('final-digit'));
+    var finalDigit = parseInt($el.data('final-digit')),
+        timeout = 500 / finalDigit;
     (function drawDigit($el, digit){
         if(!digit) digit = 0;
         $el.text(digit);
         if (digit < finalDigit) {
             setTimeout(function(){
                 drawDigit($el, digit+1);
-            }, 500 / finalDigit);
+            }, timeout);
         }
     })($el);
 }
 
 $(function(){
     //animation
-    initAnimation($('.animate[data-delay]').not('.wow'));
+    if (!$('body').hasClass('no-animation')){
+        initAnimation($('.animate[data-delay]').not('.wow'));
+    }
     //initDigits();
     
     //navigation
