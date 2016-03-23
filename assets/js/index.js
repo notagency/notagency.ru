@@ -1,11 +1,11 @@
-if (typeof WOW != 'undefined') {
+/*if (typeof WOW != 'undefined') {
     var wow = new WOW({
         callback: function(el) {
             initAnimation($(el));
         }
     });
     wow.init();
-}
+}*/
 
 //animation
 function initAnimation($el){
@@ -14,16 +14,40 @@ function initAnimation($el){
             delay = parseInt($el.data('delay'));
         setTimeout(function(){
             $el.addClass('start-animation');
+            /*setTimeout(function(){
+                executeDigitsAnimation($('[data-digit]', $el));
+            }, 200);*/
         }, delay);
     })        
+}
+
+function initDigits(){
+    $('[data-digit]').each(function(){
+        var digit = $(this).text();
+        $(this).data('final-digit', digit).text(0);    
+    })
+}
+
+function executeDigitsAnimation($el){
+    var finalDigit = parseInt($el.data('final-digit'));
+    (function drawDigit($el, digit){
+        if(!digit) digit = 0;
+        $el.text(digit);
+        if (digit < finalDigit) {
+            setTimeout(function(){
+                drawDigit($el, digit+1);
+            }, 500 / finalDigit);
+        }
+    })($el);
 }
 
 $(function(){
     //animation
     initAnimation($('.animate[data-delay]').not('.wow'));
+    //initDigits();
     
     //navigation
-    $('[data-scroll-to]').click(function(e){
+    /*$('[data-scroll-to]').click(function(e){
         e.preventDefault();
         var scrollTo = $(this).data('scroll-to'),
             offsetTop = $('[data-slide="' + scrollTo + '"]').offset().top;
@@ -93,7 +117,7 @@ $(function(){
         return false;
     });
     
-    /*$('[data-role="portfolio-list"]').owlCarousel({
+    $('[data-role="portfolio-list"]').owlCarousel({
         loop:true,
         margin: 40,
         nav: true,
