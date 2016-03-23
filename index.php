@@ -11,14 +11,15 @@ ob_start();
 <html lang="ru">
 <head>
 	
-    <title>NotAgency</title>
+    <title>NotAgency — Профессиональная разработка сайтов на 1C-Битрикс, Laravel, Symfony</title>
     
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Профессиональная разработка сайтов на 1C-Битрикс, Laravel, Symfony" />
+    <meta name="keywords" content="создание и поддержка веб-проектов, профессиональная разработка сайтов, 1C-Битрикс, Laravel, Symfony" />
     
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|Russo+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     
-    <?/*<link rel="stylesheet" href="/assets/packages/owl.carousel.css">*/?>    
     <?
     $inputLessFile = 'assets/less/common.less';
     $outputCssFile = 'assets/css/common.min.css';
@@ -44,7 +45,7 @@ ob_start();
     <div class="slide slide_hero" data-slide="hero">
         <div class="hero">
             <h1 class="hero__title animate top-to-bottom" data-delay="400">Команда разработчиков</h1>
-            <h3 class="hero__subtitle animate zoom-in" data-delay="600">Верстка и сборка сайтов на&nbsp;1C&#8209;Битрикс&nbsp;и&nbsp;Laravel</h3>
+            <h3 class="hero__subtitle animate zoom-in" data-delay="600">Профессиональная разработка сайтов на&nbsp;1C&#8209;Битрикс,&nbsp;Laravel,&nbsp;Symfony</h3>
             <hr class="hero__hr  zoom-in animate" data-delay="800">
             <h3 class="hero__subtitle bottom-to-top animate" data-delay="1000">
                 По любым вопросам<br/>
@@ -93,6 +94,16 @@ ob_start();
     <script src="//cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.1/mobile-detect.min.js"></script>
     <script src="/assets/js/common.js"></script>
     <script src="/assets/js/index.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-75473565-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter36296500 = new Ya.Metrika({ id:36296500, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/36296500" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->    
 </body>
 </html><?
 
