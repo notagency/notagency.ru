@@ -19,6 +19,11 @@ ob_start();
     
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|Russo+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/c57a88943c.css">
+    
     <?
     $inputLessFile = 'assets/less/common.less';
     $outputCssFile = 'assets/css/common.min.css';
@@ -35,10 +40,17 @@ ob_start();
 </head>
 <body  <?if ($isMobile):?>class="no-animation"<?endif?>>
     <div class="header">
-        <div class="header__inner">
-            <h2 class="header_notagency animate left-to-right" data-delay="200">
-                NotAgency
-            </h2>
+        <div class="header__inner row">
+            <div class="col-xs-6 animate left-to-right" data-delay="200">
+                <h2 class="header__logo">
+                    NotAgency
+                </h2>
+            </div>
+            <div class="col-xs-6 animate right-to-left text-right" data-delay="1000">
+                <a class="header__social" href="https://www.facebook.com/notagency.ru/timeline" target="_blank">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
     </div>
     <div class="slide slide_hero" data-slide="hero">
