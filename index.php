@@ -40,16 +40,18 @@ ob_start();
 </head>
 <body  <?if ($isMobile):?>class="no-animation"<?endif?>>
     <div class="header">
-        <div class="header__inner row">
-            <div class="col-xs-6 animate left-to-right" data-delay="200">
-                <h2 class="header__logo">
-                    NotAgency
-                </h2>
-            </div>
-            <div class="col-xs-6 animate right-to-left text-right" data-delay="1000">
-                <a class="header__social" href="https://www.facebook.com/notagency.ru/timeline" target="_blank">
-                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                </a>
+        <div class="header__inner">
+            <div class="row">
+                <div class="col-xs-6 animate left-to-right" data-delay="200">
+                    <h2 class="header__logo">
+                        NotAgency
+                    </h2>
+                </div>
+                <div class="col-xs-6 animate right-to-left text-right" data-delay="1000">
+                    <a class="header__social" href="https://www.facebook.com/notagency.ru/timeline" target="_blank">
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -70,7 +72,7 @@ ob_start();
                                 65
                             </div><div class="about__text">
                                 проектов по заказу агентств<br/>
-                                <strong>Articul&nbsp;Media, CreativePeople,<br/>ZephyrLab, NotaMedia</strong>
+                                <strong>Articul&nbsp;Media, CreativePeople,<br/> ZephyrLab, NotaMedia</strong>
                             </div>
                         </div>
                     </div>
@@ -80,7 +82,7 @@ ob_start();
                                 20
                             </div><div class="about__text">
                                 проектов по заказу клиентов<br/>
-                                <strong>Yota, НПФ&nbsp;Сбербанка<br/>и других</strong>
+                                <strong>Yota, НПФ&nbsp;Сбербанка<br class="hidden-xs"/>и других</strong>
                             </div>
                         </div>
                     </div>
