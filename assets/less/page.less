@@ -24,7 +24,20 @@ body {
         min-height: 500px;
     }
 }
-
+a {
+    border-bottom: 1px solid;
+    &:hover{    
+        outline: none;
+        text-decoration: none;
+        border-bottom: none;
+    }
+    &:active,
+    &:visited,
+    &:focus{
+        text-decoration: none;
+        outline: none;
+    }
+}
 
 .font-russo-one{
     font-family: 'Russo One', sans-serif;
@@ -92,6 +105,7 @@ body {
 .header__social{
     font-size: 25px;
     color: #3b5998;
+    border-bottom: none;
     &:hover{
         color: #627aac;
     }
