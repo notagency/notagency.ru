@@ -48,7 +48,7 @@ ob_start();
                     </h2>
                 </div>
                 <div class="col-xs-6 animate right-to-left text-right" data-delay="1000">
-                    <a class="header__social" href="https://www.facebook.com/notagency.ru/timeline" target="_blank">
+                    <a class="header__social" href="https://www.facebook.com/notagency.ru" target="_blank">
                         <i class="fa fa-facebook-official" aria-hidden="true"></i>
                     </a>
                 </div>
