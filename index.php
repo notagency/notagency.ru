@@ -1,4 +1,4 @@
-<?php require 'includes/header.php' ?>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php' ?>
 
 <div class="slide slide_hero" data-slide="hero">
     <div class="hero">
@@ -46,4 +46,4 @@
     </div>
 </div>
 
-<?php require 'includes/footer.php' ?>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php' ?>

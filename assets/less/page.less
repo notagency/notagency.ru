@@ -3,6 +3,11 @@
  */
 @footer_height: 37px;
 @mobile: ~"(max-width: 425px)";
+@mobile-wide: ~"(max-width: 700px)";
+@corporate-color: #f70236;
+@corporate-color-hover: #a00022;
+@corporate-color2: #607d8b;
+
 /**
  *  Globals
  */
@@ -26,10 +31,12 @@ body {
 }
 a {
     border-bottom: 1px solid;
+    color: @corporate-color;
     &:hover{    
         outline: none;
         text-decoration: none;
         border-bottom: none;
+        color: @corporate-color-hover;
     }
     &:active,
     &:visited,
@@ -39,8 +46,12 @@ a {
     }
 }
 
+
 .font-russo-one{
     font-family: 'Russo One', sans-serif;
+}
+.corporate-color{
+    color: @corporate-color;
 }
 
 /**
@@ -80,15 +91,14 @@ a {
     margin: 10px 0;
     overflow: hidden;
     z-index: 1;
-    @media @mobile{
+    @media @mobile-wide{
         position: static;
-        margin: 30px 0 0;
     }
 }
 .header__inner{
     padding: 0 50px;
-    @media @mobile{
-        padding: 0 10px;
+    @media @mobile-wide{
+        padding: 0 20px;
     }
 }
 .header__logo{
@@ -96,11 +106,30 @@ a {
     font-size: 26px;
     font-weight: 400;
     margin: 0;
-    line-height: 35px;
+    height: 60px;
     @media @mobile{
         font-size: 19px;
-        text-align: center;
     }
+    a {
+        color: #000;
+    }
+    &:before{
+        content: "";
+        background: url(../i/logo.svg) no-repeat;
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        top: 0;
+        left: 40px;
+        color: @corporate-color;
+    }
+    span {
+        position: relative;
+        display: block;
+        background: #fff;
+        line-height: 25px;
+        margin-top: 17px;
+    }    
 }
 .header__social{
     font-size: 25px;
@@ -140,7 +169,7 @@ a {
     height: 100%;
     .valign-middle();
     text-align: center;
-    @media @mobile{
+    @media @mobile-wide{
         position: static;
         .valign-undo();
         height: auto;
@@ -166,18 +195,21 @@ a {
     font-size: 42px;
     letter-spacing: 1px;
     .font-russo-one();
-    @media @mobile{
+    @media @mobile-wide{
         font-size: 28px;
-        margin-top: 20px;
+        margin: 10px 0;
     }
 
+}
+.hero__title_404{
+    color: @corporate-color2;
 }
 .hero__subtitle{
     font-size: 19px;
     font-weight: 300;
     line-height: normal;
     margin: 0;
-    @media @mobile{
+    @media @mobile-wide{
         font-size: 17px;
     }
 }
@@ -186,7 +218,8 @@ a {
     border-top: 2px solid black;
     margin: 25px auto;
     text-transform: uppercase;
-    @media @mobile{
+    @media @mobile-wide{
+        border-top: 1px solid black;
         margin: 15px auto;
     }
 }
@@ -196,13 +229,14 @@ a {
 .about{
     margin-top: 50px;
     max-width: 1000px;
-    @media @mobile{
-        margin: 30px 0 20px;
+    padding: 0 20px;
+    @media @mobile-wide{
+        margin: 30px 0;
     }
- }
+}
 .about__item{
     padding: 0 30px;
-    @media @mobile{
+    @media @mobile-wide{
         padding: 0;
         margin: 0 0 15px;
     }
@@ -210,18 +244,27 @@ a {
 .about__digit{
     font-size: 72px;
     font-weight: 700;
-    @media @mobile{
+    color: @corporate-color2;
+    @media @mobile-wide{
         font-size: 36px;
         display: inline-block;
         vertical-align: middle;
-        width: 30%;
+        text-align: right;
+        margin-right: 20px;
+        width: 100px;
+    }
+    @media @mobile{
+        width: 50px;
     }
 }
 .about__text{
-    @media @mobile{
+    @media @mobile-wide{
         display: inline-block;
         vertical-align: middle;
-        width: 70%;
         text-align: left;
+        width: 300px;
+    }
+    @media @mobile{
+        width: 200px;
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
-require dirname(__FILE__) . './../vendor/autoload.php';
-require dirname(__FILE__) . './../lib/tools.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/lib/tools.php';
 
 $isMobile = (new Mobile_Detect)->isMobile();
 $isMainPage = $_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '/index.php';
@@ -13,7 +13,7 @@ ob_start();
 <head>
     <title>NotAgency — Профессиональная разработка сайтов на 1C-Битрикс, Laravel, Symfony</title>    
     <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.png?v=1.2">
+    <link rel="icon" href="/favicon.png?v=1.1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Профессиональная разработка сайтов на 1C-Битрикс, Laravel, Symfony" />
     <meta name="keywords" content="создание и поддержка веб-проектов, профессиональная разработка сайтов, 1C-Битрикс, Laravel, Symfony" />
@@ -26,9 +26,9 @@ ob_start();
     <link rel="stylesheet" href="https://use.fontawesome.com/c57a88943c.css">
     
     <?php
-    $inputLessFile = 'assets/less/common.less';
-    $outputCssFile = 'assets/css/common.min.css';
-    compileLess('./' . $inputLessFile, './' . $outputCssFile);
+    $inputLessFile = '/assets/less/common.less';
+    $outputCssFile = '/assets/css/common.min.css';
+    compileLess($_SERVER['DOCUMENT_ROOT'] . $inputLessFile, $_SERVER['DOCUMENT_ROOT'] . $outputCssFile);
     ?>
     <link rel="stylesheet" href="<?=$outputCssFile?>">
     
@@ -44,7 +44,13 @@ ob_start();
         <div class="header__inner row">
             <div class="col-xs-6 animate left-to-right" data-delay="200">
                 <h2 class="header__logo">
-                    NotAgency
+                    <?php if (!$isMainPage):?>
+                        <a href="/">
+                    <?php endif?>
+                    <span>NotAgency</span>
+                    <?php if (!$isMainPage):?>
+                        </a>
+                    <?php endif?>
                 </h2>
             </div>
             <div class="col-xs-6 animate right-to-left text-right" data-delay="1000">
