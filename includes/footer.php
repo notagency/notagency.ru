@@ -1,6 +1,6 @@
     <div class="footer text-center bottom-to-top animate" data-delay="1200">
         <div class="col-xs-2">
-            <a href="/join/">Разработчикам</a>
+            <?php /* <a href="/join/">Разработчикам</a> */ ?>
         </div>
         <div class="col-xs-8">
             <?=date('Y')?> &copy; NotAgency ОГРНИП 314774601700196
