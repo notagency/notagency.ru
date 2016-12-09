@@ -37,7 +37,7 @@ ob_start();
 </head>
 <body  <?php if (IS_MOBILE || !IS_MAIN_PAGE):?>class="no-animation"<?php endif?>>
 
-    <div id="app" data-state='<?=json_encode(['data' => ['isMobile' => IS_MOBILE, 'year' => date('Y')]])?>'></div>
+    <div id="app" data-state='<?=json_encode(['data' => ['isMobile' => IS_MOBILE, 'fromMainPage' => IS_MAIN_PAGE, 'year' => date('Y')]])?>'></div>
     
     <?php
     linkJs('/assets/app.js');

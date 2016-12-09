@@ -10,8 +10,7 @@ class Timer extends Component {
   }
   
   componentDidMount() {
-    console.log(this.props);
-    if (!this.props.isMobile) {
+    if (!this.props.isMobile && this.props.fromMainPage) {
         var self = this,
             seconds = 0,
             secondsIncrement = 100,
@@ -28,7 +27,8 @@ class Timer extends Component {
 }
 
 Timer.propTypes = {
-  isMobile: PropTypes.bool.isRequired
+  isMobile: PropTypes.bool.isRequired,
+  fromMainPage: PropTypes.bool.isRequired
 };
 
 export default Timer;

@@ -14,12 +14,12 @@ import Footer from 'components/Footer';
  */
 class App extends Component {
   render() {
-    const {children, year, isMobile} = this.props;
+    const {children, year, isMobile, fromMainPage} = this.props;
     return (
         <div>
-            <Header isMobile={isMobile} />
+            <Header isMobile={isMobile} fromMainPage={fromMainPage} />
             {children}
-            <Footer year={year} isMobile={isMobile} />
+            <Footer year={year} isMobile={isMobile} fromMainPage={fromMainPage} />
         </div>
       );
   }
@@ -32,7 +32,8 @@ App.propTypes = {
 function mapStateToProps(state) {
   return {
     year: state.data.year,
-    isMobile: state.data.isMobile
+    isMobile: state.data.isMobile,
+    fromMainPage: state.data.fromMainPage
   };
 }
 

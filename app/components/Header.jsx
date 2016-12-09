@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router'
 import Timer from 'helpers/Timer.jsx';
 
 class Header extends Timer {
@@ -8,9 +9,9 @@ class Header extends Timer {
                 <div className="header__inner row">
                     <div className={"col-xs-6 animate left-to-right " + (this.state.timer > 200 ? "start-animation" : "")}>
                         <h2 className="header__logo">
-                            <a href="/"> {/*@toDo: link should not from main page*/}
+                            <Link to="/">
                                 <span>NotAgency</span>
-                            </a>
+                            </Link>
                         </h2>
                     </div>
                     <div className={"col-xs-6 animate right-to-left text-right " + (this.state.timer > 1000 ? "start-animation" : "")}>
