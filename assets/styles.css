@@ -102,21 +102,23 @@ a:focus {
 .header__logo {
   margin: 0;
   height: 60px;
+  /*&:hover{
+        &:before{
+            transform: rotate(120deg);
+        }
+    }*/
 }
 @media (max-width: 425px) {
   .header__logo {
     height: 45px;
   }
 }
-.header__logo a {
-  color: #000;
-}
 .header__logo:before {
   content: "";
   background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzOC4zOSAzMy4yOSI+CiAgPHBhdGggZD0iTTEzLjgyLDE5LjA5TDE5LjEzLDEuN2w1LjM4LDE3LjM3TDM2LjkyLDMyLjM2bC0xNy43My00TDEuNDcsMzIuNDRaIiBmaWxsPSJ0cmFuc3BhcmVudCIgc3Ryb2tlPSIjZjcwMjM2IiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiLz4KPC9zdmc+Cg==) no-repeat;
   position: absolute;
   width: 60px;
-  height: 60px;
+  height: 70px;
   top: 0;
   left: 40px;
   color: #f70236;
@@ -127,6 +129,9 @@ a:focus {
     height: 45px;
     left: 34px;
   }
+}
+.header__logo a {
+  color: #000;
 }
 .header__logo span {
   font-family: 'Russo One', sans-serif;

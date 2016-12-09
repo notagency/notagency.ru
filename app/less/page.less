@@ -108,23 +108,29 @@ a {
     @media @mobile{
         height: 45px;
     }
-    a {
-        color: #000;
-    }
     &:before{
         content: "";
         background: url(../i/logo.svg) no-repeat;
         position: absolute;
         width: 60px;
-        height: 60px;
+        height: 70px;
         top: 0;
         left: 40px;
         color: @corporate-color;
+        //transition: all 0.5s ease;
         @media @mobile{
             width: 45px;
             height: 45px;
             left: 34px;
         }
+    }
+    /*&:hover{
+        &:before{
+            transform: rotate(120deg);
+        }
+    }*/
+    a {
+        color: #000;
     }
     span {
         .font-russo-one();
