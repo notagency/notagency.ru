@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router'
 
 class Page404 extends Component {
   render() {
@@ -9,7 +10,7 @@ class Page404 extends Component {
                 <h3 className="hero__subtitle">Страница не найдена</h3>
                 <hr className="hero__hr" />
                 <h3 className="hero__subtitle">
-                    Вы можете перейти на <a href="/">главную страницу</a>,<br/>или связаться с нами <a href="mailto:info@notagency.ru">info@notagency.ru</a>
+                    Вы можете перейти на <Link to="/">главную страницу</Link>,<br/>или связаться с нами <a href="mailto:info@notagency.ru">info@notagency.ru</a>
                 </h3>
             </div>
         </div>
