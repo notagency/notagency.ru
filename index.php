@@ -3,8 +3,9 @@
 require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
 require $_SERVER['DOCUMENT_ROOT'] . '/lib/tools.php';
 
-$isMobile = (new Mobile_Detect)->isMobile();
-$isMainPage = $_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '/index.php';
+define('IS_MOBILE', (new Mobile_Detect)->isMobile());
+define('IS_MAIN_PAGE', $_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '/index.php');
+define('IS_PRODUCTION', $_SERVER['HTTP_HOST'] == 'notagency.ru');
 
 ob_start();
 
@@ -23,9 +24,10 @@ ob_start();
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="/assets/icons.css?<?=filemtime($_SERVER['DOCUMENT_ROOT'] . '/assets/icons.css')?>">
-    <link rel="stylesheet" href="/assets/styles.css?<?=filemtime($_SERVER['DOCUMENT_ROOT'] . '/assets/styles.css')?>">
-    
+    <?php
+    linkCss('/assets/icons.css');
+    linkCss('/assets/styles.css');
+    ?>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -33,16 +35,13 @@ ob_start();
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body  <?php if ($isMobile || !$isMainPage):?>class="no-animation"<?php endif?>>
+<body  <?php if (IS_MOBILE || !IS_MAIN_PAGE):?>class="no-animation"<?php endif?>>
 
-    <div id="app" data-state='<?=json_encode(['data' => ['isMobile' => $isMobile, 'year' => date('Y')]])?>'></div>
-    <script src="/assets/app.js"></script>
-
-    <?/*<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.1/mobile-detect.min.js"></script>
-    <script src="/assets/js/common.js"></script>
-    <script src="/assets/js/index.js"></script>*/?>
+    <div id="app" data-state='<?=json_encode(['data' => ['isMobile' => IS_MOBILE, 'year' => date('Y')]])?>'></div>
     
+    <?php
+    linkJs('/assets/app.js');
+    ?>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

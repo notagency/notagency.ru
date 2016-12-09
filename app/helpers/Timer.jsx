@@ -10,6 +10,7 @@ class Timer extends Component {
   }
   
   componentDidMount() {
+    console.log(this.props);
     if (!this.props.isMobile) {
         var self = this,
             seconds = 0,

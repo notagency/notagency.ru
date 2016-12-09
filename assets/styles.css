@@ -348,17 +348,17 @@ a:focus {
   animation-name: right_to_left;
 }
 .start-animation.zoom-in {
-  animation-name: zoom_in);
+  animation-name: zoom_in;
   -ms-transform: scale(1);
       transform: scale(1);
 }
 .start-animation.zoom-out {
-  animation-name: zoom_out);
+  animation-name: zoom_out;
   -ms-transform: scale(1);
       transform: scale(1);
 }
 .start-animation.alpha-anim {
-  animation-name: alpha_in);
+  animation-name: alpha_in;
 }
 .animate[data-duration="100"] {
   animation-duration: 0.1s;

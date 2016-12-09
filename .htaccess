@@ -9,6 +9,17 @@ ErrorDocument 404 /404.php
 
 <IfModule mod_rewrite.c>
   Options +FollowSymLinks
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !/index.php$
+  RewriteRule ^(.*)$ /index.php [L]
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
 </IfModule>
 
 <IfModule mod_expires.c>

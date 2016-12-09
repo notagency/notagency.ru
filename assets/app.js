@@ -5811,6 +5811,7 @@
 	    _createClass(Timer, [{
 	        key: 'componentDidMount',
 	        value: function componentDidMount() {
+	            console.log(this.props);
 	            if (!this.props.isMobile) {
 	                var self = this,
 	                    seconds = 0,
@@ -15309,13 +15310,18 @@
 
 	var _Index2 = _interopRequireDefault(_Index);
 
+	var _Page = __webpack_require__(283);
+
+	var _Page2 = _interopRequireDefault(_Page);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = function () {
 	  return _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: '/', component: _App2.default },
-	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Index2.default })
+	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Index2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '*', component: _Page2.default })
 	  );
 	};
 
@@ -29586,6 +29592,98 @@
 		return module;
 	}
 
+
+/***/ },
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Page404 = function (_Component) {
+	    _inherits(Page404, _Component);
+
+	    function Page404() {
+	        _classCallCheck(this, Page404);
+
+	        return _possibleConstructorReturn(this, (Page404.__proto__ || Object.getPrototypeOf(Page404)).apply(this, arguments));
+	    }
+
+	    _createClass(Page404, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "slide slide_hero", "data-slide": "hero" },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "hero" },
+	                    _react2.default.createElement(
+	                        "h1",
+	                        { className: "hero__title hero__title_404" },
+	                        "404"
+	                    ),
+	                    _react2.default.createElement(
+	                        "h3",
+	                        { className: "hero__subtitle" },
+	                        "\u0421\u0442\u0440\u0430\u043D\u0438\u0446\u0430 \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D\u0430"
+	                    ),
+	                    _react2.default.createElement("hr", { className: "hero__hr" }),
+	                    _react2.default.createElement(
+	                        "h3",
+	                        { className: "hero__subtitle" },
+	                        "\u0412\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u043F\u0435\u0440\u0435\u0439\u0442\u0438 \u043D\u0430 ",
+	                        _react2.default.createElement(
+	                            "a",
+	                            { href: "/" },
+	                            "\u0433\u043B\u0430\u0432\u043D\u0443\u044E \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443"
+	                        ),
+	                        ",",
+	                        _react2.default.createElement("br", null),
+	                        "\u0438\u043B\u0438 \u0441\u0432\u044F\u0437\u0430\u0442\u044C\u0441\u044F \u0441 \u043D\u0430\u043C\u0438 ",
+	                        _react2.default.createElement(
+	                            "a",
+	                            { href: "mailto:info@notagency.ru" },
+	                            "info@notagency.ru"
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Page404;
+	}(_react.Component);
+
+	;
+
+	exports.default = Page404;
 
 /***/ }
 /******/ ])));
