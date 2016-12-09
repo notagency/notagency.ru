@@ -12,6 +12,22 @@ if (argOptimizeMinimizePos != -1 || arg2OptimizeMinimizePos != -1) {
     fileSuffix = '.min';
 }
 
+var plugins = [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.DedupePlugin(), //remove dublicated modules
+    new ExtractTextPlugin('[name]' + fileSuffix + '.css'),
+    new webpack.NoErrorsPlugin(),
+    new NpmInstallPlugin()
+];
+
+if (argOptimizeMinimizePos != -1 || arg2OptimizeMinimizePos != -1) {
+    plugins.push(new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    }));
+    plugins.push(new webpack.optimize.UglifyJsPlugin());
+}
 
 module.exports = {
     // The configuration for the client
@@ -94,13 +110,7 @@ module.exports = {
             },
       ]
     },
-    plugins: [
-        new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.optimize.DedupePlugin(), //remove dublicated modules
-        new ExtractTextPlugin('[name]' + fileSuffix + '.css'),
-        new webpack.NoErrorsPlugin(),
-        new NpmInstallPlugin()
-    ],
+    plugins: plugins,
     resolve: {
       root: [path.join(__dirname, 'app')],
       extensions: ['', '.js', '.jsx', '.css']
