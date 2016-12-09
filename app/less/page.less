@@ -5,7 +5,6 @@
 @mobile: ~"(max-width: 425px)";
 @mobile-wide: ~"(max-width: 700px)";
 @corporate-color: #f70236;
-@corporate-color-hover: #a00022;
 @corporate-color2: #607d8b;
 
 /**
@@ -32,11 +31,13 @@ body {
 a {
     border-bottom: 1px solid;
     color: @corporate-color;
+    transition: all 0.3s ease-in-out;
     &:hover{    
         outline: none;
         text-decoration: none;
-        border-bottom: none;
-        color: @corporate-color-hover;
+        border-bottom-color: transparent;
+        opacity: 0.8;
+        color: @corporate-color;
     }
     &:active,
     &:visited,
@@ -133,10 +134,38 @@ a {
 }
 .header__social{
     font-size: 25px;
-    color: #3b5998;
     border-bottom: none;
     &:hover{
         color: #627aac;
+    }
+    .icons_facebook{
+        position: relative;
+        width: 27px;
+        height: 27px;
+        overflow: hidden;
+        display: inline-block;
+        color: #fff;
+        transition: opacity 0.3s ease-in-out;
+        &:hover{
+            opacity: 0.8;
+        }
+        &:before{
+            z-index: 1;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            text-align: right;
+       }
+        &:after{
+            content: "";
+            background: #3b5998;
+            border-radius: 3px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 .footer{
