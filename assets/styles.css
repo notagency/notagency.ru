@@ -100,15 +100,12 @@ a:focus {
   }
 }
 .header__logo {
-  font-family: 'Russo One', sans-serif;
-  font-size: 26px;
-  font-weight: 400;
   margin: 0;
   height: 60px;
 }
 @media (max-width: 425px) {
   .header__logo {
-    font-size: 19px;
+    height: 45px;
   }
 }
 .header__logo a {
@@ -124,18 +121,41 @@ a:focus {
   left: 40px;
   color: #f70236;
 }
+@media (max-width: 425px) {
+  .header__logo:before {
+    width: 45px;
+    height: 45px;
+    left: 34px;
+  }
+}
 .header__logo span {
+  font-family: 'Russo One', sans-serif;
+  font-weight: 400;
   position: relative;
   display: block;
   background: #fff;
+  font-size: 26px;
   line-height: 25px;
   margin-top: 17px;
+}
+@media (max-width: 425px) {
+  .header__logo span {
+    margin-top: 12px;
+    font-size: 19px;
+    line-height: 21px;
+  }
 }
 .header__social {
   font-size: 25px;
   border-bottom: none;
   margin-top: 17px;
   display: inline-block;
+}
+@media (max-width: 425px) {
+  .header__social {
+    margin-top: 8px;
+    font-size: 20px;
+  }
 }
 .header__social:hover {
   color: #627aac;
@@ -168,6 +188,12 @@ a:focus {
   left: 0;
   width: 100%;
   height: 100%;
+}
+@media (max-width: 425px) {
+  .header__social .icons_facebook {
+    width: 23px;
+    height: 23px;
+  }
 }
 .footer {
   background: #000;

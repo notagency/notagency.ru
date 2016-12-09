@@ -103,13 +103,10 @@ a {
     }
 }
 .header__logo{
-    .font-russo-one();
-    font-size: 26px;
-    font-weight: 400;
     margin: 0;
     height: 60px;
     @media @mobile{
-        font-size: 19px;
+        height: 45px;
     }
     a {
         color: #000;
@@ -123,13 +120,26 @@ a {
         top: 0;
         left: 40px;
         color: @corporate-color;
+        @media @mobile{
+            width: 45px;
+            height: 45px;
+            left: 34px;
+        }
     }
     span {
+        .font-russo-one();
+        font-weight: 400;
         position: relative;
         display: block;
         background: #fff;
+        font-size: 26px;
         line-height: 25px;
         margin-top: 17px;
+        @media @mobile{
+            margin-top: 12px;
+            font-size: 19px;
+            line-height: 21px;
+        }
     }    
 }
 .header__social{
@@ -137,6 +147,10 @@ a {
     border-bottom: none;
     margin-top: 17px;
     display: inline-block;
+    @media @mobile{
+        margin-top: 8px;
+        font-size: 20px;
+    }
     &:hover{
         color: #627aac;
     }
@@ -167,6 +181,10 @@ a {
             left: 0;
             width: 100%;
             height: 100%;
+        }
+        @media @mobile{
+            width: 23px;
+            height: 23px;
         }
     }
 }
