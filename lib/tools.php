@@ -18,7 +18,7 @@ function getAsset($path)
     $pathInfo = pathinfo($path);
     $minified = $pathInfo['dirname'] . '/' . $pathInfo['filename'] . '.min.' . $pathInfo['extension'];
     if (IS_PRODUCTION && file_exists($_SERVER['DOCUMENT_ROOT'] . $minified)) {
-       $url = $pathInfo['dirname'] . '/' . $pathInfo['filename'] . '.' . $pathInfo['extension'];
+       $url = $pathInfo['dirname'] . '/' . $pathInfo['filename'] . '.min.' . $pathInfo['extension'];
     } else {
        $url = $pathInfo['dirname'] . '/' . $pathInfo['filename'] . '.' . $pathInfo['extension'];
     }
