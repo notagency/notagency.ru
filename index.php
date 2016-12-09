@@ -1,11 +1,12 @@
 <?php
 
 require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/lib/tools.php';
 
 define('IS_MOBILE', (new Mobile_Detect)->isMobile());
 define('IS_MAIN_PAGE', $_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '/index.php');
 define('IS_PRODUCTION', $_SERVER['HTTP_HOST'] == 'notagency.ru');
+
+require $_SERVER['DOCUMENT_ROOT'] . '/lib/tools.php';
 
 ob_start();
 
