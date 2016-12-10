@@ -5,9 +5,9 @@
   "author": "NotAgency",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --colors --config webpack.config.client.js --progress",
-    "watch": "webpack --config webpack.config.client.js --watch",
-    "deploy": "webpack --colors --config webpack.config.client.js --progress -p"
+    "watch":      "NODE_ENV=development webpack --config webpack.config.client.js --progress --watch",
+    "build:test": "NODE_ENV=development webpack --config webpack.config.client.js --progress --colors",
+    "build:prod": "NODE_ENV=production  webpack --config webpack.config.client.js --progress --colors -p"
   },
   "license": "ISC",
   "devDependencies": {

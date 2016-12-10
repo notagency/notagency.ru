@@ -4,23 +4,18 @@ var NpmInstallPlugin = require('npm-install-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var autoprefixer = require('autoprefixer');
 
-//if we pass -p or --optimize-minimize args then file names should contain '.min' 
-var fileSuffix = '';
-var argOptimizeMinimizePos = process.argv.indexOf('-p');
-var arg2OptimizeMinimizePos = process.argv.indexOf('--optimize-minimize');
-if (argOptimizeMinimizePos != -1 || arg2OptimizeMinimizePos != -1) {
-    fileSuffix = '.min';
-}
+var DEV_MODE = process.env.NODE_ENV !== 'production';
+console.log('\n', DEV_MODE ? '== DEV_MODE ==' : '== PRODUCTION ==', '\n');
 
 var plugins = [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(), //remove dublicated modules
-    new ExtractTextPlugin('[name]' + fileSuffix + '.css'),
+    new ExtractTextPlugin('[name].css'),
     new webpack.NoErrorsPlugin(),
     new NpmInstallPlugin()
 ];
 
-if (argOptimizeMinimizePos != -1 || arg2OptimizeMinimizePos != -1) {
+if (!DEV_MODE) {
     plugins.push(new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')
@@ -40,7 +35,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'assets'),
-        filename: "[name]" + fileSuffix + ".js",
+        filename: "[name].js",
         sourceMapFilename: "[file].map",
         chunkFilename: "[name].[id].js",
         publicPath: './'
