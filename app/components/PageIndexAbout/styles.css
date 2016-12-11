@@ -1,3 +1,5 @@
+@import "../../css/main";
+
 .about{
     margin-top: 50px;
     max-width: 1000px;
@@ -16,7 +18,7 @@
 .digit{
     font-size: 72px;
     font-weight: 700;
-    color: --corporate-color2;
+    color: var(--corporate-color2);
     @media (--mobile-wide) {
         font-size: 36px;
         display: inline-block;
