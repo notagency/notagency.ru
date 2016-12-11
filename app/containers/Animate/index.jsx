@@ -20,7 +20,7 @@ class Animate extends Component {
     var self = this,
         timer = 0,
         limit = this.props.startFrom,
-        increment = 100,
+        increment = 10,
         intervalId = setInterval(function() {
             timer += increment;
             if (timer === limit) {

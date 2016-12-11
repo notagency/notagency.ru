@@ -1,11 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router'
+import objectAssign from 'object-assign';
 import Animate from 'containers/Animate';
 import classNames from 'classnames/bind';
 import styles from './styles';
 import { grid, type } from 'bootstrap-css'
 
-Object.assign(styles, grid, type);
+objectAssign(styles, grid, type);
 const cx = classNames.bind(styles);
 
 class Header extends Component {

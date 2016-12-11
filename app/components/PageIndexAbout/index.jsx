@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react';
-
+import objectAssign from 'object-assign';
 import Animate from 'containers/Animate';
 import classNames from 'classnames/bind';
 import styles from './styles';
 import { grid } from 'bootstrap-css'
 
-Object.assign(styles, grid);
+objectAssign(styles, grid);
 const cx = classNames.bind(styles);
 
 class IndexAbout extends Component {
