@@ -7,31 +7,44 @@ var autoprefixer = require('autoprefixer');
 var DEV_MODE = process.env.NODE_ENV !== 'production';
 console.log('\n', DEV_MODE ? '== DEV_MODE ==' : '== PRODUCTION ==', '\n');
 
-var plugins = [
+//plugins
+var _plugins = [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(), //remove dublicated modules
     new ExtractTextPlugin('[name].css'),
     new webpack.NoErrorsPlugin(),
     new NpmInstallPlugin()
 ];
-
 if (!DEV_MODE) {
-    plugins.push(new webpack.DefinePlugin({
+    _plugins.push(new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')
       }
     }));
-    plugins.push(new webpack.optimize.UglifyJsPlugin());
+    _plugins.push(new webpack.optimize.UglifyJsPlugin());
 }
 
+//plugins
+var _postcss = function () {
+  return [
+    require('postcss-import')({
+      path: path.join(__dirname, 'app', 'css')
+    }),
+    require('postcss-cssnext')({
+      browsers: ['> 1%', 'last 2 versions']
+    }),
+    require('postcss-reporter')({
+        clearMessages: true 
+    })
+  ];
+};
+
 module.exports = {
-    // The configuration for the client
-    name: 'browser',
     context: path.join(__dirname, 'app'),
     entry: {
       app: 'client',
       icons : 'icons.font',
-      styles: 'less/common.less'
+      //styles: 'less/common.less'
     },
     output: {
         path: path.join(__dirname, 'assets'),
@@ -59,12 +72,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract('style', 'css')
-            },
-            {
-                test: /\.less$/,
-                exclude: /node_modules/,
-                loader: ExtractTextPlugin.extract('style', 'css!postcss!less?sourceMap&root=true')
+                loader: ExtractTextPlugin.extract('style', 'css?sourceMap&module&localIdentName=[name]__[local]___[hash:base64:5]!postcss')
             },
             {
                 test: /\/sprite\//,
@@ -105,15 +113,10 @@ module.exports = {
             },
       ]
     },
-    plugins: plugins,
+    plugins: _plugins,
     resolve: {
       root: [path.join(__dirname, 'app')],
       extensions: ['', '.js', '.jsx', '.css']
     },
-    postcss: [autoprefixer({ browsers: ['last 3 version','ie >= 10'] })],
-    lessLoader: {
-        'lessPlugins': [
-            require('less-plugin-glob')
-        ]
-    }
+    postcss: _postcss
   };

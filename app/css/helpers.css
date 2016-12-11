@@ -1,0 +1,17 @@
+:root{
+    --valign-middle{
+        white-space: nowrap;
+        &:before{
+            content: "";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;    
+        }
+    }
+    --valign-undo{
+        white-space: normal;
+        &:before{
+            display: none;
+        }
+    }
+}

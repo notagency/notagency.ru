@@ -1,0 +1,15 @@
+@import "../../css/main";
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: var(--footer_height);
+}
+.inner{
+    background: #000;
+    color: #8C8C8C;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: var(--footer_height);
+}

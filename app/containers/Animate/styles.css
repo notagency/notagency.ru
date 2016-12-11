@@ -33,13 +33,6 @@
 .start-animation.alpha-anim {
     animation-name: alpha_in;
 }
-.generate_duration_rules(@duration: 100) when (@duration <= 1200) {
-    .animate[data-duration="@{duration}"]{
-        animation-duration: unit(@duration / 1000, s);
-    }
-    .generate_duration_rules(@duration + 100);
-}
-.generate_duration_rules();
 /* Top to bottom keyframes */
 @keyframes top_to_bottom {
   0% {

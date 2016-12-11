@@ -4,7 +4,6 @@ require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
 
 define('IS_MOBILE', (new Mobile_Detect)->isMobile());
 define('IS_MAIN_PAGE', $_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '/index.php');
-define('IS_PRODUCTION', $_SERVER['HTTP_HOST'] == 'notagency.ru');
 
 require $_SERVER['DOCUMENT_ROOT'] . '/lib/tools.php';
 
@@ -19,15 +18,13 @@ ob_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Профессиональная разработка сайтов на 1C-Битрикс, Laravel, Symfony" />
     <meta name="keywords" content="создание и поддержка веб-проектов, профессиональная разработка сайтов, 1C-Битрикс, Laravel, Symfony" />
-    
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|Russo+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    
+        
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     
     <?php
     linkCss('/assets/icons.css');
-    linkCss('/assets/styles.css');
+    linkCss('/assets/app.css');
     ?>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

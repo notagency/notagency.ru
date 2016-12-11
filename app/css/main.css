@@ -1,0 +1,124 @@
+@import 'settings';
+@import 'helpers';
+/*
+@import 'common/layout';
+@import 'common/typography';
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|Russo+One&subset=latin,cyrillic);
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    font-family: 'Roboto',Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 var(--footer_height);
+    overflow: hidden;
+    &.no-animation{
+        overflow: auto;
+    }
+    @media (--mobile){
+        font-size: 14px;
+        min-height: 500px;
+    }
+}
+a {
+    border-bottom: 1px solid;
+    color: var(--corporate-color);
+    transition: all 0.3s ease-in-out;
+    &:hover{    
+        outline: none;
+        text-decoration: none;
+        border-bottom-color: transparent;
+        opacity: 0.8;
+        color: var(--corporate-color);
+    }
+    &:active,
+    &:visited,
+    &:focus{
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+/**
+ *  Layout
+ */
+.layout{
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.content{
+    width: 100%;
+    top: 100%;    
+    position: absolute;
+}
+
+.slide{
+    width: 100%;
+    overflow: hidden;
+}
+.slide_hero{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    @apply --valign-middle;
+    text-align: center;
+    @media (--mobile-wide){
+        position: static;
+        @apply --valign-undo;
+        height: auto;
+    }
+}
+
+.hero{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    white-space: normal;
+    min-width: 100%;
+}
+
+.hero-title{
+    font-weight: 400;
+    display: inline-block;
+    line-height: 35px;
+    margin: 0 0 18px;
+    text-transform: uppercase;
+    font-size: 42px;
+    letter-spacing: 1px;
+    @apply --font-russo-one;
+    @media (--mobile-wide) {
+        font-size: 28px;
+        margin: 10px 0;
+    }
+
+}
+.hero-subtitle{
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 30px;
+    margin: 0;
+    @media (--mobile-wide){
+        font-size: 17px;
+    }
+}
+.hero-hr{
+    width: 250px;
+    border-top: 2px solid black;
+    margin: 25px auto;
+    text-transform: uppercase;
+    @media (--mobile-wide){
+        border-top: 1px solid black;
+        margin: 15px auto;
+    }
+}

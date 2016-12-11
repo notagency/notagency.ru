@@ -1,0 +1,125 @@
+@import "../../css/main";
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 10px 0;
+    overflow: hidden;
+    z-index: 1;
+    @media (--mobile-wide){
+        position: static;
+    }
+}
+.inner{
+    padding: 0 50px;
+    @media (--mobile-wide){
+        padding: 0 20px;
+    }
+}
+.logo{
+    margin: 0;
+    height: 60px;
+    @media (--mobile) {
+        height: 45px;
+    }
+    &:before{
+        content: "";
+        background: url(../../i/logo.svg) no-repeat;
+        position: absolute;
+        width: 60px;
+        height: 70px;
+        top: 0;
+        left: 40px;
+        color: @corporate-color;
+        //transition: all 0.5s ease;
+        @media (--mobile) {
+            width: 45px;
+            height: 45px;
+            left: 34px;
+        }
+    }
+    /*&:hover{
+        &:before{
+            transform: rotate(120deg);
+        }
+    }*/
+    & a {
+        color: #000;
+        &:hover{
+            color: #000;
+        }
+    }
+    & span {
+        @apply --font-russo-one;
+        font-weight: 400;
+        position: relative;
+        display: block;
+        background: #fff;
+        font-size: 26px;
+        line-height: 25px;
+        margin-top: 17px;
+        @media (--mobile) {
+            margin-top: 12px;
+            font-size: 19px;
+            line-height: 21px;
+        }
+    }    
+}
+.social{
+    font-size: 25px;
+    border-bottom: none;
+    margin-top: 17px;
+    display: inline-block;
+    @media (--mobile) {
+        margin-top: 8px;
+        font-size: 20px;
+    }
+    &:hover{
+        color: #627aac;
+    }
+    & .facebook{
+        position: relative;
+        width: 27px;
+        height: 27px;
+        overflow: hidden;
+        display: inline-block;
+        color: #fff;
+        transition: opacity 0.3s ease-in-out;
+        &:hover{
+            opacity: 0.8;
+        }
+        &:before{
+            z-index: 1;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            text-align: right;
+       }
+        &:after{
+            content: "";
+            background: #3b5998;
+            border-radius: 3px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        @media (--mobile){
+            width: 23px;
+            height: 23px;
+        }
+    }
+}
+
+.appear {
+  opacity: 0.01;
+}
+
+.appear-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+

@@ -15,15 +15,7 @@ function linkJs($path)
 function getAsset($path)
 {
     $mtime = filemtime($_SERVER['DOCUMENT_ROOT'] . $path);
-    $pathInfo = pathinfo($path);
-    $minified = $pathInfo['dirname'] . '/' . $pathInfo['filename'] . '.min.' . $pathInfo['extension'];
-    if (IS_PRODUCTION && file_exists($_SERVER['DOCUMENT_ROOT'] . $minified)) {
-       $url = $pathInfo['dirname'] . '/' . $pathInfo['filename'] . '.min.' . $pathInfo['extension'];
-    } else {
-       $url = $pathInfo['dirname'] . '/' . $pathInfo['filename'] . '.' . $pathInfo['extension'];
-    }
-    $url .= '?' . $mtime;
-    return $url;
+    return $path . '?' . $mtime;
 }
 
 
