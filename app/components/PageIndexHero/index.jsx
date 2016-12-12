@@ -16,7 +16,7 @@ class IndexHero extends Animate {
                 <h1 className={cx('hero-title')}>Команда разработчиков</h1>
             </Animate>
             <Animate type="zoom-in" startFrom={500} >
-                <h3 className={cx('hero-subtitle')}>Профессиональная разработка сайтов на&nbsp;1C&#8209;Битрикс,&nbsp;Laravel,&nbsp;Symfony</h3>
+                <h3 className={cx('hero-subtitle')}>Профессиональная разработка сайтов на&nbsp;1C&#8209;Битрикс,&nbsp;Laravel,&nbsp;Symfony,&nbsp;ReactJS</h3>
             </Animate>
             <Animate type="zoom-in" startFrom={650} >
                 <hr className={cx('hero-hr')} />

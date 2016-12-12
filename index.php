@@ -12,12 +12,12 @@ ob_start();
 ?><!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>NotAgency — Профессиональная разработка сайтов на 1C-Битрикс, Laravel, Symfony, ReactJs</title>    
+    <title>NotAgency — Профессиональная разработка сайтов на 1C-Битрикс, Laravel, Symfony, ReactJS</title>    
     <meta charset="utf-8" />
     <link rel="icon" href="/favicon.png?v=1.1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Профессиональная разработка сайтов на 1C-Битрикс, Laravel, Symfony, ReactJs" />
-    <meta name="keywords" content="создание и поддержка веб-проектов, профессиональная разработка сайтов, 1C-Битрикс, Laravel, Symfony, ReactJs" />
+    <meta name="description" content="Профессиональная разработка сайтов на 1C-Битрикс, Laravel, Symfony, ReactJS" />
+    <meta name="keywords" content="создание и поддержка веб-проектов, профессиональная разработка сайтов, 1C-Битрикс, Laravel, Symfony, ReactJS, React, Redux" />
     <?php
     linkCss('/assets/icons.css');
     linkCss('/assets/app.css');
