@@ -71,22 +71,25 @@
     }    
 }
 .socials{
-    margin-top: 17px;    
+    margin-top: 17px;
+    @media (--mobile) {
+        margin-top: 0;
+    }
 }
 .social{
     border-bottom: none;
     display: inline-block;
     vertical-align: middle;
-    @media (--mobile) {
-        margin-top: 8px;
-        font-size: 20px;
-    }
     & + .social{
         margin-left: 15px;
     }
 }
 .social_facebook{
     font-size: 25px;
+    @media (--mobile) {
+        margin-top: 8px;
+        font-size: 20px;
+    }
     &:hover{
         color: #627aac;
     }
@@ -128,6 +131,10 @@
     color: #000;
     font-size: 35px;
     line-height: 42px;
+    @media (--mobile) {
+        font-size: 30px;
+        line-height: 30px;
+    }
 }
 
 .appear {
