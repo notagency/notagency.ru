@@ -23,13 +23,19 @@ class Header extends Component {
                             </h2>
                         </div>
                     </Animate>
-                    <Animate type="right-to-left" startFrom={1000} >
-                        <div className={cx('col-xs-6', 'text-right')}>
-                            <a className={cx('social')} href="https://www.facebook.com/notagency.ru/" target="_blank">
-                                <i className={'icons icons_facebook ' + cx('facebook')}></i>
-                            </a>
-                        </div>
-                    </Animate>
+                        
+                    <div className={cx('col-xs-6', 'text-right', 'socials')}>
+                        <a className={cx('social', 'social_facebook')} href="https://www.facebook.com/notagency.ru/" target="_blank">
+                            <Animate type="right-to-left" startFrom={1000} >
+                                <i className={'icons icons_facebook ' + cx('social_facebook__icon')}></i>
+                            </Animate>
+                        </a>
+                        <a className={cx('social', 'social_github')} href="https://github.com/notagency/" target="_blank">
+                            <Animate type="right-to-left" startFrom={1100} >
+                                <i className={'icons icons_github ' + cx('social_github__icon')}></i>
+                            </Animate>
+                        </a>
+                    </div>
                 </div>
             </div>
       );

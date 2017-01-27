@@ -70,19 +70,27 @@
         }
     }    
 }
+.socials{
+    margin-top: 17px;    
+}
 .social{
-    font-size: 25px;
     border-bottom: none;
-    margin-top: 17px;
     display: inline-block;
+    vertical-align: middle;
     @media (--mobile) {
         margin-top: 8px;
         font-size: 20px;
     }
+    & + .social{
+        margin-left: 15px;
+    }
+}
+.social_facebook{
+    font-size: 25px;
     &:hover{
         color: #627aac;
     }
-    & .facebook{
+    &__icon {
         position: relative;
         width: 27px;
         height: 27px;
@@ -115,6 +123,11 @@
             height: 23px;
         }
     }
+}
+.social_github {
+    color: #000;
+    font-size: 35px;
+    line-height: 42px;
 }
 
 .appear {
