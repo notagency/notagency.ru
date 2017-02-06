@@ -9,6 +9,7 @@ export default () => {
   return (
     <Route path="/" component={App} >
       <IndexRoute component={PageIndex} />
+      <Route path='only-header' />
       <Route path="*" component={Page404} />
     </Route>
   );
