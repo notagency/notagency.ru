@@ -10,5 +10,6 @@
     }
 }
 
-@custom-media --mobile (max-width: 426px);
-@custom-media --mobile-wide (max-width: 770px);
+@custom-media --device-xs (max-width: 769px);
+@custom-media --device-sm (max-width: 991px);
+@custom-media --device-md (max-width: 1119px);

@@ -13,7 +13,7 @@ const cx = classNames.bind(styles);
 const IndexAbout = (props) => (
     <div className={cx('about', 'container-fluid')}>
         <div className={cx('row')}>
-            <div className={cx('col-sm-4')}>
+            <div className={cx('col-md-4')}>
                 <Animate type="bottom-to-top" startFrom={1000}>
                     <div className={cx('item')}>
                         <div className={cx('digit')}>
@@ -27,7 +27,7 @@ const IndexAbout = (props) => (
                     </div>
                 </Animate>
             </div>
-            <div className={cx('col-sm-4')}>
+            <div className={cx('col-md-4')}>
                 <Animate type="bottom-to-top" startFrom={1100}>
                     <div className={cx('item')}>
                         <div className={cx('digit')}>
@@ -41,7 +41,7 @@ const IndexAbout = (props) => (
                     </div>
                 </Animate>
             </div>
-            <div className={cx('col-sm-4')}>
+            <div className={cx('col-md-4')}>
                 <Animate type="bottom-to-top" startFrom={1200}>
                     <div className={cx('item')}>
                         <div className={cx('digit')}>

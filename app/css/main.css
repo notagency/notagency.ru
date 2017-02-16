@@ -1,5 +1,5 @@
-@import 'settings';
-@import 'helpers';
+@import 'settings.css';
+@import 'helpers.css';
 /*
 @import 'common/layout';
 @import 'common/typography';
@@ -21,7 +21,7 @@ body {
     &.no-animation{
         overflow: auto;
     }
-    @media (--mobile){
+    @media (--device-xs){
         font-size: 14px;
         min-height: 500px;
     }
@@ -76,10 +76,12 @@ iframe {
     height: 100%;
     @apply --valign-middle;
     text-align: center;
-    @media (--mobile-wide){
+    @media (--device-sm){
         position: static;
         @apply --valign-undo;
         height: auto;
+        width: 96%;
+        padding: 0 2%;
     }
 }
 .slide_hero_black{
@@ -103,9 +105,9 @@ iframe {
     font-size: 42px;
     letter-spacing: 1px;
     @apply --font-russo-one;
-    @media (--mobile-wide) {
+    @media (--device-sm) {
         font-size: 28px;
-        margin: 10px 0;
+        margin: 20px 0;
     }
 
 }
@@ -114,8 +116,9 @@ iframe {
     font-weight: 300;
     line-height: 30px;
     margin: 0;
-    @media (--mobile-wide){
+    @media (--device-sm){
         font-size: 17px;
+        line-height: 24px;
     }
 }
 .hero-hr{
@@ -123,7 +126,7 @@ iframe {
     border-top: 2px solid black;
     margin: 25px auto;
     text-transform: uppercase;
-    @media (--mobile-wide){
+    @media (--device-sm){
         border-top: 1px solid black;
         margin: 15px auto;
     }
