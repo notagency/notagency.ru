@@ -1,17 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import classNames from 'classnames/bind';
-import styles from './styles';
+
+import styles from './styles.css';
 
 const cx = classNames.bind(styles);
 
-class PageWalkingDead extends Component {
-  render() {
-    return (
-        <div className={cx('viewport')}>
-            <iframe src="http://not:agency@wd.notagency.ru/" width="100%" height="100%"></iframe>
-        </div>
-    );
-  }
-}
+const PageWalkingDead = () => (
+    <div className={cx('viewport')} >
+        <iframe src="http://not:agency@wd.notagency.ru/" width="100%" height="100%" />
+    </div>
+);
 
 export default PageWalkingDead;

@@ -1,27 +1,29 @@
+/* global __DEVMODE__, document */
+/* eslint global-require: 0 */
+
 import React from 'react';
 import { render } from 'react-dom';
 import { createStore, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
-import createRoutes from 'routes';
+import createRoutes from './routes';
 import reducers from './state';
-import DevTools from 'components/DevTools';
+import DevTools from './components/DevTools';
 
 const initialState = JSON.parse(document.getElementById('app').getAttribute('data-state'));
 
 let store;
 if (__DEVMODE__) {
-
     const createLogger = require('redux-logger');
     const logger = createLogger({ predicate:
         (getState, action) => action.type !== 'EFFECT_TRIGGERED' &&
         action.type !== 'EFFECT_RESOLVED' });
+    const enhance = compose(applyMiddleware(logger), DevTools.instrument());
 
-    store = createStore(reducers, initialState, compose(applyMiddleware(logger), DevTools.instrument()));
-}
-else {
-    store = createStore(reducers, initialState);    
+    store = createStore(reducers, initialState, enhance);
+} else {
+    store = createStore(reducers, initialState);
 }
 
 const history = syncHistoryWithStore(browserHistory, store);

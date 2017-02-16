@@ -1,21 +1,24 @@
+/* global window */
+
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
 import classNames from 'classnames/bind';
-import styles from 'css/main';
 import ls from 'local-storage';
-import {changeLanguage} from 'state/lang';
+
+import Header from '../Header';
+import Footer from '../Footer';
+import styles from '../../css/main.css';
+import { changeLanguage } from '../../state/lang';
 
 const cx = classNames.bind(styles);
 
 class App extends Component {
-  
+
     constructor(props) {
         super(props);
         this.state = {
             contentHeight: window.innerHeight
-        }
+        };
         this.pathToThemeMap = {
             '/wd': 'black'
         };
@@ -29,16 +32,16 @@ class App extends Component {
             this.props.dispatch(changeLanguage(lang));
         }
     }
-      
+
     fixHeight() {
-        var minHeroHeight = 400,
-            windowHeight = window.innerHeight,
-            contentHeight = windowHeight > minHeroHeight ? windowHeight : minHeroHeight;
-        this.setState({contentHeight: contentHeight});
+        const minHeroHeight = 400;
+        const windowHeight = window.innerHeight;
+        const contentHeight = windowHeight > minHeroHeight ? windowHeight : minHeroHeight;
+        this.setState({ contentHeight });
     }
-    
+
     render() {
-        const {children} = this.props;
+        const { children } = this.props;
         const pathname = this.props.location.pathname;
         const theme = this.pathToThemeMap[pathname] ? this.pathToThemeMap[pathname] : '';
         return (
@@ -56,7 +59,9 @@ class App extends Component {
 }
 
 App.propTypes = {
-  children: PropTypes.object
+    children: PropTypes.object,
+    location: PropTypes.object,
+    dispatch: PropTypes.func
 };
 
 export default connect()(App);

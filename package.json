@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "NODE_ENV=development webpack --config webpack.config.client.js --progress --watch",
-    "build:test": "NODE_ENV=development npm run lint && webpack --config webpack.config.client.js --progress --colors",
+    "build:test": "NODE_ENV=development webpack --config webpack.config.client.js --progress --colors",
     "build:prod": "NODE_ENV=production  npm run lint && webpack --config webpack.config.client.js --progress --colors -p",
     "lint": "eslint --ext .js --ext .jsx ."
   },
@@ -15,11 +15,12 @@
     "babel-preset-react-hmre": "1.1.1",
     "bootstrap-css": "^3.0.0",
     "nodemon": "^1.10.2",
-    "npm-install-webpack-plugin": "^4.0.4",
     "react-transform-hmr": "1.0.4",
     "redux-devtools": "^3.3.2",
     "redux-devtools-dock-monitor": "^1.1.1",
-    "redux-devtools-log-monitor": "^1.2.0"
+    "redux-devtools-log-monitor": "^1.2.0",
+    "webpack-dev-middleware": "1.8.4",
+    "webpack-hot-middleware": "2.13.2"
   },
   "dependencies": {
     "assemble": "^0.17.1",
@@ -57,6 +58,7 @@
     "less-loader": "^2.2.3",
     "less-plugin-glob": "^1.1.1",
     "local-storage": "^1.4.2",
+    "npm-install-webpack-plugin": "^4.0.4",
     "object-assign": "^4.1.0",
     "postcss-cssnext": "^2.9.0",
     "postcss-import": "^9.0.0",
@@ -75,8 +77,6 @@
     "style-loader": "^0.13.1",
     "styles": "^0.2.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.2",
-    "webpack-dev-middleware": "1.8.4",
-    "webpack-hot-middleware": "2.13.2"
+    "webpack": "^1.13.2"
   }
 }

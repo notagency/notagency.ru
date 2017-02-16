@@ -1,59 +1,56 @@
-var path = require('path');
-var webpack = require('webpack');
-var NpmInstallPlugin = require('npm-install-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var autoprefixer = require('autoprefixer');
+/* eslint no-useless-concat: 0 */
+/* eslint global-require: 0 */
 
-var DEV_MODE = process.env.NODE_ENV !== 'production';
+const path = require('path');
+const webpack = require('webpack');
+const NpmInstallPlugin = require('npm-install-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const DEV_MODE = process.env.NODE_ENV !== 'production';
 console.log('\n', DEV_MODE ? '== DEV_MODE ==' : '== PRODUCTION ==', '\n');
 
-//plugins
-var _plugins = [
+const plugins = [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.DedupePlugin(), //remove dublicated modules
+    new webpack.optimize.DedupePlugin(), // remove dublicated modules
     new ExtractTextPlugin('[name].css'),
     new webpack.NoErrorsPlugin(),
     new NpmInstallPlugin(),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-      '__DEVMODE__':  DEV_MODE
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+        __DEVMODE__: DEV_MODE
     })
 ];
 if (!DEV_MODE) {
-    _plugins.push(new webpack.optimize.UglifyJsPlugin());
+    plugins.push(new webpack.optimize.UglifyJsPlugin());
 }
 
-//plugins
-var _postcss = function () {
-  return [
+const postcss = () => [
     require('postcss-import')({
-      path: path.join(__dirname, 'app', 'css')
+        path: path.join(__dirname, 'app', 'css')
     }),
     require('postcss-cssnext')({
-      browsers: ['> 1%', 'last 2 versions']
+        browsers: ['> 1%', 'last 2 versions']
     }),
     require('postcss-reporter')({
-        clearMessages: true 
+        clearMessages: true
     })
-  ];
-};
+];
 
 module.exports = {
     context: path.join(__dirname, 'app'),
     entry: {
-      app: 'client',
-      icons : 'icons.font',
-      //styles: 'less/common.less'
+        app: 'client',
+        icons: 'icons.font'
     },
     output: {
         path: path.join(__dirname, 'assets'),
-        filename: "[name].js",
-        sourceMapFilename: "[file].map",
-        chunkFilename: "[name].[id].js",
+        filename: '[name].js',
+        sourceMapFilename: '[file].map',
+        chunkFilename: '[name].[id].js',
         publicPath: './'
     },
     module: {
-      loaders: [
+        loaders: [
             {
                 /*
                  * TC39 categorises proposals for babel in 4 stages
@@ -83,7 +80,7 @@ module.exports = {
             {
                 test: /\.(png|jpg|gif)$/,
                 loader: 'url?prefix=img/&limit=30000&q=100&name=[name].[ext]'
-            }, 
+            },
             {
                 test: /\.svg$/,
                 exclude: /(\.font\.|\/sprite\/)/,
@@ -92,7 +89,7 @@ module.exports = {
             {
                 test: /\.woff$/,
                 loader: 'url?prefix=font/&limit=30000&mimetype=application/font-woff&name=[name].[ext]'
-            }, 
+            },
             {
                 test: /\.woff2$/,
                 loader: 'url?prefix=font/&limit=30000&mimetype=application/font-woff2&name=[name].[ext]'
@@ -109,13 +106,13 @@ module.exports = {
                 test: /\.font\.(js|json)$/,
                 exclude: /node_modules/,
                 loader: ExtractTextPlugin.extract('style', 'css-raw!postcss!fontgen')
-            },
-      ]
+            }
+        ]
     },
-    plugins: _plugins,
+    plugins,
     resolve: {
-      root: [path.join(__dirname, 'app')],
-      extensions: ['', '.js', '.jsx', '.css']
+        root: [path.join(__dirname, 'app')],
+        extensions: ['', '.js', '.jsx', '.css']
     },
-    postcss: _postcss
-  };
+    postcss
+};

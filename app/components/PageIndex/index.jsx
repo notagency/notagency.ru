@@ -1,17 +1,12 @@
-import React, { Component } from 'react';
-import PageIndexHero from 'components/PageIndexHero';
-import PageIndexAbout from 'components/PageIndexAbout';
+import React from 'react';
+import PageIndexHero from '../PageIndexHero';
+import PageIndexAbout from '../PageIndexAbout';
 
-class Index extends Component {
-
-  render() {
-    return (
-        <div>
-            <PageIndexHero />
-            <PageIndexAbout />
-        </div>
-    );
-  }
-}
+const Index = () => (
+    <div>
+        <PageIndexHero />
+        <PageIndexAbout />
+    </div>
+);
 
 export default Index;

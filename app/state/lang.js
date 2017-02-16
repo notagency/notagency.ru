@@ -16,7 +16,8 @@ export default function reducer(state = {
     }
 }
 
+
 export const changeLanguage = lang => {
     ls('language', lang);
-    return { type: CHANGE_LANGUAGE, payload: lang }
-}
+    return { type: CHANGE_LANGUAGE, payload: lang };
+};

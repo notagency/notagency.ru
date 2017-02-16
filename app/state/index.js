@@ -3,7 +3,7 @@ import { routerReducer } from 'react-router-redux';
 import lang from './lang';
 
 const rootReducer = combineReducers({
-    data: (state) => state ? state : 0,
+    data: state => state || 0,
     lang,
     routing: routerReducer
 });
