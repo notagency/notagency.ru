@@ -5,11 +5,14 @@
     top: 0;
     left: 0;
     width: 100%;
-    margin: 10px 0;
+    padding: 10px 0;
     overflow: hidden;
     z-index: 1;
     @media (--device-sm){
         position: static;
+    }
+    &.black {
+        background: #000;
     }
 }
 .inner{
@@ -187,6 +190,9 @@
         }
         @media (--device-xs) {
             font-size: 15px;
+        }
+        &.black{
+            color: #fff;
         }
     }
 }

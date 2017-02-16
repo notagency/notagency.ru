@@ -17,7 +17,7 @@ const cx = classNames.bind(styles);
 const Header = ({ currentLanguage, onChangeLanguage, theme }) => {
     const anotherLanguage = currentLanguage === 'ru' ? 'en' : 'ru';
     return (
-        <div className={cx('header')}>
+        <div className={cx('header', theme)}>
             <div className={cx('inner', 'row')}>
                 <div className={cx('col-xs-6', 'header_col')}>
                     <Animate type="left-to-right" startFrom={200}>
@@ -51,7 +51,7 @@ const Header = ({ currentLanguage, onChangeLanguage, theme }) => {
                     </div>
                     <div className={cx('langs')}>
                         <Animate type="right-to-left" startFrom={1400}>
-                            <button className={cx('zoom-in-link')} onClick={ (e) => {
+                            <button className={cx('zoom-in-link', theme)} onClick={ (e) => {
                                 e.preventDefault();
                                 onChangeLanguage(anotherLanguage);
                             }}>{anotherLanguage}</button>
