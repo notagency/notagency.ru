@@ -58,6 +58,7 @@
     "less-loader": "^2.2.3",
     "less-plugin-glob": "^1.1.1",
     "local-storage": "^1.4.2",
+    "lodash": "^4.17.4",
     "npm-install-webpack-plugin": "^4.0.4",
     "object-assign": "^4.1.0",
     "postcss-cssnext": "^2.9.0",

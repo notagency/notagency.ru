@@ -16,6 +16,9 @@ export default {
             youCanReturn: 'You can either return to',
             mainPage: 'main page',
             contactUs: 'or contact us'
+        },
+        Footer: {
+            psrn: 'PSRN'
         }
     },
     ru: {
@@ -35,6 +38,9 @@ export default {
             youCanReturn: 'Вы можете перейти на',
             mainPage: 'главную страницу',
             contactUs: 'или связаться с нами'
+        },
+        Footer: {
+            psrn: 'ОГРНИП'
         }
     }
 };

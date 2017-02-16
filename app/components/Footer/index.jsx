@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import objectAssign from 'object-assign';
 import classNames from 'classnames/bind';
 import { type } from 'bootstrap-css';
+import flow from 'lodash/flow';
 
 import Animate from '../Animate';
 import styles from './styles.css';
@@ -16,7 +17,7 @@ const Footer = props => (
     <div className={cx('footer')}>
         <Animate type="bottom-to-top" startFrom={400}>
             <div className={cx('inner', 'text-center')}>
-                {props.year} &copy; NotAgency ОГРНИП 314774601700196
+                {props.year} &copy; NotAgency {props.strings.psrn} 314774601700196
             </div>
         </Animate>
     </div>
@@ -30,4 +31,9 @@ const mapStateToProps = (state) => ({
     year: state.data.year
 });
 
-export default connect(mapStateToProps)(Footer);
+const decorators = flow([
+    connect(mapStateToProps),
+    translate('Footer')
+]);
+
+export default decorators(Footer);
