@@ -8,13 +8,13 @@
     margin: 10px 0;
     overflow: hidden;
     z-index: 1;
-    @media (--mobile-wide){
+    @media (--device-sm){
         position: static;
     }
 }
 .inner{
     padding: 0 50px;
-    @media (--mobile-wide){
+    @media (--device-sm){
         padding: 0 20px;
     }
 }
@@ -45,7 +45,7 @@
         line-height: 25px;
         margin-top: 17px;
         padding: 0 0 3px;
-        @media (--mobile) {
+        @media (--device-xs) {
             margin-top: 12px;
             font-size: 19px;
             line-height: 21px;
@@ -58,7 +58,7 @@
         height: 55px;
         top: 0;
         left: 26px;
-        @media (--mobile) {
+        @media (--device-xs) {
             width: 45px;
             height: 45px;
             left: 18px;
@@ -86,7 +86,7 @@
     white-space: nowrap;
     height: 60px;
     line-height: 60px;
-    @media (--mobile) {
+    @media (--device-xs) {
         height: 45px;
         line-height: 45px;
     }
@@ -107,7 +107,7 @@
     }
     &.facebook {
         font-size: 25px;
-        @media (--mobile) {
+        @media (--device-xs) {
             font-size: 20px;
         }
         &:hover {
@@ -118,7 +118,7 @@
         color: #000;
         font-size: 35px;
         line-height: 42px;
-        @media (--mobile) {
+        @media (--device-xs) {
             font-size: 28px;
             line-height: 28px;
         }
@@ -150,7 +150,7 @@
             width: 100%;
             height: 100%;
         }
-        @media (--mobile) {
+        @media (--device-xs) {
             width: 23px;
             height: 23px;
         }
@@ -173,7 +173,7 @@
     margin-left: 30px;
     vertical-align: middle;
     width: 40px;
-    @media (--mobile) {
+    @media (--device-xs) {
         margin-left: 5px;
     }
     & button {
@@ -185,7 +185,7 @@
         &:focus{
             outline: none;
         }
-        @media (--mobile) {
+        @media (--device-xs) {
             font-size: 15px;
         }
     }
