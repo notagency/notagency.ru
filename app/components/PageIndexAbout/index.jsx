@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import objectAssign from 'object-assign';
-import Animate from 'containers/Animate';
+import Animate from 'components/Animate';
 import classNames from 'classnames/bind';
 import styles from './styles';
 import { grid } from 'bootstrap-css'

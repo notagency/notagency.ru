@@ -13,14 +13,13 @@ var _plugins = [
     new webpack.optimize.DedupePlugin(), //remove dublicated modules
     new ExtractTextPlugin('[name].css'),
     new webpack.NoErrorsPlugin(),
-    new NpmInstallPlugin()
+    new NpmInstallPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      '__DEVMODE__':  DEV_MODE
+    })
 ];
 if (!DEV_MODE) {
-    _plugins.push(new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    }));
     _plugins.push(new webpack.optimize.UglifyJsPlugin());
 }
 

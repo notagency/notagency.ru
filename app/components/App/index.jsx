@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Header from 'components/Header';
-import Footer from 'containers/Footer';
+import Footer from 'components/Footer';
 import classNames from 'classnames/bind';
 import styles from 'css/main';
 
@@ -13,6 +13,9 @@ class App extends Component {
         this.state = {
             contentHeight: window.innerHeight
         }
+        this.pathToThemeMap = {
+            '/wd': 'black'
+        };
     }
 
     componentDidMount() {
@@ -29,24 +32,19 @@ class App extends Component {
     
     render() {
         const {children} = this.props;
-        if (this.props.location.pathname == '/only-header') {
-            return (
-                <Header />
-            );
-        } 
-        else {
-            return (
-                <div>
-                    <Header />
-                    <div className={cx('slide', 'slide_hero')} height={this.state.contentHeight}>
-                        <div className={cx('hero')}>
-                            {children}
-                        </div>
+        const pathname = this.props.location.pathname;
+        const theme = this.pathToThemeMap[pathname] ? this.pathToThemeMap[pathname] : '';
+        return (
+            <div>
+                <Header theme={theme} />
+                <div className={cx('slide', 'slide_hero', 'slide_hero_' + theme)} height={this.state.contentHeight}>
+                    <div className={cx('hero')}>
+                        {children}
                     </div>
-                    <Footer />
                 </div>
-            );
-        }
+                <Footer />
+            </div>
+        );
     }
 }
 

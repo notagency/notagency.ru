@@ -44,6 +44,9 @@ a {
         outline: none;
     }
 }
+iframe {
+    border: none;
+}
 
 /**
  *  Layout
@@ -78,6 +81,9 @@ a {
         @apply --valign-undo;
         height: auto;
     }
+}
+.slide_hero_black{
+    background: #000;
 }
 
 .hero{
