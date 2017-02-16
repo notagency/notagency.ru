@@ -10,5 +10,5 @@
     }
 }
 
-@custom-media --mobile (max-width: 425px);
+@custom-media --mobile (max-width: 426px);
 @custom-media --mobile-wide (max-width: 770px);

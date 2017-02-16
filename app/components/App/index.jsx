@@ -1,57 +1,67 @@
+/* global window */
+
 import React, { Component, PropTypes } from 'react';
-import Header from 'components/Header';
-import Footer from 'containers/Footer';
+import { connect } from 'react-redux';
 import classNames from 'classnames/bind';
-import styles from 'css/main';
+import ls from 'local-storage';
+
+import Header from '../Header';
+import Footer from '../Footer';
+import styles from '../../css/main.css';
+import { changeLanguage } from '../../state/lang';
 
 const cx = classNames.bind(styles);
 
 class App extends Component {
-  
+
     constructor(props) {
         super(props);
         this.state = {
             contentHeight: window.innerHeight
-        }
+        };
+        this.pathToThemeMap = {
+            '/wd': 'black'
+        };
     }
 
     componentDidMount() {
         window.addEventListener('resize', this.fixHeight.call(this));
         this.fixHeight();
-    }
-      
-    fixHeight() {
-        var minHeroHeight = 400,
-            windowHeight = window.innerHeight,
-            contentHeight = windowHeight > minHeroHeight ? windowHeight : minHeroHeight;
-        this.setState({contentHeight: contentHeight});
-    }
-    
-    render() {
-        const {children} = this.props;
-        if (this.props.location.pathname == '/only-header') {
-            return (
-                <Header />
-            );
-        } 
-        else {
-            return (
-                <div>
-                    <Header />
-                    <div className={cx('slide', 'slide_hero')} height={this.state.contentHeight}>
-                        <div className={cx('hero')}>
-                            {children}
-                        </div>
-                    </div>
-                    <Footer />
-                </div>
-            );
+        const lang = ls('language');
+        if (lang) {
+            this.props.dispatch(changeLanguage(lang));
         }
+    }
+
+    fixHeight() {
+        const minHeroHeight = 400;
+        const windowHeight = window.innerHeight;
+        const contentHeight = windowHeight > minHeroHeight ? windowHeight : minHeroHeight;
+        this.setState({ contentHeight });
+    }
+
+    render() {
+        const { children } = this.props;
+        const pathname = this.props.location.pathname;
+        const theme = this.pathToThemeMap[pathname] ? this.pathToThemeMap[pathname] : '';
+        return (
+            <div>
+                <Header theme={theme} />
+                <div className={cx('slide', 'slide_hero', 'slide_hero_' + theme)} height={this.state.contentHeight}>
+                    <div className={cx('hero')}>
+                        {children}
+                    </div>
+                </div>
+                <Footer />
+            </div>
+        );
     }
 }
 
 App.propTypes = {
-  children: PropTypes.object
+    children: PropTypes.object,
+    location: PropTypes.object,
+    dispatch: PropTypes.func
 };
 
-export default App;
+export default connect()(App);

@@ -1,22 +1,21 @@
-var fs = require('fs');
-var path = require('path');
+const fs = require('fs');
+const path = require('path');
 
-var iconsDir = 'i/icons/';
-var iconsDirFull = path.join(__dirname, iconsDir);
+const iconsDir = 'i/icons/';
+const iconsDirFull = path.join(__dirname, iconsDir);
 
-var fileNames = fs.readdirSync(iconsDirFull);
-var files = [];
-for (i in fileNames) {
-    files.push(iconsDir + fileNames[i]);
-}
+const fileNames = fs.readdirSync(iconsDirFull);
+const files = [];
+
+fileNames.forEach(fileName => files.push(iconsDir + fileName));
 
 module.exports = {
-    "files": files,
-    "fileName": "[fontname][ext]",
-    "fontName": "icons",
-    "classPrefix": "icons_",
-    "baseClass": "icons",
-    "fixedWidth": true,
-    "centerHorizontally": true,
-    "centerVertically": true
+    files,
+    fileName: '[fontname][ext]',
+    fontName: 'icons',
+    classPrefix: 'icons_',
+    baseClass: 'icons',
+    fixedWidth: true,
+    centerHorizontally: true,
+    centerVertically: true
 };

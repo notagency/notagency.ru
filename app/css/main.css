@@ -44,6 +44,9 @@ a {
         outline: none;
     }
 }
+iframe {
+    border: none;
+}
 
 /**
  *  Layout
@@ -78,6 +81,9 @@ a {
         @apply --valign-undo;
         height: auto;
     }
+}
+.slide_hero_black{
+    background: #000;
 }
 
 .hero{
@@ -120,5 +126,12 @@ a {
     @media (--mobile-wide){
         border-top: 1px solid black;
         margin: 15px auto;
+    }
+}
+.zoom-in-link {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.2);
+        opacity: 1;
     }
 }
