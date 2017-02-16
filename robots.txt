@@ -1,0 +1,3 @@
+User-agent: *
+Host: www.notagency.ru
+Disallow: /wd/
