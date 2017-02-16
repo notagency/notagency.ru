@@ -3,7 +3,8 @@ export default {
         Index: {
             title: 'Team of developers',
             desc: 'Professional websites development with\u00a01C-Bitrix,\u00a0Laravel,\u00a0Symfony,\u00a0ReactJS',
-            anyQuestions: 'If you have any questions'
+            anyQuestions: 'If you have any questions',
+
         },
     },
     ru: {

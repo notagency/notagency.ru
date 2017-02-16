@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore, compose } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
@@ -12,7 +12,13 @@ const initialState = JSON.parse(document.getElementById('app').getAttribute('dat
 
 let store;
 if (__DEVMODE__) {
-    store = createStore(reducers, initialState, DevTools.instrument());
+
+    const createLogger = require('redux-logger');
+    const logger = createLogger({ predicate:
+        (getState, action) => action.type !== 'EFFECT_TRIGGERED' &&
+        action.type !== 'EFFECT_RESOLVED' });
+
+    store = createStore(reducers, initialState, compose(applyMiddleware(logger), DevTools.instrument()));
 }
 else {
     store = createStore(reducers, initialState);    

@@ -1,11 +1,11 @@
-import React from 'react';
-import objectAssign from 'object-assign';
-import Animate from 'components/Animate';
-import classNames from 'classnames/bind';
-import styles from 'css/main';
+import React from 'react'
+import objectAssign from 'object-assign'
+import Animate from 'components/Animate'
+import classNames from 'classnames/bind'
+import styles from 'css/main'
 import { type } from 'bootstrap-css'
 
-import translate from '../../i18n/Translate';
+import translate from 'i18n/Translate'
 
 objectAssign(styles, type);
 const cx = classNames.bind(styles);

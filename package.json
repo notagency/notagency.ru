@@ -6,8 +6,9 @@
   "main": "index.js",
   "scripts": {
     "watch": "NODE_ENV=development webpack --config webpack.config.client.js --progress --watch",
-    "build:test": "NODE_ENV=development webpack --config webpack.config.client.js --progress --colors",
-    "build:prod": "NODE_ENV=production  webpack --config webpack.config.client.js --progress --colors -p"
+    "build:test": "NODE_ENV=development npm run lint && webpack --config webpack.config.client.js --progress --colors",
+    "build:prod": "NODE_ENV=production  npm run lint && webpack --config webpack.config.client.js --progress --colors -p",
+    "lint": "eslint --ext .js --ext .jsx ."
   },
   "license": "ISC",
   "devDependencies": {
@@ -41,6 +42,12 @@
     "css": "^2.2.1",
     "css-loader": "^0.26.1",
     "css-raw-loader": "^0.1.1",
+    "eslint": "3.15.0",
+    "eslint-config-airbnb": "12.0.0",
+    "eslint-loader": "1.6.1",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-react": "6.9.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "fontgen-loader": "^0.2.1",

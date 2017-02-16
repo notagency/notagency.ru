@@ -1,9 +1,9 @@
 import ls from 'local-storage';
 
-export const CHANGE_LANGUAGE = 'language/change';
+export const CHANGE_LANGUAGE = 'notagency/language/change';
 
 export default function reducer(state = {
-    code: ls('language') || 'en'
+    code: 'en'
 }, action) {
     switch (action.type) {
         case CHANGE_LANGUAGE:
@@ -16,7 +16,7 @@ export default function reducer(state = {
     }
 }
 
-export const changeLanguage = (dispatch, lang) => {
+export const changeLanguage = lang => {
     ls('language', lang);
-    dispatch({ type: CHANGE_LANGUAGE, payload: lang });
-};
+    return { type: CHANGE_LANGUAGE, payload: lang }
+}

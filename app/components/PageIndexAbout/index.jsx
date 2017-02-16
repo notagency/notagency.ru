@@ -1,9 +1,10 @@
-import React, { Component, PropTypes } from 'react';
-import objectAssign from 'object-assign';
-import Animate from 'components/Animate';
-import classNames from 'classnames/bind';
-import styles from './styles';
+import React, { Component, PropTypes } from 'react'
+import objectAssign from 'object-assign'
+import Animate from 'components/Animate'
+import classNames from 'classnames/bind'
+import styles from './styles'
 import { grid } from 'bootstrap-css'
+import translate from 'i18n/Translate'
 
 objectAssign(styles, grid);
 const cx = classNames.bind(styles);

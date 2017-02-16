@@ -1,8 +1,11 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import classNames from 'classnames/bind';
 import styles from 'css/main';
+import ls from 'local-storage';
+import {changeLanguage} from 'state/lang';
 
 const cx = classNames.bind(styles);
 
@@ -21,6 +24,10 @@ class App extends Component {
     componentDidMount() {
         window.addEventListener('resize', this.fixHeight.call(this));
         this.fixHeight();
+        const lang = ls('language');
+        if (lang) {
+            this.props.dispatch(changeLanguage(lang));
+        }
     }
       
     fixHeight() {
@@ -52,4 +59,4 @@ App.propTypes = {
   children: PropTypes.object
 };
 
-export default App;
+export default connect()(App);

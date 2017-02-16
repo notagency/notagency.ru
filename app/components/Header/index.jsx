@@ -7,7 +7,7 @@ import classNames from 'classnames/bind';
 import styles from './styles';
 import { grid, type } from 'bootstrap-css';
 
-import { changeLanguage } from '../../state/lang';
+import { changeLanguage } from 'state/lang';
 
 import { createAction } from 'redux-actions';
 
@@ -63,8 +63,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    //onChangeLanguage: lang => dispatch({ type: CHANGE_LANGUAGE, payload: lang })
-    onChangeLanguage: lang => changeLanguage(dispatch, lang)
+    onChangeLanguage: lang => dispatch(changeLanguage(lang))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
