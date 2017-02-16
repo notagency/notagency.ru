@@ -5,12 +5,12 @@ import { grid } from 'bootstrap-css';
 
 import Animate from '../Animate';
 import styles from './styles.css';
-// import translate from 'i18n/Translate';
+import translate from 'i18n/Translate';
 
 objectAssign(styles, grid);
 const cx = classNames.bind(styles);
 
-const IndexAbout = () => (
+const IndexAbout = (props) => (
     <div className={cx('about', 'container-fluid')}>
         <div className={cx('row')}>
             <div className={cx('col-sm-4')}>
@@ -20,7 +20,7 @@ const IndexAbout = () => (
                             65
                         </div>
                         <div className={cx('text')}>
-                            проектов по заказу агентств<br />
+                            {props.strings.agenciesLabel}<br />
                             <strong>Articul&nbsp;Media, CreativePeople,<br />
                                 ZephyrLab, NotaMedia</strong>
                         </div>
@@ -34,8 +34,8 @@ const IndexAbout = () => (
                             20
                         </div>
                         <div className={cx('text')}>
-                            проектов по заказу клиентов<br />
-                            <strong>Yota, НПФ&nbsp;Сбербанка<br />и других</strong>
+                            {props.strings.clientsLabel}<br />
+                            <strong>Yota, {props.strings.npfSberbanka}<br />{props.strings.andOthers}</strong>
                         </div>
                     </div>
                 </Animate>
@@ -44,11 +44,11 @@ const IndexAbout = () => (
                 <Animate type="bottom-to-top" startFrom={1200}>
                     <div className={cx('item')}>
                         <div className={cx('digit')}>
-                            8
+                            9
                         </div>
                         <div className={cx('text')}>
-                            лет работы
-                            <br /><strong>в веб&#8209;индустрии</strong>
+                            {props.strings.years}
+                            <br /><strong>{props.strings.inWebIndustry}</strong>
                         </div>
                     </div>
                 </Animate>
@@ -57,4 +57,4 @@ const IndexAbout = () => (
     </div>
 );
 
-export default IndexAbout;
+export default translate('Index')(IndexAbout);

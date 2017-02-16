@@ -128,3 +128,10 @@ iframe {
         margin: 15px auto;
     }
 }
+.zoom-in-link {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}

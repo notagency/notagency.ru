@@ -7,6 +7,8 @@ import { type } from 'bootstrap-css';
 import Animate from '../Animate';
 import styles from './styles.css';
 
+import translate from '../../i18n/Translate';
+
 objectAssign(styles, type);
 const cx = classNames.bind(styles);
 
