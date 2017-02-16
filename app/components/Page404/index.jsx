@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import classNames from 'classnames/bind';
 
@@ -19,6 +19,10 @@ const Page404 = (props) => (
         </h3>
     </div>
 );
+
+Page404.propTypes = {
+    strings: PropTypes.object
+};
 
 export default translate('Page404')(Page404);
 

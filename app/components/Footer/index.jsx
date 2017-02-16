@@ -24,7 +24,8 @@ const Footer = props => (
 );
 
 Footer.propTypes = {
-    year: PropTypes.string
+    year: PropTypes.string,
+    strings: PropTypes.object
 };
 
 const mapStateToProps = (state) => ({

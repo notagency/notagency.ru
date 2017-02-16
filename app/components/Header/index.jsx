@@ -61,7 +61,7 @@ const Header = ({ currentLanguage, onChangeLanguage, theme }) => {
             </div>
         </div>
     );
-}
+};
 
 Header.propTypes = {
     currentLanguage: PropTypes.string,

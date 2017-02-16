@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import objectAssign from 'object-assign';
 import classNames from 'classnames/bind';
 import { type } from 'bootstrap-css';
@@ -33,5 +33,9 @@ class IndexHero extends Animate {
         );
     }
 }
+
+IndexHero.propTypes = {
+    strings: PropTypes.object
+};
 
 export default translate('Index')(IndexHero);
