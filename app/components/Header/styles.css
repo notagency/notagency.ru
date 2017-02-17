@@ -90,7 +90,6 @@
     --header_col{
         white-space: nowrap;
         height: 60px;
-        line-height: 0;
         @media (--device-xs) {
             height: 40px;
         }
@@ -107,6 +106,7 @@
     display: inline-block;
     vertical-align: middle;
     font-size: 25px;
+    line-height: 20px;
 }
 .social_link{
     border-bottom: none;
