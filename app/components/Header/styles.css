@@ -49,7 +49,7 @@
         margin-top: 17px;
         padding: 0 0 3px;
         @media (--device-xs) {
-            margin-top: 12px;
+            margin-top: 11px;
             font-size: 19px;
             line-height: 21px;
             padding: 0;
@@ -65,37 +65,48 @@
             width: 45px;
             height: 45px;
             left: 18px;
+            top: -4px;
         }
     }
-}
-.logo_black {
-    &:before{
-        path{
-            fill: #fff;
+    &.black {
+        &:before{
+            path{
+                fill: #fff;
+            }
         }
-    }
-    & a {
-        color: #fff;
-        &:hover,
-        &:visited{
+        & a {
             color: #fff;
+            &:hover,
+            &:visited{
+                color: #fff;
+            }
+        }
+        & span {
+            background: #000;
         }
     }
-    & span {
-        background: #000;
+}
+:root {
+    --header_col{
+        white-space: nowrap;
+        height: 60px;
+        line-height: 0;
+        @media (--device-xs) {
+            height: 40px;
+        }
     }
 }
-.header_col{
-    white-space: nowrap;
-    height: 60px;
-    line-height: 60px;
-    @media (--device-xs) {
-        height: 45px;
-        line-height: 45px;
-    }
+.header_left {
+    @apply --header_col;    
+}
+.header_right {
+    @apply --header_col;
+    @apply --valign-middle;
 }
 .socials {
     display: inline-block;
+    vertical-align: middle;
+    font-size: 25px;
 }
 .social_link{
     border-bottom: none;
@@ -106,13 +117,6 @@
     }
 }
 .social_icon {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 25px;
-    @media (--device-xs) {
-        font-size: 20px;
-        line-height: 20px;
-    }
     &.facebook {
         color: #3b5998;
         &.black {
@@ -132,20 +136,17 @@
     margin-left: 20px;
     vertical-align: middle;
     width: 40px;
+    font-size: 15px;
     @media (--device-xs) {
         margin-left: 5px;
     }
     & button {
-        font-size: 15px;
         background: none;
         border: none;
         text-transform: uppercase;
         @apply --font-russo-one;
         &:focus{
             outline: none;
-        }
-        @media (--device-xs) {
-            font-size: 15px;
         }
         &.black{
             color: #fff;
