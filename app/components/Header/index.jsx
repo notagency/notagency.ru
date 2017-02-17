@@ -19,9 +19,9 @@ const Header = ({ currentLanguage, onChangeLanguage, theme }) => {
     return (
         <div className={cx('header', theme)}>
             <div className={cx('inner', 'row')}>
-                <div className={cx('col-xs-6', 'header_col')}>
+                <div className={cx('col-xs-6', 'header_left')}>
                     <Animate type="left-to-right" startFrom={200}>
-                        <h2 className={cx('logo', 'logo_' + theme)}>
+                        <div className={cx('logo', theme)}>
                             <Link to="/">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.39 33.29">
                                     <path d="M13.82,19.09L19.13,1.7l5.38,17.37L36.92,32.36l-17.73-4L1.47,32.44Z"
@@ -30,11 +30,11 @@ const Header = ({ currentLanguage, onChangeLanguage, theme }) => {
                                 </svg>
                                 <span>NotAgency</span>
                             </Link>
-                        </h2>
+                        </div>
                     </Animate>
                 </div>
 
-                <div className={cx('col-xs-6', 'header_col', 'text-right')}>
+                <div className={cx('col-xs-6', 'header_right', 'text-right')}>
                     <div className={cx('socials')}>
                         <a className={cx('zoom-in-link', 'social_link')} href="https://www.facebook.com/notagency.ru/"
                            target="_blank" rel="noopener noreferrer">
