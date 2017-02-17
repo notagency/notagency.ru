@@ -36,16 +36,16 @@ const Header = ({ currentLanguage, onChangeLanguage, theme }) => {
 
                 <div className={cx('col-xs-6', 'header_col', 'text-right')}>
                     <div className={cx('socials')}>
-                        <a className={cx('zoom-in-link', 'social_link', 'facebook')} href="https://www.facebook.com/notagency.ru/"
+                        <a className={cx('zoom-in-link', 'social_link')} href="https://www.facebook.com/notagency.ru/"
                            target="_blank" rel="noopener noreferrer">
                             <Animate type="right-to-left" startFrom={1000}>
-                                <i className={'icons icons_facebook ' + cx('social_icon', 'facebook', theme)} />
+                                <i className={'icons icons_facebook-squared ' + cx('social_icon', 'facebook', theme)} />
                             </Animate>
                         </a>
-                        <a className={cx('zoom-in-link', 'social_link', 'github', theme)}
+                        <a className={cx('zoom-in-link', 'social_link')}
                            href="https://github.com/notagency/" target="_blank" rel="noopener noreferrer">
                             <Animate type="right-to-left" startFrom={1100}>
-                                <i className={'icons icons_github ' + cx('social_icon', 'github', theme)} />
+                                <i className={'icons icons_github-round ' + cx('social_icon', 'github', theme)} />
                             </Animate>
                         </a>
                     </div>
