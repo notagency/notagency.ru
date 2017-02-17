@@ -30,6 +30,8 @@ class App extends Component {
         const lang = ls('language');
         if (lang) {
             this.props.dispatch(changeLanguage(lang));
+        } else if (this.props.langFromBackend) {
+            this.props.dispatch(changeLanguage(this.props.langFromBackend));
         }
     }
 
@@ -61,7 +63,12 @@ class App extends Component {
 App.propTypes = {
     children: PropTypes.object,
     location: PropTypes.object,
-    dispatch: PropTypes.func
+    dispatch: PropTypes.func,
+    langFromBackend: PropTypes.string
 };
 
-export default connect()(App);
+const mapStateToProps = (state) => ({
+    langFromBackend: state.data.lang
+});
+
+export default connect(mapStateToProps)(App);
