@@ -9,6 +9,18 @@ require $_SERVER['DOCUMENT_ROOT'] . '/lib/tools.php';
 
 ob_start();
 
+$supportedLangs = ['ru', 'en'];
+$defaultLang = 'en';
+$lang = $defaultLang;
+if (!empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+    $rawLang = Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+}
+if ($rawLang) {
+    list($lang, $regionCode) = explode('_', $rawLang);
+    $lang = strtolower($lang);
+    $lang = in_array($lang, $supportedLangs) ? $lang : 'en';
+}
+
 ?><!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -25,7 +37,16 @@ ob_start();
 </head>
 <body  <?php if (IS_MOBILE || !IS_MAIN_PAGE):?>class="no-animation"<?php endif?>>
 
-    <div id="app" data-state='<?=json_encode(['data' => ['isMobile' => IS_MOBILE, 'fromMainPage' => IS_MAIN_PAGE, 'year' => date('Y')]])?>'></div>
+    <?php 
+    $data = [
+        'isMobile' => IS_MOBILE, 
+        'fromMainPage' => IS_MAIN_PAGE, 
+        'year' => date('Y'), 
+        'lang' => $lang
+    ];
+    ?>
+
+    <div id="app" data-state='<?=json_encode(['data' => $data])?>'></div>
     
     <?php
     linkJs('/assets/app.js');

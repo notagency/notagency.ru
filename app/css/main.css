@@ -80,7 +80,6 @@ iframe {
         position: static;
         @apply --valign-undo;
         height: auto;
-        width: 96%;
         padding: 0 2%;
     }
 }
