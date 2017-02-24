@@ -27,18 +27,21 @@
     width: 140px;
     @media (--device-xs){
         width: 80%;
+        max-width: 140px;
     }
 }
 .cpeople{
     width: 170px;
     @media (--device-xs){
         width: 90%;
+        max-width: 170px;
     }
 }
 .nota{
     width: 170px;
     @media (--device-xs){
         width: 90%;
+        max-width: 170px;
     }
 }
 .yota{
@@ -48,6 +51,7 @@
     width: 170px;
     @media (--device-xs){
         width: 90%;
+        max-width: 170px;
     }
 }
 .zephyr{

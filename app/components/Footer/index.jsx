@@ -20,7 +20,7 @@ const Footer = props => (
                 <div className={cx('footer-item')}>
                     {props.year} &copy; NotAgency
                 </div>
-                <br className={cx('visible-xs')} />
+                <br className={cx('visible-sm')} />
                 <div className={cx('footer-item')}>
                     {props.strings.psrn} 314774601700196
                 </div>
