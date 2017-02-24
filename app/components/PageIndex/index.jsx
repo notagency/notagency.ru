@@ -1,11 +1,12 @@
 import React from 'react';
-import PageIndexHero from '../PageIndexHero';
-import PageIndexAbout from '../PageIndexAbout';
+import IndexHero from '../PageIndexHero';
+import IndexAbout from '../PageIndexAbout';
+import IndexPartners from '../PageIndexPartners';
 
 const Index = () => (
     <div>
-        <PageIndexHero />
-        <PageIndexAbout />
+        <IndexHero />
+        <IndexPartners />
     </div>
 );
 

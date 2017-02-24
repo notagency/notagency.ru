@@ -1,0 +1,29 @@
+@import "../../css/main.css";
+
+.partners{
+    position: absolute;
+    bottom: var(--footer_height);
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.partner-logo{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 20px;
+}
+.articul{
+    width: 140px;
+}
+.cpeople{
+    width: 170px;
+}
+.nota{
+    width: 170px;
+}
+.yota{
+    width: 35px;
+}
+.npfsb{
+    width: 170px;
+}
