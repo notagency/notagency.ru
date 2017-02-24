@@ -24,6 +24,7 @@ body {
     @media (--device-xs){
         font-size: 14px;
         min-height: 500px;
+        margin: 0 0 var(--footer_height_xs);
     }
 }
 a {

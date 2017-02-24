@@ -18,7 +18,8 @@ export default {
             contactUs: 'or contact us'
         },
         Footer: {
-            psrn: 'PSRN'
+            psrn: 'PSRN',
+            inn: 'INN'
         }
     },
     ru: {
@@ -40,7 +41,8 @@ export default {
             contactUs: 'или связаться с нами'
         },
         Footer: {
-            psrn: 'ОГРНИП'
+            psrn: 'ОГРНИП',
+            inn: 'ИНН'
         }
     }
 };
