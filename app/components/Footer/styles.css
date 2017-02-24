@@ -5,11 +5,19 @@
     bottom: 0;
     width: 100%;
     height: var(--footer_height);
+    @media (--device-xs){
+        height: var(--footer_height_xs);
+    }
+}
+.footer-item{
+    padding: 0 10px;
+    display: inline-block;
 }
 .inner{
-    background: #000;
-    color: #8C8C8C;
     font-size: 12px;
     font-weight: 400;
-    line-height: var(--footer_height);
+    line-height: 20px;
+    padding: 8px 0;
+    background: #000;
+    color: #8C8C8C;
 }
