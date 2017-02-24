@@ -17,15 +17,19 @@ const Footer = props => (
     <div className={cx('footer')}>
         <Animate type="bottom-to-top" startFrom={1400}>
             <div className={cx('inner', 'text-center')}>
-                <div className={cx('footer-item')}>
+                <div className={cx('footer-item', 'hidden-xs')}>
                     {props.year} &copy; NotAgency
                 </div>
-                <br className={cx('visible-sm')} />
                 <div className={cx('footer-item')}>
                     {props.strings.psrn} 314774601700196
                 </div>
                 <div className={cx('footer-item')}>
                     {props.strings.inn} 771878367680
+                </div>
+                <div className={cx('visible-xs')}>
+                    <div className={cx('footer-item')}>
+                        {props.year} &copy; NotAgency
+                    </div>
                 </div>
             </div>
         </Animate>

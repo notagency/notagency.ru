@@ -57,7 +57,7 @@ h1{
     font-size: 42px;
     letter-spacing: 1px;
     @apply --font-russo-one;
-    @media (--device-sm) {
+    @media (--device-xs) {
         font-size: 28px;
         margin: 20px 0;
     }
@@ -68,7 +68,7 @@ h3{
     font-weight: 300;
     line-height: 30px;
     margin: 0;
-    @media (--device-sm){
+    @media (--device-xs){
         font-size: 17px;
         line-height: 24px;
     }
@@ -102,7 +102,7 @@ h3{
     height: 100%;
     @apply --valign-middle;
     text-align: center;
-    @media (--device-sm){
+    @media (--device-xs){
         position: static;
         @apply --valign-undo;
         height: auto;
@@ -125,7 +125,7 @@ h3{
     border-top: 2px solid black;
     margin: 25px auto;
     text-transform: uppercase;
-    @media (--device-sm){
+    @media (--device-xs){
         border-top: 1px solid black;
         margin: 15px auto;
     }

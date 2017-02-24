@@ -3,11 +3,13 @@
 .partners{
     position: absolute;
     bottom: var(--footer_height);
-    width: 100%;
+    width: 98%;
     padding-bottom: 15px;
+    left: 2%;
     @media (--device-xs){
         text-align: left;
-        bottom: var(--footer_height_xs);
+        position: static;
+        margin-top: 40px;
     }
 }
 
@@ -22,38 +24,55 @@
         line-height: 50px;
         text-align: center;
     }
+    @media (--device-sm){
+        padding: 10px 15px 0;
+    }
 }
 .articul{
     width: 140px;
     @media (--device-xs){
-        width: 80%;
-        max-width: 140px;
+        width: 115px;
+    }
+    @media (--device-sm){
+        width: 105px;
     }
 }
 .cpeople{
     width: 170px;
     @media (--device-xs){
-        width: 90%;
-        max-width: 170px;
+        width: 125px;
+    }
+    @media (--device-sm){
+        width: 115px;
     }
 }
 .nota{
     width: 170px;
     @media (--device-xs){
-        width: 90%;
-        max-width: 170px;
+        width: 125px;
+    }
+    @media (--device-sm){
+        width: 115px;
     }
 }
 .yota{
     width: 35px;
+    @media (--device-sm){
+        width: 30px;
+    }
 }
 .npfsb{
     width: 170px;
     @media (--device-xs){
-        width: 90%;
-        max-width: 170px;
+        width: 125px;
+    }
+    @media (--device-sm){
+        width: 115px;
     }
 }
 .zephyr{
     width: 35px;
+    @media (--device-sm){
+        width: 30px;
+    }
 }

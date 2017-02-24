@@ -8,7 +8,7 @@
     padding: 10px 0;
     overflow: hidden;
     z-index: 1;
-    @media (--device-sm){
+    @media (--device-xs){
         position: static;
     }
     &.black {
@@ -17,7 +17,7 @@
 }
 .inner{
     padding: 0 50px;
-    @media (--device-sm){
+    @media (--device-xs){
         padding: 0 20px;
     }
 }

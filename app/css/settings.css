@@ -11,6 +11,6 @@
     }
 }
 
-@custom-media --device-xs (max-width: 769px);
-@custom-media --device-sm (max-width: 991px);
-@custom-media --device-md (max-width: 1119px);
+@custom-media --device-xs (max-width: 767px);
+@custom-media --device-sm (min-width: 768px) and (max-width: 991px);
+@custom-media --device-md (min-width: 992px) and (max-width: 1119px);
