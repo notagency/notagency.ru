@@ -10,10 +10,10 @@ import translate from '../../i18n/Translate';
 objectAssign(styles, type, grid);
 const cx = classNames.bind(styles);
 
-const IndexPartners = (props) => (
-    <div className={cx('text-center', 'partners')}>
+const IndexPartners = () => (
+    <div className={cx('partners')}>
         <Animate type="bottom-to-top" startFrom={1300}>
-            <h3>Нам доверяют</h3>
+            <h3 className={cx('text-center')}>Нам доверяют</h3>
         </Animate>
         <div className={cx('partner-logo')} >
             <Animate type="bottom-to-top" startFrom={1300}>
@@ -32,12 +32,17 @@ const IndexPartners = (props) => (
         </div>
         <div className={cx('partner-logo')} >
             <Animate type="bottom-to-top" startFrom={1450}>
-                <img src="/app/i/partners/yota.png" alt="Yota" className={cx('yota')} />
+                <img src="/app/i/partners/npfsb.png" alt="НПФ Сбербанка" className={cx('npfsb')} />
             </Animate>
         </div>
         <div className={cx('partner-logo')} >
             <Animate type="bottom-to-top" startFrom={1500}>
-                <img src="/app/i/partners/npfsb.png" alt="НПФ Сбербанка" className={cx('npfsb')} />
+                <img src="/app/i/partners/yota.png" alt="Yota" className={cx('yota')} />
+            </Animate>
+        </div>
+        <div className={cx('partner-logo')} >
+            <Animate type="bottom-to-top" startFrom={1550}>
+                <img src="/app/i/partners/zephyr.png" alt="Zephyrlab" className={cx('zephyr')} />
             </Animate>
         </div>
     </div>

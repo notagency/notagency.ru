@@ -5,25 +5,51 @@
     bottom: var(--footer_height);
     width: 100%;
     padding-bottom: 15px;
+    @media (--device-xs){
+        text-align: left;
+        bottom: var(--footer_height_xs);
+    }
 }
 
 .partner-logo{
     display: inline-block;
     vertical-align: middle;
-    padding: 0 20px;
+    padding: 10px 20px 0;
+    @media (--device-xs){
+        padding: 0 10px;
+        width: 50%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
 }
 .articul{
     width: 140px;
+    @media (--device-xs){
+        width: 80%;
+    }
 }
 .cpeople{
     width: 170px;
+    @media (--device-xs){
+        width: 90%;
+    }
 }
 .nota{
     width: 170px;
+    @media (--device-xs){
+        width: 90%;
+    }
 }
 .yota{
     width: 35px;
 }
 .npfsb{
     width: 170px;
+    @media (--device-xs){
+        width: 90%;
+    }
+}
+.zephyr{
+    width: 35px;
 }
