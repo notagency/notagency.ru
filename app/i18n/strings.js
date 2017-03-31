@@ -9,7 +9,8 @@ export default {
             years: 'years',
             inWebIndustry: 'in web industry',
             npfSberbanka: 'Sberbank PPF',
-            andOthers: 'and others'
+            andOthers: 'and others',
+            trusted: 'Trusted by'
         },
         Page404: {
             pageNotFound: 'We are sorry, but requested page was not found',
@@ -32,7 +33,8 @@ export default {
             years: 'лет работы',
             inWebIndustry: 'в веб\u2011индустрии',
             npfSberbanka: 'НПФ\u00a0Сбербанка',
-            andOthers: 'и других'
+            andOthers: 'и других',
+            trusted: 'Нам доверяют'
         },
         Page404: {
             pageNotFound: 'Страница не найдена',
