@@ -1,8 +1,4 @@
 {
-  "name": "notagency-website",
-  "version": "1.0.0",
-  "description": "Main website of NotAgency agency",
-  "author": "NotAgency",
   "main": "index.js",
   "scripts": {
     "watch": "NODE_ENV=development webpack --config webpack.config.client.js --progress --watch",

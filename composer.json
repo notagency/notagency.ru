@@ -1,13 +1,5 @@
 {
-  "name": "notagency/website",
-  "type": "project",
   "minimum-stability": "dev",
-  "authors": [
-    {
-      "name": "Dmitry Savchenkov",
-      "email": "ds@notagency.ru"
-    }
-  ],
   "require": {
     "php": ">=5.4.0",
     "mobiledetect/mobiledetectlib": "^2.8"

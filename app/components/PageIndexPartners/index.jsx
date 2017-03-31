@@ -10,10 +10,10 @@ import translate from '../../i18n/Translate';
 objectAssign(styles, type, grid);
 const cx = classNames.bind(styles);
 
-const IndexPartners = () => (
+const IndexPartners = (props) => (
     <div className={cx('partners')}>
         <Animate type="bottom-to-top" startFrom={1300}>
-            <h3 className={cx('text-center')}>Нам доверяют</h3>
+            <h3 className={cx('text-center')}>{ props.strings.trusted }</h3>
         </Animate>
         <div className={cx('partner-logo')} >
             <Animate type="bottom-to-top" startFrom={1300}>
