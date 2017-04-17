@@ -9,7 +9,7 @@ function linkCss($path)
 function linkJs($path)
 {
     $url = getAsset($path);
-    echo sprintf('<script src="%s"></script>', $url);
+    echo sprintf('<script async src="%s"></script>', $url);
 }
 
 function getAsset($path)
