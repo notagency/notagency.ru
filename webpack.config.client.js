@@ -223,7 +223,7 @@ const config = {
                     defaults: [
                         require('postcss-import'),
                         require('postcss-flexbugs-fixes'),
-                        require('postcss-cssnext')({ browsers: ['last 3 version'] }), // already includes autoprefixer
+                        require('postcss-cssnext')({ browsers: ['last 3 version'] }) // already includes autoprefixer
                     ]
                 })
             }
