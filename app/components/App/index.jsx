@@ -48,12 +48,10 @@ class App extends Component {
         const pathname = this.props.location.pathname;
         const theme = this.pathToThemeMap[pathname] ? this.pathToThemeMap[pathname] : '';
         return (
-            <div>
+            <div className={cx('layout')}>
                 <Header theme={theme} />
                 <div className={cx('slide', 'slide_hero', 'slide_hero_' + theme)} height={this.state.contentHeight}>
-                    <div className={cx('hero')}>
-                        {children}
-                    </div>
+                    {children}
                 </div>
                 <Footer />
             </div>

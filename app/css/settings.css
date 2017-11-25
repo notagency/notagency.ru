@@ -3,10 +3,10 @@
     --corporate-color2: #607d8b;
     --footer_height: 36px;
     --footer_height_xs: 56px;
-    --font-russo-one{
+    --font-russo-one {
         font-family: 'Russo One', sans-serif;
     }
-    --corporate-color{
+    --corporate-color {
         color: var(--corporate-color);
     }
 }

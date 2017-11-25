@@ -34,12 +34,10 @@ let rootElements;
 if (__DEVMODE__) {
     rootElements = (
         <Provider store={store}>
-            <div>
-                <Router history={history}>
-                    {routes}
-                </Router>
+            <Router history={history}>
+                {routes}
                 <DevTools />
-            </div>
+            </Router>
         </Provider>
     );
 } else {

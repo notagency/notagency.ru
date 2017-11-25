@@ -22,16 +22,17 @@ const dirs = {
 let sourceMaps;
 let minimize;
 
-console.info('\x1b[37m', '\x1b[40m');
 if (DEV_MODE) {
     sourceMaps = true;
     minimize = false;
-    console.info('\x1b[35m', '\x1b[40m', 'DEV MODE');
 } else {
     sourceMaps = false;
     minimize = true;
-    console.info('\x1b[35m', '\x1b[40m', 'PRODUCTION MODE');
 }
+
+console.info('\x1b[37m', '\x1b[40m');
+console.info('\x1b[35m', '\x1b[40m', (DEV_MODE ? 'DEV' : 'PRODUCTION') + ' BUILD');
+// console.info('\x1b[35m', '\x1b[40m', 'NODE_ENV ' + process.env.NODE_ENV);
 console.info('\x1b[37m', '\x1b[40m');
 
 const config = {
@@ -78,7 +79,7 @@ const config = {
                                 importLoaders: 1,
                                 import: false,
                                 url: false,
-                                localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                                localIdentName: '[local]--[hash:base64:5]',
                                 getLocalIdent: (loaderContext, localIdentName, localName, options) => {
                                     if (!options.context) {
                                         options.context = loaderContext.options && typeof loaderContext.options.context === 'string' ? loaderContext.options.context : loaderContext.context;
@@ -89,8 +90,8 @@ const config = {
                                     const hash = loaderUtils.interpolateName(loaderContext, localIdentName, options);
                                     return hash.replace(new RegExp('[^a-zA-Z0-9\\-_\u00A0-\uFFFF]', 'g'), '-').replace(/^((-?[0-9])|--)/, '_$1');
                                 },
-                                sourceMap: sourceMaps,
-                                minimize: minimize
+                                sourceMap: sourceMaps
+                                // minimize: minimize
                             }
                         },
                         {
@@ -246,7 +247,7 @@ if (DEV_MODE) {
         sourceMap: false
     }));
     // minimization enabled
-    config.plugins.push(new webpack.LoaderOptionsPlugin({ minimize: true }));
+    config.plugins.push(new webpack.LoaderOptionsPlugin({ minimize: minimize }));
 }
 
 module.exports = config;
