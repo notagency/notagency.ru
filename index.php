@@ -12,6 +12,7 @@ ob_start();
 $supportedLangs = ['ru', 'en'];
 $defaultLang = 'en';
 $lang = $defaultLang;
+$rawLang = false;
 if (!empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
     $rawLang = Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
 }
