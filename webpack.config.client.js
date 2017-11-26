@@ -9,6 +9,7 @@ const webpack = require('webpack');
 // const NpmInstallPlugin = require('npm-install-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const loaderUtils = require('loader-utils');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 const DEV_MODE = process.env.NODE_ENV !== 'production';
 
@@ -228,7 +229,8 @@ const config = {
                     ]
                 })
             }
-        })
+        }),
+        new SpriteLoaderPlugin()
     ],
     resolve: {
         extensions: ['.js', '.jsx']

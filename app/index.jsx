@@ -11,6 +11,7 @@ import { createLogger } from 'redux-logger';
 import createRoutes from './routes';
 import reducers from './state';
 import DevTools from './components/DevTools';
+import './sprite';
 
 const initialState = JSON.parse(document.getElementById('app').getAttribute('data-state'));
 

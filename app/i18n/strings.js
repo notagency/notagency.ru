@@ -2,7 +2,8 @@ export default {
     en: {
         Index: {
             title: 'Team of developers',
-            desc: 'SuperB development with\u00a01C\u2011Bitrix, Symfony, ReactJS',
+            backEnd: 'Back-End: \u00a01C\u2011Bitrix, Symfony',
+            frontEnd: 'Front-End: React & Redux, Angular, Knockout, ES7',
             anyQuestions: 'If you have any questions',
             agenciesLabel: 'projects from digital agencies',
             clientsLabel: 'projects from clients',
@@ -26,7 +27,8 @@ export default {
     ru: {
         Index: {
             title: 'Команда разработчиков',
-            desc: 'Профессиональная разработка сайтов на\u00a01C\u2011Битрикс, Symfony, ReactJS',
+            backEnd: 'Backend: \u00a01C\u2011Bitrix, Symfony',
+            frontEnd: 'Профессиональная разработка сайтов на\u00a01C\u2011Битрикс, Symfony, ReactJS',
             anyQuestions: 'По любым вопросам',
             agenciesLabel: 'проектов по заказу агентств',
             clientsLabel: 'проектов по заказу клиентов',

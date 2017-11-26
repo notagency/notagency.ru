@@ -6293,8 +6293,7 @@ button.close--CrfiA {
         left: 18px;
         top: -4px;
     }
-}.logo--3kioO.black--3Reb6{
-}.logo--3kioO.black--3Reb6:before{path{
+}.logo--3kioO.black--3Reb6{}.logo--3kioO.black--3Reb6:before{path{
         fill: #fff;
     }
 }.logo--3kioO.black--3Reb6 a{
@@ -6334,6 +6333,11 @@ button.close--CrfiA {
 }.social_link--2cM1K + .social_link--2cM1K{
     margin-left: 15px;
 }.social_icon--3bHrh {
+    width: 25px;
+    height: 25px
+}.social_icon_svg--2bui8{
+    width: 100%;
+    height: 100%;
 }.social_icon--3bHrh.facebook--3J4Rs{
     color: #3b5998;
 }.social_icon--3bHrh.facebook--3J4Rs.black--3Reb6{
