@@ -3,7 +3,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import strings from './strings';
+
+import strings from '../json/content.json';
 
 export default function translate(key) {
     return Component => {

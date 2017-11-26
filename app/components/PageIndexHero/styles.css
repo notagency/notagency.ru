@@ -1,8 +1,6 @@
 @import "../../css/main.css";
 
 .page-index-hero {
-    display: inline-block;
-    vertical-align: middle;
     margin: 0;
     white-space: normal;
     min-width: 100%;
