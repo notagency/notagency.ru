@@ -91,8 +91,10 @@ const config = {
                                     const hash = loaderUtils.interpolateName(loaderContext, localIdentName, options);
                                     return hash.replace(new RegExp('[^a-zA-Z0-9\\-_\u00A0-\uFFFF]', 'g'), '-').replace(/^((-?[0-9])|--)/, '_$1');
                                 },
-                                sourceMap: sourceMaps
-                                // minimize: minimize
+                                sourceMap: sourceMaps,
+                                minimize: minimize ? {
+                                    // core: { disable: true }
+                                } : false
                             }
                         },
                         {

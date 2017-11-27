@@ -14,6 +14,9 @@ function linkJs($path)
 
 function getAsset($path)
 {
+    if (strpos($path, '://') !== false) {
+        return $path;
+    }
     $mtime = filemtime($_SERVER['DOCUMENT_ROOT'] . $path);
     return $path . '?' . $mtime;
 }

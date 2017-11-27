@@ -25,13 +25,14 @@ if ($rawLang) {
 ?><!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>NotAgency — Профессиональная разработка сайтов на 1C-Битрикс, Laravel, Symfony, ReactJS</title>    
+    <title>NotAgency — Профессиональная разработка сайтов на 1C-Битрикс, Symfony, ReactJS, AngularJs</title>
     <meta charset="utf-8" />
     <link rel="icon" href="/favicon.png?v=2.2">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Профессиональная разработка сайтов на 1C-Битрикс, Symfony, ReactJS" />
-    <meta name="keywords" content="создание и поддержка веб-проектов, профессиональная разработка сайтов, 1C-Битрикс, Symfony, ReactJS, React, Redux, AngularJs, NodeJs" />
+    <meta name="description" content="Профессиональная разработка сайтов на 1C-Битрикс, Symfony, ReactJS, AngularJs" />
+    <meta name="keywords" content="создание и поддержка веб-проектов, профессиональная разработка сайтов, 1C-Битрикс, Symfony, ReactJS, React, Redux, AngularJs, NodeJs, ES7" />
     <?php
+    linkCss('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
     linkCss('/assets/app.css');
     ?>
 </head>

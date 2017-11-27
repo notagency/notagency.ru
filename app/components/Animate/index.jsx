@@ -51,7 +51,7 @@ Animate.propTypes = {
     fromMainPage: PropTypes.bool,
     type: PropTypes.string.isRequired,
     startFrom: PropTypes.number.isRequired,
-    children: PropTypes.object
+    children: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
 };
 
 function mapStateToProps(state) {

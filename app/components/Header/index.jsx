@@ -2,17 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import objectAssign from 'object-assign';
 import classNames from 'classnames/bind';
-import { grid, type } from 'bootstrap-css';
 
 import Animate from '../Animate';
-import mainStyles from '../../css/main.css';
 import styles from './styles.css';
 
 import { changeLanguage } from '../../state/lang';
 
-objectAssign(styles, grid, type, mainStyles);
 const cx = classNames.bind(styles);
 
 const Header = ({ currentLanguage, onChangeLanguage, theme }) => {

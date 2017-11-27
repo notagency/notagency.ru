@@ -1,14 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import objectAssign from 'object-assign';
 import classNames from 'classnames/bind';
-import { responsiveUtilities } from 'bootstrap-css';
 
 import styles from './styles.css';
 import Animate from '../Animate';
 import translate from '../../i18n/Translate';
 
-objectAssign(styles, responsiveUtilities);
 const cx = classNames.bind(styles);
 
 class IndexHero extends Animate {

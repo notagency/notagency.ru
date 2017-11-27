@@ -1,4 +1,5 @@
-@import "../../css/main.css";
+@import "../../css/settings.css";
+@import "../../css/helpers.css";
 
 .header{
     position: absolute;
