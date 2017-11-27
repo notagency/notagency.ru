@@ -16,15 +16,18 @@ body {
     font-family: 'Roboto',Helvetica,Arial,sans-serif;
     font-size: 16px;
     font-weight: 300;
-    margin: 0 0 var(--footer_height);
+    padding: 0 0 var(--footer_height);
     overflow: hidden;
     &.no-animation{
         overflow: auto;
     }
+    height: 100vh;
     @media (--device-xs){
         font-size: 14px;
-        min-height: 500px;
-        margin: 0 0 var(--footer_height_xs);
+        padding-bottom: var(--footer_height_xs);
+    }
+    & > div {
+        height: 100%;
     }
 }
 a {
@@ -59,7 +62,6 @@ h1{
     @apply --font-russo-one;
     @media (--device-xs) {
         font-size: 28px;
-        margin: 20px 0;
     }
 
 }
@@ -69,21 +71,19 @@ h3{
     line-height: 30px;
     margin: 0;
     @media (--device-xs){
-        font-size: 17px;
+        font-size: 16px;
         line-height: 24px;
     }
 }
 
-/**
- *  Layout
- */
+/* Layout */
 .layout{
     height: 100%;
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
+    display: flex;
+    @media (--device-xs) {
+        justify-content: space-between;
+        flex-direction: column;
+    }
 }
 .content{
     width: 100%;
@@ -94,40 +94,20 @@ h3{
 .slide{
     width: 100%;
     overflow: hidden;
-}
-.slide_hero{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    @apply --valign-middle;
-    text-align: center;
-    @media (--device-xs){
-        position: static;
-        @apply --valign-undo;
-        height: auto;
-        padding: 0 2%;
+    &_hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+        @media (--device-xs){
+            padding: 0 2%;
+            flex: 1;
+            justify-content: space-between;
+        }
     }
-}
-.slide_hero_black{
-    background: #000;
-}
-
-.hero{
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0;
-    white-space: normal;
-    min-width: 100%;
-}
-.hero-hr{
-    width: 250px;
-    border-top: 2px solid black;
-    margin: 25px auto;
-    text-transform: uppercase;
-    @media (--device-xs){
-        border-top: 1px solid black;
-        margin: 15px auto;
+    &_hero_black{
+        background: #000;
     }
 }
 .zoom-in-link {

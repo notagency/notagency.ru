@@ -1,8 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import objectAssign from 'object-assign';
 import classNames from 'classnames/bind';
-import { type, responsiveUtilities } from 'bootstrap-css';
 import flow from 'lodash/flow';
 
 import Animate from '../Animate';
@@ -10,7 +9,6 @@ import styles from './styles.css';
 
 import translate from '../../i18n/Translate';
 
-objectAssign(styles, type, responsiveUtilities);
 const cx = classNames.bind(styles);
 
 const Footer = props => (

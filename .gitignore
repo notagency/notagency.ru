@@ -41,3 +41,5 @@ npm-debug.log
 # Project specific folders
 /portfolio/*
 /vendor/
+
+composer.phar

@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import classNames from 'classnames/bind';
 import styles from './styles.css';
@@ -50,7 +51,7 @@ Animate.propTypes = {
     fromMainPage: PropTypes.bool,
     type: PropTypes.string.isRequired,
     startFrom: PropTypes.number.isRequired,
-    children: PropTypes.object
+    children: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
 };
 
 function mapStateToProps(state) {

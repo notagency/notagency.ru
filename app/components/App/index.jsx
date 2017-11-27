@@ -1,6 +1,7 @@
 /* global window */
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import classNames from 'classnames/bind';
 import ls from 'local-storage';
@@ -47,12 +48,10 @@ class App extends Component {
         const pathname = this.props.location.pathname;
         const theme = this.pathToThemeMap[pathname] ? this.pathToThemeMap[pathname] : '';
         return (
-            <div>
+            <div className={cx('layout')}>
                 <Header theme={theme} />
                 <div className={cx('slide', 'slide_hero', 'slide_hero_' + theme)} height={this.state.contentHeight}>
-                    <div className={cx('hero')}>
-                        {children}
-                    </div>
+                    {children}
                 </div>
                 <Footer />
             </div>

@@ -11,29 +11,30 @@ require $_SERVER['DOCUMENT_ROOT'] . '/lib/tools.php';
 
 ob_start();
 
-$supportedLangs = ['ru', 'en'];
+$supportedLanguages = ['ru', 'en'];
 $defaultLang = 'en';
 $lang = $defaultLang;
+$rawLang = false;
 if (!empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
     $rawLang = Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
 }
 if ($rawLang) {
     list($lang, $regionCode) = explode('_', $rawLang);
     $lang = strtolower($lang);
-    $lang = in_array($lang, $supportedLangs) ? $lang : 'en';
+    $lang = in_array($lang, $supportedLanguages) ? $lang : 'en';
 }
 
 ?><!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>NotAgency — Профессиональная разработка сайтов на 1C-Битрикс, Laravel, Symfony, ReactJS</title>    
+    <title>NotAgency — Профессиональная разработка сайтов на 1C-Битрикс, Symfony, ReactJS, AngularJs</title>
     <meta charset="utf-8" />
     <link rel="icon" href="/favicon.png?v=2.2">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Профессиональная разработка сайтов на 1C-Битрикс, Laravel, Symfony, ReactJS" />
-    <meta name="keywords" content="создание и поддержка веб-проектов, профессиональная разработка сайтов, 1C-Битрикс, Laravel, Symfony, ReactJS, React, Redux" />
+    <meta name="description" content="Профессиональная разработка сайтов на 1C-Битрикс, Symfony, ReactJS, AngularJs" />
+    <meta name="keywords" content="создание и поддержка веб-проектов, профессиональная разработка сайтов, 1C-Битрикс, Symfony, ReactJS, React, Redux, AngularJs, NodeJs, ES7" />
     <?php
-    linkCss('/assets/icons.css');
+    linkCss('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
     linkCss('/assets/app.css');
     ?>
 </head>

@@ -1,17 +1,14 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import objectAssign from 'object-assign';
 import classNames from 'classnames/bind';
-import { grid, type } from 'bootstrap-css';
 
 import Animate from '../Animate';
-import mainStyles from '../../css/main.css';
 import styles from './styles.css';
 
 import { changeLanguage } from '../../state/lang';
 
-objectAssign(styles, grid, type, mainStyles);
 const cx = classNames.bind(styles);
 
 const Header = ({ currentLanguage, onChangeLanguage, theme }) => {
@@ -39,13 +36,21 @@ const Header = ({ currentLanguage, onChangeLanguage, theme }) => {
                         <a className={cx('zoom-in-link', 'social_link')} href="https://www.facebook.com/notagency.ru/"
                            target="_blank" rel="noopener noreferrer">
                             <Animate type="right-to-left" startFrom={1000}>
-                                <i className={'icons icons_facebook-squared ' + cx('social_icon', 'facebook', theme)} />
+                                <div className={cx('social_icon', 'facebook', theme)} >
+                                    <svg className={cx('social_icon_svg')}>
+                                        <use xlinkHref="#spr-facebook-squared" />
+                                    </svg>
+                                </div>
                             </Animate>
                         </a>
                         <a className={cx('zoom-in-link', 'social_link')}
                            href="https://github.com/notagency/" target="_blank" rel="noopener noreferrer">
                             <Animate type="right-to-left" startFrom={1100}>
-                                <i className={'icons icons_github-round ' + cx('social_icon', 'github', theme)} />
+                                <div className={cx('social_icon', 'github', theme)} >
+                                    <svg className={cx('social_icon_svg')}>
+                                        <use xlinkHref="#spr-github-round" />
+                                    </svg>
+                                </div>
                             </Animate>
                         </a>
                     </div>
