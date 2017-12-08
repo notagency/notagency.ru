@@ -34,7 +34,7 @@ class PageWalkingDead extends Component {
         const { iframeWidth, iframeHeight, iframeTop } = this.state;
         return (
             <div className={cx('viewport')}>
-                <iframe src="http://not:agency@wd.notagency.ru/" width={`${iframeWidth}px`} height={`${iframeHeight}px`}
+                <iframe src="http://wd.notagency.ru/" width={`${iframeWidth}px`} height={`${iframeHeight}px`}
                         style={{ top: `${iframeTop}px` }} />
             </div>
         );
