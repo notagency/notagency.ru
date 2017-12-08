@@ -12,7 +12,6 @@ import { changeLanguage } from '../../state/lang';
 const cx = classNames.bind(styles);
 
 const Header = ({ currentLanguage, onChangeLanguage, theme }) => {
-    console.log(theme);
     const anotherLanguage = currentLanguage === 'ru' ? 'en' : 'ru';
     return (
         <div className={cx('header', theme)}>
