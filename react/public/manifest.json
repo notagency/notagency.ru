@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "NotAgency",
+  "name": "NotAgency — профессиональная разработка сайтов на React.js и Laravel",
   "icons": [
     {
       "src": "favicon.ico",
