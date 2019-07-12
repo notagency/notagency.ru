@@ -1,0 +1,19 @@
+{
+  "path": "https://api.lobster.tyrell.group",
+  "endpoints": {
+    "users": {
+      "one": "/user"
+    },
+    "competences": {
+      "list": "",
+      "one": ""
+    },
+    "courses": {
+      "list": "/competences/:competenceCode/courses",
+      "one": "/courses/:courseCode"
+    },
+    "learningObjects": {
+      "one": "/learningObject/:learningObjectCode"
+    }
+  }
+}

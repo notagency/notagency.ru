@@ -1,0 +1,10 @@
+{
+  "path": "http://cms.dvk-realty.test.notagency.local/api",
+  "endpoints": {
+    "globals": "/globals",
+    "homes": {
+      "list": "/homes",
+      "one": "/homes/:code"
+    }
+  }
+}

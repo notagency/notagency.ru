@@ -1,0 +1,27 @@
+@import "../../variables";
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+  @media #{$screen-xs-only} {
+    height: $footer-height-xs;
+  }
+
+  .inner {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 8px 0;
+    background: black;
+    color: $grey-color;
+    display: flex;
+    justify-content: center;
+  }
+
+  .item {
+    padding: 0 10px;
+  }
+
+}

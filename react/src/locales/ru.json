@@ -1,0 +1,25 @@
+{
+  "Index": {
+    "title": "ДИДЖИТАЛ АУТСОРС",
+    "firstRow": "Стратегия | Концепция | Разработка | Аналитика",
+    "secondRow": "WebGL | React.js | Laravel",
+    "anyQuestions": "По любым вопросам",
+    "agenciesLabel": "проектов по заказу агентств",
+    "clientsLabel": "проектов по заказу клиентов",
+    "years": "лет работы",
+    "inWebIndustry": "в веб\u2011индустрии",
+    "npfSberbanka": "НПФ\u00a0Сбербанка",
+    "andOthers": "и других",
+    "trusted": "Нам доверяют"
+  },
+  "Page404": {
+    "pageNotFound": "Страница не найдена",
+    "youCanReturn": "Вы можете перейти на",
+    "mainPage": "главную страницу",
+    "contactUs": "или связаться с нами"
+  },
+  "Footer": {
+    "psrn": "ОГРНИП",
+    "inn": "ИНН"
+  }
+}

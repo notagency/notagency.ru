@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|Russo+One&subset=latin,cyrillic');
+@import './variables';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $font-roboto;
+  font-size: 16px;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0 0 $footer-height;
+  overflow: hidden;
+
+  &.no-animation {
+    overflow: auto;
+  }
+
+  height: 100vh;
+  @media #{$screen-xs-only} {
+    font-size: 14px;
+    padding-bottom: $footer-height-xs;
+  }
+
+}
+
+a {
+  border-bottom: 1px solid;
+  color: $team-pink-color;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  outline: none;
+  &:hover {
+    border-bottom-color: transparent;
+    opacity: 0.8;
+    color: $team-pink-color;
+  }
+}
+
+iframe {
+  border: none;
+}
+
+h1 {
+  font-weight: 400;
+  display: inline-block;
+  line-height: 35px;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+  font-size: 42px;
+  letter-spacing: 1px;
+  font-family: $font-russo-one;
+  @media #{$screen-xs-only} {
+    font-size: 28px;
+  }
+
+}
+
+h3 {
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 30px;
+  margin: 0;
+  @media #{$screen-xs-only} {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+// Layout
+.layout {
+  height: 100%;
+  display: flex;
+  @media #{$screen-xs-only} {
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+
+.zoom-in-link {
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+// bootstrap
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+
+// helpers
+.screen-sm-max {
+  @media #{$screen-sm-max} {
+    display: none;
+  }
+}
+.screen-sm-only {
+  @media #{$screen-xs-only} {
+    display: none;
+  }
+  @media #{$screen-md-min} {
+    display: none;
+  }
+}
+.screen-sm-min {
+  @media #{$screen-xs-only} {
+    display: none;
+  }
+}
+.screen-xs-only {
+  @media #{$screen-sm-min} {
+    display: none;
+  }
+}
+
+
+// animations
+.animate {
+  opacity: 0;
+  animation-duration: 0.6s;
+  perspective: 1000px;
+  backface-visibility: hidden;
+}
+.start-animation{
+  opacity: 1;
+  &.top-to-bottom {
+    animation-name: top-to-bottom;
+  }
+  &.bottom-to-top {
+    animation-name: bottom-to-top;
+  }
+  &.left-to-right {
+    animation-name: left-to-right;
+  }
+  &.right-to-left {
+    animation-name: right-to-left;
+  }
+  &.zoom-in {
+    animation-name: zoom-in;
+    transform: scale(1);
+  }
+  &.zoom-out {
+    animation-name: zoom-out;
+    transform: scale(1);
+  }
+  &.alpha-in {
+    animation-name: alpha-in;
+  }
+}
+
+/* Top to bottom keyframes */
+@keyframes top-to-bottom {
+  0% {
+    transform: translate3d(0, -100px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+/* Bottom to top keyframes */
+@keyframes bottom-to-top {
+  0% {
+    transform: translate3d(0, 100px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+/* Left to right keyframes */
+@keyframes left-to-right {
+  0% {
+    transform: translate3d(-100px, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+/* Right to left keyframes */
+@keyframes right-to-left {
+  0% {
+    transform: translate3d(100px, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+/* Appear from center in keyframes */
+@keyframes zoom-in {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Appear from center out keyframes */
+@keyframes zoom-out {
+  0% {
+    transform: scale(1.5);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Alpha keyframes */
+@keyframes alpha-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

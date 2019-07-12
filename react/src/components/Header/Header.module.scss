@@ -1,0 +1,170 @@
+@import '../../variables';
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  overflow: hidden;
+  z-index: 1;
+  white-space: nowrap;
+  @media #{$screen-xs-only} {
+    position: static;
+  }
+
+  &.black {
+    background: #000;
+  }
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  @media #{$screen-xs-only} {
+    padding: 0 20px;
+  }
+}
+
+.logo {
+  margin: 0;
+  position: relative;
+  display: inline-block;
+
+  /*&:hover{
+      &:before{
+          transform: rotate(120deg);
+      }
+  }*/
+  & a {
+    color: #000;
+
+    &:hover,
+    &:visited {
+      color: #000;
+    }
+  }
+
+  & span {
+    font-family: $font-russo-one;
+    font-weight: 400;
+    position: relative;
+    display: block;
+    background: #fff;
+    font-size: 26px;
+    line-height: 25px;
+    margin: 17px 0;
+    padding: 0 0 3px;
+    @media #{$screen-xs-only} {
+      margin-top: 11px;
+      font-size: 19px;
+      line-height: 21px;
+      padding: 0;
+    }
+  }
+
+  & svg {
+    position: absolute;
+    width: 60px;
+    height: 55px;
+    top: 0;
+    left: 26px;
+    @media #{$screen-xs-only} {
+      width: 45px;
+      height: 45px;
+      left: 18px;
+      top: -4px;
+    }
+  }
+
+  &.black {
+    &:before {
+      path {
+        fill: #fff;
+      }
+    }
+
+    & a {
+      color: #fff;
+
+      &:hover,
+      &:visited {
+        color: #fff;
+      }
+    }
+
+    & span {
+      background: #000;
+    }
+  }
+}
+
+.socials {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 25px;
+  line-height: 20px;
+
+  .link {
+    border-bottom: none;
+    display: inline-block;
+    vertical-align: middle;
+
+    & + .link {
+      margin-left: 15px;
+    }
+  }
+
+  .icon {
+    width: 25px;
+    height: 25px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &.facebook {
+      color: #3b5998;
+
+      &.black {
+        color: #fff;
+      }
+    }
+
+    &.github {
+      color: #000;
+
+      &.black {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.langs {
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: middle;
+  width: 40px;
+  font-size: 15px;
+  @media #{$screen-xs-only} {
+    margin-left: 5px;
+  }
+
+  & button {
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    font-family: $font-russo-one;
+    &:focus {
+      outline: none;
+    }
+
+    &.black {
+      color: #fff;
+    }
+  }
+}

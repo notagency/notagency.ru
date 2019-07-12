@@ -1,0 +1,24 @@
+@import "../../variables";
+
+.hero {
+  margin: 0;
+  white-space: normal;
+  min-width: 100%;
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hr {
+  width: 250px;
+  border-top: 1px solid black;
+  margin: 25px auto;
+  text-transform: uppercase;
+  @media #{$screen-xs-only} {
+    border-top: 1px solid black;
+    margin: 15px auto;
+  }
+}
