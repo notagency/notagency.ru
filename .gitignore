@@ -1,45 +1,17 @@
-# Numerous always-ignore extensions
-*.bak
-*.diff
-*.err
-*.exe
-*.log
-*.orig
-*.rej
-*.sass-cache
-*.swo
-*.swp
-*.vi
-*~
-*.cache
-
-# OS or Editor folders
-*.sublime-grunt.cache
-*.sublime-project
-*.sublime-workspace
-._*
-.cache
 .DS_Store
-.project
-.settings
-.tmproj
-Thumbs.db
-
-# Folders to ignore
-.CVS
-.git
-.hg
-.idea
-.svn
-.publish
-bower_components
-
-# Node.JS
-node_modules
+node_modules/
+dist/
+dist-nossr/
 npm-debug.log
-
-# Project specific folders
-/portfolio/*
-/vendor/
-
-composer.phar
+yarn-error.log
+*.zip
+*.log
+.idea
+*.iml
+.vscode
+run.sh
+env.js
+env.json
+cypress.env.json
+storybook-static/
+pm2.config.json

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui" />
+  <link rel="shortcut icon" type="image/png" sizes="16x16" href="https://smotreshka.sequoia-api.lfstrm.tv/upload/favicon/Group 2.png" />
+  <link rel="shortcut icon" type="image/png" sizes="32x32" href="https://smotreshka.sequoia-api.lfstrm.tv/upload/favicon/Group 2.png" />
+  <link rel="shortcut icon" type="image/png" sizes="150x150" href="https://smotreshka.sequoia-api.lfstrm.tv/upload/favicon/Group 2.png" />
+  <link rel="shortcut icon" type="image/png" sizes="180x180" href="https://smotreshka.sequoia-api.lfstrm.tv/upload/favicon/Group 2.png" />
+  <link rel="shortcut icon" type="image/png" sizes="192x192" href="https://smotreshka.sequoia-api.lfstrm.tv/upload/favicon/Group 2.png" />
+  <link rel="shortcut icon" type="image/png" sizes="512x512" href="https://smotreshka.sequoia-api.lfstrm.tv/upload/favicon/Group 2.png" />
+  <link rel="shortcut icon" type="image/svg+xml" sizes="192x192" href="https://smotreshka.sequoia-api.lfstrm.tv/upload/favicon/Group 2.png" />
+  <title>Смотрёшка</title>
+  <meta name="description" content="Совершенно новое телевидение!">
+  <meta property="og:title" content="Смотрёшка"/>
+  <meta property="og:description" content="Совершенно новое телевидение!"/>
+  <meta property="og:image" content="https://smotreshka.sequoia-api.lfstrm.tv/upload/f2441e0e67e6ae99ac26993ef92553b0.png"/>
+  <meta property="vk:image" content="https://smotreshka.sequoia-api.lfstrm.tv/upload/f2441e0e67e6ae99ac26993ef92553b0.png"/>
+  <style>
+      body, h2 {
+          font-family: Roboto, sans-serif;
+          font-style: normal;
+      }
+
+      body {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          min-height: 100%;
+          padding: 0;
+          margin: 0;
+          overflow: hidden;
+          font-size: 16px;
+      }
+
+      h2 {
+          margin: 0;
+          font-size: 1.5rem;
+          font-weight: 700;
+          line-height: 2rem;
+          letter-spacing: -0.00625rem;
+      }
+
+      p {
+          margin: 12px 0 0;
+          font-size: 1rem;
+          font-weight: normal;
+          line-height: 1.5rem;
+          color: rgba(0, 0, 0, 0.6);
+          letter-spacing: 0.0125rem;
+      }
+
+      img {
+          display: block;
+          max-width: 100%;
+          vertical-align: middle;
+          border-style: none;
+      }
+
+     .layout-error {
+           position: relative;
+           display: flex;
+           flex: 1;
+           flex-direction: column;
+           justify-content: flex-start;
+           width: 100%;
+           max-width: 1440px;
+           margin: 0 auto;
+           background: no-repeat;
+           background-size: contain;
+       }
+
+      .light {
+          color: rgba(0, 0, 0, 0.9);
+      }
+
+      .text {
+          position: absolute;
+          top: 64px;
+          left: 64px;
+          width: 100%;
+          max-width: 464px;
+      }
+
+      .text-inner {
+          padding: 24px 32px;
+          background-color: rgba(255, 255, 255, 0.9);
+          border-radius: 8px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      .link {
+          line-height: 1.25rem;
+          color: rgba(0, 0, 0, 0.9);
+          text-decoration: none;
+          cursor: pointer;
+          border-bottom-color: rgb(1, 102, 255);
+          border-bottom-style: solid;
+          border-bottom-width: 1px;
+      }
+
+      .image-mobile {
+          display: none;
+      }
+
+      @media (max-width: 599px) {
+          .text {
+              position: relative;
+              top: auto;
+              left: auto;
+              width: auto;
+              max-width: none;
+          }
+
+          .text-inner {
+              padding: 16px 24px;
+              margin: 32px 32px 16px;
+          }
+
+          .image-desktop {
+              display: none;
+          }
+
+          .image-mobile {
+              display: block;
+          }
+      }
+
+  </style>
+</head>
+<body>
+  <div class="layout-error light">
+    <div class="text">
+      <div class="text-inner">
+        <h2>К&nbsp;сожалению, произошла какая‑то&nbsp;ошибка</h2>
+        <p>%description%</p>
+      </div>
+    </div>
+    <img src="/public/images/backgrounds/error-pages/500.png" alt="500 error" class="image-desktop">
+    <img src="/public/images/backgrounds/error-pages/500-mobile.png" alt="500 error" class="image-mobile">
+  </div>
+  <!--Google Tag Manager-->
+  <script>if ('%gtmCounter%') (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});let f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!=='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','%gtmCounter%');</script>
+  <noscript>
+    <iframe src="%gtmCounterUrl%" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!--End Google Tag Manager-->
+  <script>
+    if ('%errorMessage%') {
+      console.error(`%errorStack%` ? `%errorStack%` : '%errorMessage%');
+    }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'event-to-ga',
+      eventCategory: 'error',
+      eventAction: '500_error',
+      eventLabel: '%errorMessage%'
+    });
+  </script>
+</body>
+</html>

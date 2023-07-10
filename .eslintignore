@@ -1,4 +1,5 @@
-assets/
-app/i/
-lib/
-.git/
+public/lottie.js
+public/500.html
+public
+scripts/ci
+dist

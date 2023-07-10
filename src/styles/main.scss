@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|Russo+One&subset=latin,cyrillic');
+@import './settings';
+@import './media-queries';
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0 0 var(--footer_height);
+  overflow: hidden;
+  height: 100vh;
+  @include prefers-dark-scheme {
+    background: #000;
+    color: #fff;
+  }
+  @include device-xs {
+    font-size: 14px;
+    padding-bottom: var(--footer_height_xs);
+  }
+
+  &.no-animation {
+    overflow: auto;
+  }
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Typography */
+
+a {
+  border-bottom: 1px solid;
+  color: var(--corporate-color);
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    outline: none;
+    text-decoration: none;
+    border-bottom-color: transparent;
+    opacity: 0.8;
+    color: var(--corporate-color);
+  }
+  &:active,
+  &:visited,
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+iframe {
+  border: none;
+}
+
+h1 {
+  font-weight: 400;
+  line-height: 35px;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+  font-size: 42px;
+  letter-spacing: 1px;
+  font-family: var(--font-russo-one);
+  @include device-xs {
+    font-size: 28px;
+  }
+}
+
+h3 {
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 30px;
+  margin: 0;
+  @include device-xs {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+/* Misc */
+
+button {
+  cursor: pointer;
+}
+
+.layout {
+  height: 100%;
+  display: flex;
+  @include device-xs {
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+
+.content {
+  width: 100%;
+  top: 100%;
+  position: absolute;
+}
+
+.slide {
+  width: 100%;
+  overflow: hidden;
+  &_hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    @include device-xs {
+      flex: 1;
+      justify-content: space-between;
+    }
+  }
+  &_hero_black {
+    background: #000;
+  }
+}
+
+.zoom-in-link {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-direction-row {
+  flex-direction: row;
+}
+
+.flex-direction-col {
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.hidden-xs {
+  @include device-xs {
+    display: none !important;
+  }
+}
+
+.visible-xs {
+  display: none !important;
+  @include device-xs {
+    display: flex !important;
+  }
+}

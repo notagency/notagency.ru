@@ -1,0 +1,27 @@
+$device-s-min: 768px;
+$device-m-min: 992px;
+$device-l-min: 1119px;
+
+@mixin device-xs {
+  @media (max-width: $device-s-min) {
+    @content;
+  }
+}
+
+@mixin device-sm {
+  @media (min-width: $device-s-min) and (max-width: $device-m-min) {
+    @content;
+  }
+}
+
+@mixin device-md {
+  @media (min-width: $device-m-min) and (max-width: $device-l-min) {
+    @content;
+  }
+}
+
+@mixin prefers-dark-scheme {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
