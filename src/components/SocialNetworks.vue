@@ -26,14 +26,11 @@ import IconGithub from 'src/components/IconGithub.vue';
 .socials {
   .item {
     border-bottom: none;
+    color: currentColor;
 
     .icon {
       width: 25px;
       height: 25px;
-      color: #000;
-      @include prefers-dark-scheme {
-        color: #fff;
-      }
     }
   }
 }

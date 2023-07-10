@@ -4,7 +4,7 @@
 
 html {
   position: relative;
-  min-height: 100%;
+  height: 100%;
 }
 
 body {
@@ -13,20 +13,15 @@ body {
   font-size: 16px;
   font-weight: 300;
   margin: 0;
-  padding: 0 0 var(--footer_height);
+  padding: 0;
   overflow: hidden;
-  height: 100vh;
+  min-height: 100%;
   @include prefers-dark-scheme {
-    background: #000;
-    color: #fff;
+    background: var(--dark-bg-color);
+    color: var(--dark-font-color);
   }
   @include device-xs {
     font-size: 14px;
-    padding-bottom: var(--footer_height_xs);
-  }
-
-  &.no-animation {
-    overflow: auto;
   }
 }
 
@@ -69,7 +64,7 @@ h1 {
   margin: 0 0 18px;
   text-transform: uppercase;
   font-size: 42px;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   font-family: var(--font-russo-one);
   @include device-xs {
     font-size: 28px;
@@ -99,31 +94,6 @@ button {
   @include device-xs {
     justify-content: space-between;
     flex-direction: column;
-  }
-}
-
-.content {
-  width: 100%;
-  top: 100%;
-  position: absolute;
-}
-
-.slide {
-  width: 100%;
-  overflow: hidden;
-  &_hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    text-align: center;
-    @include device-xs {
-      flex: 1;
-      justify-content: space-between;
-    }
-  }
-  &_hero_black {
-    background: #000;
   }
 }
 

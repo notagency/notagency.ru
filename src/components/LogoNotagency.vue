@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import AnimateBlock from 'src/components/AnimateBlock.vue';
+import { getStatus404 } from 'src/utils/error404';
+
+const is404 = getStatus404();
+const tag = is404 ? 'router-link' : 'div';
 </script>
 
 <template>
   <AnimateBlock type="left-to-right" :start-from="200">
-    <div class="logo">
+    <component :is="tag" to="/" class="logo" :class="{ 'cursor-default': !is404 }">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.39 33.29">
         <path
           d="M13.82,19.09L19.13,1.7l5.38,17.37L36.92,32.36l-17.73-4L1.47,32.44Z"
@@ -14,7 +18,7 @@ import AnimateBlock from 'src/components/AnimateBlock.vue';
       </svg>
       <div class="name">NotAgency</div>
       <div class="since">since 2014</div>
-    </div>
+    </component>
   </AnimateBlock>
 </template>
 
@@ -26,17 +30,23 @@ import AnimateBlock from 'src/components/AnimateBlock.vue';
   top: 2px;
   display: flex;
   flex-direction: column;
-  cursor: default;
   white-space: nowrap;
+  color: currentColor;
+  border-bottom: 0;
+
   @include device-xs {
     top: 3px;
   }
   @include prefers-dark-scheme {
     &:before {
       path {
-        fill: #fff;
+        fill: currentColor;
       }
     }
+  }
+
+  &.cursor-default {
+    cursor: default;
   }
 
   .name {
@@ -57,7 +67,7 @@ import AnimateBlock from 'src/components/AnimateBlock.vue';
     }
 
     @include prefers-dark-scheme {
-      background: #000;
+      background: var(--dark-bg-color);
     }
   }
 

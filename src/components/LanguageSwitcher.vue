@@ -43,9 +43,6 @@ watch(
     display: inline-block;
     text-transform: uppercase;
     font-family: var(--font-russo-one);
-    @include prefers-dark-scheme {
-      color: #fff;
-    }
 
     &:focus {
       outline: none;

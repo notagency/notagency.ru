@@ -1,161 +1,354 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui" />
-  <link rel="shortcut icon" type="image/png" sizes="16x16" href="https://smotreshka.sequoia-api.lfstrm.tv/upload/favicon/Group 2.png" />
-  <link rel="shortcut icon" type="image/png" sizes="32x32" href="https://smotreshka.sequoia-api.lfstrm.tv/upload/favicon/Group 2.png" />
-  <link rel="shortcut icon" type="image/png" sizes="150x150" href="https://smotreshka.sequoia-api.lfstrm.tv/upload/favicon/Group 2.png" />
-  <link rel="shortcut icon" type="image/png" sizes="180x180" href="https://smotreshka.sequoia-api.lfstrm.tv/upload/favicon/Group 2.png" />
-  <link rel="shortcut icon" type="image/png" sizes="192x192" href="https://smotreshka.sequoia-api.lfstrm.tv/upload/favicon/Group 2.png" />
-  <link rel="shortcut icon" type="image/png" sizes="512x512" href="https://smotreshka.sequoia-api.lfstrm.tv/upload/favicon/Group 2.png" />
-  <link rel="shortcut icon" type="image/svg+xml" sizes="192x192" href="https://smotreshka.sequoia-api.lfstrm.tv/upload/favicon/Group 2.png" />
-  <title>Смотрёшка</title>
-  <meta name="description" content="Совершенно новое телевидение!">
-  <meta property="og:title" content="Смотрёшка"/>
-  <meta property="og:description" content="Совершенно новое телевидение!"/>
-  <meta property="og:image" content="https://smotreshka.sequoia-api.lfstrm.tv/upload/f2441e0e67e6ae99ac26993ef92553b0.png"/>
-  <meta property="vk:image" content="https://smotreshka.sequoia-api.lfstrm.tv/upload/f2441e0e67e6ae99ac26993ef92553b0.png"/>
-  <style>
-      body, h2 {
-          font-family: Roboto, sans-serif;
-          font-style: normal;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui" />
+    <title>NotAgency</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|Russo+One&subset=latin,cyrillic');
+
+      :root {
+        --corporate-color: #f70236;
+        --corporate-color2: #607d8b;
+        --dark-bg-color: #212123;
+        --dark-font-color: #dfdfdf;
+        --footer_height: 36px;
+        --footer_height_xs: 56px;
+        --font-russo-one: 'Russo One', sans-serif;
+      }
+
+      html {
+        position: relative;
+        min-height: 100%;
       }
 
       body {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          min-height: 100%;
-          padding: 0;
-          margin: 0;
-          overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        font-family: 'Roboto', Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        margin: 0;
+        padding: 0 0 var(--footer_height);
+        overflow: hidden;
+        height: 100vh;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: var(--dark-bg-color);
+          color: var(--dark-font-color);
+        }
+      }
+
+      @media (max-width: 992px) {
+        body {
+          font-size: 14px;
+          padding-bottom: var(--footer_height_xs);
+        }
+      }
+
+      a {
+        border-bottom: 1px solid;
+        color: var(--corporate-color);
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+      }
+
+      a:hover {
+        outline: none;
+        text-decoration: none;
+        border-bottom-color: transparent;
+        opacity: 0.8;
+        color: var(--corporate-color);
+      }
+
+      a:active,
+      a:visited,
+      a:focus {
+        text-decoration: none;
+        outline: none;
+      }
+
+      h1 {
+        font-weight: 400;
+        line-height: 35px;
+        margin: 0 0 18px;
+        text-transform: uppercase;
+        font-size: 42px;
+        letter-spacing: 1px;
+        font-family: var(--font-russo-one);
+      }
+
+      @media (max-width: 992px) {
+        h1 {
+          font-size: 28px;
+        }
+      }
+
+      h3 {
+        font-size: 19px;
+        font-weight: 300;
+        line-height: 30px;
+        margin: 0;
+      }
+      @media (max-width: 992px) {
+        h3 {
           font-size: 16px;
+          line-height: 24px;
+        }
       }
 
-      h2 {
-          margin: 0;
-          font-size: 1.5rem;
-          font-weight: 700;
-          line-height: 2rem;
-          letter-spacing: -0.00625rem;
+      .zoom-in-link {
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.2);
+          opacity: 1;
+        }
       }
 
-      p {
-          margin: 12px 0 0;
-          font-size: 1rem;
-          font-weight: normal;
-          line-height: 1.5rem;
-          color: rgba(0, 0, 0, 0.6);
-          letter-spacing: 0.0125rem;
+      .zoom-in-link:hover {
+        transform: scale(1.2);
+        opacity: 1;
       }
 
-      img {
-          display: block;
-          max-width: 100%;
-          vertical-align: middle;
-          border-style: none;
+      .flex {
+        display: flex;
       }
 
-     .layout-error {
-           position: relative;
-           display: flex;
-           flex: 1;
-           flex-direction: column;
-           justify-content: flex-start;
-           width: 100%;
-           max-width: 1440px;
-           margin: 0 auto;
-           background: no-repeat;
-           background-size: contain;
-       }
-
-      .light {
-          color: rgba(0, 0, 0, 0.9);
+      .justify-content-center {
+        justify-content: center;
       }
 
-      .text {
-          position: absolute;
-          top: 64px;
-          left: 64px;
-          width: 100%;
-          max-width: 464px;
+      .justify-content-space-between {
+        justify-content: space-between;
       }
 
-      .text-inner {
-          padding: 24px 32px;
-          background-color: rgba(255, 255, 255, 0.9);
-          border-radius: 8px;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+      .align-items-center {
+        align-items: center;
       }
 
-      .link {
-          line-height: 1.25rem;
-          color: rgba(0, 0, 0, 0.9);
-          text-decoration: none;
-          cursor: pointer;
-          border-bottom-color: rgb(1, 102, 255);
-          border-bottom-style: solid;
-          border-bottom-width: 1px;
+      .header {
+        padding: 10px 0;
       }
 
-      .image-mobile {
-          display: none;
+      .header .inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px;
+      }
+      @media (max-width: 992px) {
+        .header .inner {
+          padding: 0 20px;
+        }
       }
 
-      @media (max-width: 599px) {
-          .text {
-              position: relative;
-              top: auto;
-              left: auto;
-              width: auto;
-              max-width: none;
-          }
-
-          .text-inner {
-              padding: 16px 24px;
-              margin: 32px 32px 16px;
-          }
-
-          .image-desktop {
-              display: none;
-          }
-
-          .image-mobile {
-              display: block;
-          }
+      .logo {
+        position: relative;
+        top: 2px;
+        display: flex;
+        flex-direction: column;
+        white-space: nowrap;
+        color: currentColor;
+        border-bottom: 0;
       }
 
-  </style>
-</head>
-<body>
-  <div class="layout-error light">
-    <div class="text">
-      <div class="text-inner">
-        <h2>К&nbsp;сожалению, произошла какая‑то&nbsp;ошибка</h2>
-        <p>%description%</p>
+      @media (max-width: 992px) {
+        .logo {
+          top: 3px;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        .logo:before path {
+          fill: currentColor;
+        }
+      }
+
+      .logo .name {
+        font-family: var(--font-russo-one);
+        font-weight: 400;
+        position: relative;
+        display: block;
+        background: #fff;
+        font-size: 26px;
+        line-height: 25px;
+        margin-top: 17px;
+        padding: 0 0 3px;
+      }
+
+      @media (max-width: 992px) {
+        .logo .name {
+          margin-top: 11px;
+          font-size: 19px;
+          line-height: 21px;
+          padding: 0;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        .logo .name {
+          background: var(--dark-bg-color);
+        }
+      }
+
+      .logo .since {
+        padding-top: 9px;
+        padding-left: 31px;
+        font-size: 10px;
+      }
+      @media (max-width: 992px) {
+        .logo .since {
+          padding-left: 19px;
+          font-size: 8px;
+        }
+      }
+
+      .logo svg {
+        position: absolute;
+        width: 60px;
+        height: 55px;
+        top: 0;
+        left: 26px;
+      }
+
+      @media (max-width: 992px) {
+        .logo svg {
+          width: 45px;
+          height: 45px;
+          left: 18px;
+          top: -4px;
+        }
+      }
+
+      .socials .item {
+        border-bottom: none;
+        color: currentColor;
+      }
+
+      .socials .item .icon {
+        width: 25px;
+        height: 25px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hr {
+        width: 100%;
+        opacity: 0.2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="inner flex justify-content-space-between align-items-center">
+        <div class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.39 33.29">
+            <path
+              d="M13.82,19.09L19.13,1.7l5.38,17.37L36.92,32.36l-17.73-4L1.47,32.44Z"
+              fill="transparent"
+              stroke="#f70236"
+            ></path>
+          </svg>
+          <div class="name">NotAgency</div>
+          <div class="since">since 2014</div>
+        </div>
+        <div class="flex align-items-center">
+          <div class="socials flex justify-content-center">
+            <a
+              class="item zoom-in-link"
+              href="https://github.com/notagency/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="icon github">
+                <svg
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 1792 1792"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M1664 896q0 251-146.5 451.5t-378.5 277.5q-27 5-39.5-7t-12.5-30v-211q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 89t.5 54q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+                  ></path>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-    <img src="/public/images/backgrounds/error-pages/500.png" alt="500 error" class="image-desktop">
-    <img src="/public/images/backgrounds/error-pages/500-mobile.png" alt="500 error" class="image-mobile">
-  </div>
-  <!--Google Tag Manager-->
-  <script>if ('%gtmCounter%') (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});let f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!=='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','%gtmCounter%');</script>
-  <noscript>
-    <iframe src="%gtmCounterUrl%" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
-  <!--End Google Tag Manager-->
-  <script>
-    if ('%errorMessage%') {
-      console.error(`%errorStack%` ? `%errorStack%` : '%errorMessage%');
-    }
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: 'event-to-ga',
-      eventCategory: 'error',
-      eventAction: '500_error',
-      eventLabel: '%errorMessage%'
-    });
-  </script>
-</body>
+    <div class="content">
+      <h1>500</h1>
+      <h3>Something went wrong</h3>
+      <hr class="hr" />
+      <h3>We're already working on it, please try again later.</h3>
+    </div>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-75473565-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+          try {
+            w.yaCounter36296500 = new Ya.Metrika({
+              id: 36296500,
+              clickmap: true,
+              trackLinks: true,
+              accurateTrackBounce: true,
+            });
+          } catch (e) {}
+        });
+        var n = d.getElementsByTagName('script')[0],
+          s = d.createElement('script'),
+          f = function () {
+            n.parentNode.insertBefore(s, n);
+          };
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'https://mc.yandex.ru/metrika/watch.js';
+        if (w.opera == '[object Opera]') {
+          d.addEventListener('DOMContentLoaded', f, false);
+        } else {
+          f();
+        }
+      })(document, window, 'yandex_metrika_callbacks');
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/36296500"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <script>
+      if ('%errorMessage%') {
+        console.error(`%errorStack%` ? `%errorStack%` : '%errorMessage%');
+      }
+    </script>
+  </body>
 </html>

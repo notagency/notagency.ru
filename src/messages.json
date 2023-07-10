@@ -11,15 +11,13 @@
       "andOthers": "и других",
       "trusted": "Нам доверяют"
     },
-    "Page404": {
-      "pageNotFound": "Страница не найдена",
-      "youCanReturn": "Вы можете перейти на",
-      "mainPage": "главную страницу",
-      "contactUs": "или связаться с нами"
-    },
     "Footer": {
       "psrn": "ОГРНИП",
       "inn": "ИНН"
+    },
+    "Meta": {
+      "title": "NotAgency",
+      "description": "Профессиональная разработка сайтов на React, ReactNative, Vue, WebGL, NodeJS, Laravel, PHP"
     }
   },
   "en": {
@@ -34,15 +32,13 @@
       "andOthers": "and others",
       "trusted": "Trusted by"
     },
-    "Page404": {
-      "pageNotFound": "We are sorry, but requested page was not found",
-      "youCanReturn": "You can either return to",
-      "mainPage": "main page",
-      "contactUs": "or contact us"
-    },
     "Footer": {
       "psrn": "PSRN",
       "inn": "INN"
+    },
+    "Meta": {
+      "title": "NotAgency",
+      "description": "React, ReactNative, Vue, WebGL, NodeJS, Laravel, PHP web-sites development"
     }
   }
 }

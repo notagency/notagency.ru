@@ -1,20 +1,22 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { getStatus404 } from 'src/utils/error404';
 
 const props = defineProps({
   type: String,
   startFrom: Number,
 });
 const appear = ref(false);
-// if (!playAnimation) {
-setTimeout(() => {
-  appear.value = true;
-}, props.startFrom);
-// }
+const playAnimation = !getStatus404();
+if (playAnimation) {
+  setTimeout(() => {
+    appear.value = true;
+  }, props.startFrom);
+}
 </script>
 
 <template>
-  <div class="animate" :class="[props.type, { start: appear }]">
+  <div :class="[props.type, { animate: playAnimation, start: appear }]">
     <slot />
   </div>
 </template>

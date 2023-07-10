@@ -22,10 +22,6 @@ import LanguageSwitcher from 'src/components/LanguageSwitcher.vue';
 .header {
   padding: 10px 0;
 
-  @include device-xs {
-    position: static;
-  }
-
   .inner {
     display: flex;
     justify-content: space-between;

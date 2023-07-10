@@ -167,7 +167,6 @@ const initRoutes = ({
     html = HtmlMinifier.minify(html, {
       minifyCSS: true,
       minifyJS: true,
-      removeEmptyElements: true,
       removeComments: true,
       collapseWhitespace: true,
     });
@@ -251,7 +250,11 @@ const initRoutes = ({
         }
       }
 
-      // template = template.split('<!--app-meta-head-->').join(renderResult.metaHead);
+      template = template.split('%languageCode%').join(renderResult.locale);
+      template = template.split('%metaTitle%').join(renderResult.meta.title);
+      template = template.split('%metaDescription%').join(renderResult.meta.description);
+      template = template.split('%metaOgImage%').join(renderResult.meta.image);
+      template = template.split('%metaOgUrl%').join(renderResult.meta.url);
       template = template.split('<!--app-html-->').join(renderResult.html);
       const appCss = await getAppCss(vite);
       template = template.split('<!--app-css-->').join(appCss);

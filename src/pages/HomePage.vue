@@ -1,26 +1,48 @@
 <script setup lang="ts">
-import { watch } from 'vue';
+import {ref, useSSRContext, watch} from 'vue';
 import { useRoute } from 'vue-router';
 import { useI18n } from 'vue-i18n';
-import HeaderNotagency from 'src/components/HeaderNotagency.vue';
-import FooterNotagency from 'src/components/FooterNotagency.vue';
+import { setMeta } from 'src/utils/meta';
+import { setStatus404 } from 'src/utils/error404';
+import { detectLocale, isValidLocale } from 'src/utils/language';
 import AnimateBlock from 'src/components/AnimateBlock.vue';
+import DefaultLayout from 'src/layouts/DefaultLayout.vue';
+import Error404Page from 'src/pages/Error404Page.vue';
+import * as process from "process";
 
 const route = useRoute();
 const { t, locale } = useI18n();
-locale.value = route.params.lang === 'en' ? 'en' : 'ru';
+const is404 = ref(false);
+const ctx = process.env.VUE_ENV === 'server' ? useSSRContext() : null;
+
+const init = (lang: string) => {
+  locale.value = detectLocale(lang);
+  is404.value = !isValidLocale(lang);
+  setStatus404(is404.value);
+};
+
+init(route.params.lang?.toString());
 
 watch(
-  () => route.name,
-  () => {
-    locale.value = route.params.lang === 'en' ? 'en' : 'ru';
+  () => route.params.lang,
+  (lang) => {
+    init(lang?.toString());
   }
 );
+
+if (process.env.VUE_ENV === 'server') {
+  setMeta({
+    title: t('Meta.title'),
+    description: t('Meta.description'),
+    url: `${ctx?.req.protocol}://${ctx?.req.get('host')}${ctx?.req.originalUrl}`,
+    image:  `${ctx?.req.protocol}://${ctx?.req.get('host')}/share.png`,
+  });
+}
 </script>
 
 <template>
-  <HeaderNotagency />
-  <div class="slide slide_hero">
+  <Error404Page v-if="is404" />
+  <DefaultLayout v-else>
     <div class="page-index-hero">
       <div>
         <AnimateBlock type="top-to-bottom" :start-from="400">
@@ -46,8 +68,7 @@ watch(
         </AnimateBlock>
       </div>
     </div>
-  </div>
-  <FooterNotagency />
+  </DefaultLayout>
 </template>
 
 <style scoped lang="scss">
