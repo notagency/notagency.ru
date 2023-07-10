@@ -15,7 +15,7 @@ const year = new Date().getFullYear();
           <div class="item">{{ t('Footer.inn') }} 771878367680</div>
           <div class="item">{{ t('Footer.psrn') }} 314774601700196</div>
         </div>
-        <div class="item">{year} &copy; NotAgency</div>
+        <div class="item">{{ year }} &copy; NotAgency</div>
       </div>
       <div class="inner hidden-xs">
         <div class="item">{{ year }} &copy; NotAgency</div>
@@ -48,6 +48,11 @@ const year = new Date().getFullYear();
 
   .item {
     padding: 0 10px;
+  }
+
+  a {
+    border-bottom: 0;
+    color: inherit;
   }
 }
 </style>
