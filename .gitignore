@@ -1,7 +1,6 @@
 .DS_Store
 node_modules/
 dist/
-dist-nossr/
 npm-debug.log
 yarn-error.log
 *.zip
@@ -9,9 +8,3 @@ yarn-error.log
 .idea
 *.iml
 .vscode
-run.sh
-env.js
-env.json
-cypress.env.json
-storybook-static/
-pm2.config.json

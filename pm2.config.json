@@ -1,0 +1,15 @@
+{
+  "apps": [
+    {
+      "name": "notagency.ru",
+      "script": "./dist/server.mjs",
+      "instances": "1",
+      "exec_mode": "fork",
+      "interpreter": "node",
+      "interpreter_args": "",
+      "env": {
+        "NODE_OPTIONS": "--max-old-space-size=4096"
+      }
+    }
+  ]
+}
